@@ -79,11 +79,24 @@ export default function Header() {
           {/* Logo Section (Left on desktop, Mathematically Centered on mobile via absolute) */}
           <div className="z-10 lg:static absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 lg:translate-x-0 lg:translate-y-0">
             <Link to="/" className="flex items-center gap-2 lg:gap-4 focus:outline-none group">
-              <img
-                src="/images/logo.png"
-                alt="Fadel trading Symbol"
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                xmlns="http://www.w3.org/2000/svg"
+                role="img"
+                aria-label="Fadel Trading"
                 className="h-10 sm:h-12 md:h-12 lg:h-16 w-auto object-contain transition-all duration-300 group-hover:scale-105"
-              />
+              >
+                {/* Tech power-loop (open ring, gap at top) */}
+                <path d="M16.6 8.4a6.5 6.5 0 1 1-9.2 0" stroke="#1E3A8A" strokeWidth="2" strokeLinecap="round" />
+                {/* Home-comfort peak bridging the loop's opening */}
+                <path d="M7.4 8.4 12 4l4.6 4.4" stroke="#1E3A8A" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                {/* Circuit node line from apex to the core */}
+                <path d="M12 5v6" stroke="#1E3A8A" strokeWidth="2" strokeLinecap="round" />
+                {/* Electric-cyan power node — the 10% accent */}
+                <circle cx="12" cy="13" r="1.9" fill="#06B6D4" />
+              </svg>
               <span className="text-xl md:text-2xl lg:text-3xl font-black tracking-tighter text-[#1E3A8A] uppercase italic leading-none whitespace-nowrap">
                 Fadel trading
               </span>
@@ -179,7 +192,12 @@ export default function Header() {
             {/* Drawer Content */}
             <div className="absolute top-0 left-0 bottom-0 w-[80%] sm:w-[350px] bg-white shadow-2xl animate-in slide-in-from-left duration-300 flex flex-col">
               <div className="flex items-center justify-between px-5 py-4 border-b border-gray-100">
-                <img src="/images/logo.png" alt="Fadel trading" className="h-10 w-auto object-contain" />
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Fadel Trading" className="h-10 w-auto object-contain">
+                  <path d="M16.6 8.4a6.5 6.5 0 1 1-9.2 0" stroke="#1E3A8A" strokeWidth="2" strokeLinecap="round" />
+                  <path d="M7.4 8.4 12 4l4.6 4.4" stroke="#1E3A8A" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                  <path d="M12 5v6" stroke="#1E3A8A" strokeWidth="2" strokeLinecap="round" />
+                  <circle cx="12" cy="13" r="1.9" fill="#06B6D4" />
+                </svg>
                 <button onClick={() => setOpen(false)} className="p-2 rounded-full hover:bg-gray-50 text-gray-400 hover:text-[#1E3A8A] transition-colors">
                   <CloseIcon className="w-5 h-5" />
                 </button>
