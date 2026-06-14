@@ -147,9 +147,9 @@ router.get('/health-sync', asyncHandler(async (req: Request, res: Response) => {
     select: { name: true, slug: true }
   }).catch((e: any) => []);
 
-  // Diagnostic: Check if hardcoded password matches DB hash for admin@hermado.com
+  // Diagnostic: Check if hardcoded password matches DB hash for admin@fadeltrading.com
   let passwordMatch = false;
-  const adminUser = users.find(u => u.email === 'admin@hermado.com');
+  const adminUser = users.find(u => u.email === 'admin@fadeltrading.com');
   if (adminUser) {
     passwordMatch = await bcrypt.compare('AdminPassword2026!', adminUser.password);
   }

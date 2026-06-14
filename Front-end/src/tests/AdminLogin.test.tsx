@@ -51,7 +51,7 @@ describe('AdminLogin', () => {
         const user = userEvent.setup();
         renderWithProviders(<AdminLogin />);
 
-        await user.type(screen.getByLabelText(/Email Professionnel/i), 'admin@hermado.com');
+        await user.type(screen.getByLabelText(/Email Professionnel/i), 'admin@fadeltrading.com');
         await user.type(screen.getByLabelText(/Mot de Passe/i), 'password123');
         await user.click(screen.getByRole('button', { name: /Se Connecter/i }));
 
@@ -65,7 +65,7 @@ describe('AdminLogin', () => {
         const user = userEvent.setup();
         renderWithProviders(<AdminLogin />);
 
-        await user.type(screen.getByLabelText(/Email Professionnel/i), 'admin@hermado.com');
+        await user.type(screen.getByLabelText(/Email Professionnel/i), 'admin@fadeltrading.com');
         await user.type(screen.getByLabelText(/Mot de Passe/i), 'password123');
 
         const submitBtn = screen.getByRole('button', { name: /Se Connecter/i });

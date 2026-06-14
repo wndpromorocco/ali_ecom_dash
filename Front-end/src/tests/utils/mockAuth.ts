@@ -5,7 +5,7 @@ export const mockAuthContext = {
     register: vi.fn().mockResolvedValue(true),
     logout: vi.fn().mockResolvedValue(undefined),
     fetchProfile: vi.fn().mockResolvedValue(undefined),
-    user: { id: 'u-1', email: 'admin@hermado.com', role: 'ADMIN' },
+    user: { id: 'u-1', email: 'admin@fadeltrading.com', role: 'ADMIN' },
     isAuthenticated: true,
     loading: false,
 };

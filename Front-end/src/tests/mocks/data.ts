@@ -154,7 +154,7 @@ export const MOCK_BLACKFRIDAY = {
 
 export const MOCK_USER = {
     id: 'u-1',
-    email: 'admin@hermado.com',
+    email: 'admin@fadeltrading.com',
     role: 'ADMIN',
     accessToken: 'mock-jwt-token-hermado-2026',
 };

@@ -149,7 +149,7 @@ const AdminLogin = () => {
                                         <Input
                                             id="email"
                                             type="email"
-                                            placeholder="admin@hermado.com"
+                                            placeholder="admin@fadeltrading.com"
                                             value={email}
                                             onChange={(e) => setEmail(e.target.value)}
                                             className="h-14 pl-11 bg-[#1e2535] border border-white/10 hover:border-white/20 focus:border-[#db6513] focus:ring-2 focus:ring-[#db6513]/20 !text-gray-300 text-[14px] font-medium !placeholder:text-gray-400 !placeholder:font-medium rounded-sm transition-all duration-200 [&:-webkit-autofill]:bg-[#1e2535] [&:-webkit-autofill]:[box-shadow:0_0_0_1000px_#1e2535_inset] [&:-webkit-autofill]:[-webkit-text-fill-color:#d1d5db]"

@@ -3,7 +3,7 @@ import PrismaService from '../services/prisma';
 import { UserRole } from '../types';
 
 async function seedAdmin() {
-    const email = 'admin@hermado.com';
+    const email = 'admin@fadeltrading.com';
     const password = 'AdminPassword2026!'; // Change this in production
     const firstName = 'Mehdi';
     const lastName = 'Admin';

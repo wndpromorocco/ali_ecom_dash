@@ -18,7 +18,7 @@ export const handlers = [
     // ── AUTH ──────────────────────────────────────────────
     http.post(`${BASE}/auth/login`, async ({ request }) => {
         const body = await request.json() as any;
-        if (body.email === 'admin@hermado.com' &&
+        if (body.email === 'admin@fadeltrading.com' &&
             body.password === 'password123') {
             return HttpResponse.json({
                 success: true,
