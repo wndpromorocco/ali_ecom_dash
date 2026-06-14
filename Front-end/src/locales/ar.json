@@ -1,0 +1,271 @@
+{
+  "nav": {
+    "home": "الرئيسية",
+    "boutique": "المتجر",
+    "categories": "الفئات",
+    "catalogue": "الكتالوج",
+    "contact": "اتصل بنا",
+    "magasins": "متاجرنا",
+    "account": "حسابي",
+    "logout": "تسجيل الخروج",
+    "cart": "السلة",
+    "stores": "متاجرنا"
+  },
+  "header": {
+    "searchPlaceholder": "البحث عن منتج...",
+    "categories": "فئاتنا",
+    "viewAll": "عرض الكل",
+    "menu": "القائمة",
+    "login": "تسجيل الدخول",
+    "allProducts": "جميع المنتجات",
+    "stores": "متاجرنا"
+  },
+  "home": {
+    "hero": {
+      "slide1": {
+        "title": "منتجات عضوية من المغرب",
+        "description": "اكتشف مجموعتنا المختارة من المنتجات الطبيعية والعضوية."
+      },
+      "slide2": {
+        "title": "جودة عالية",
+        "description": "منتجات مختارة بعناية من أجلك."
+      },
+      "shopNow": "تسوق الآن"
+    },
+    "categories": {
+      "title": "فئاتنا",
+      "herboristerie": "الأعشاب",
+      "huiles": "الزيوت الطبيعية",
+      "miel": "العسل ومشتقاته",
+      "cosmetique": "مستحضرات تجميل عضوية",
+      "grains": "الحبوب والقطاني",
+      "spices": "التوابل",
+      "fruits": "الفواكه والخضروات",
+      "teas": "الشاي والأعشاب المنسمة"
+    },
+    "gallery": {
+      "title": "منتجاتنا بالصور"
+    },
+    "sections": {
+      "exceptionalProducts": "منتجاتنا الاستثنائية",
+      "bestProducts": "أفضل منتجاتنا",
+      "best_sellers": "أفضل منتجاتنا",
+      "discover": "اكتشف",
+      "gourmetProducts": "منتجات فاخرة",
+      "gourmetDescription": "اكتشف مجموعتنا المختارة من المنتجات المحلية والفاخرة."
+    }
+  },
+  "boutique": {
+    "title": "متجرنا",
+    "subtitle": "اكتشف مجموعتنا الكاملة من المنتجات العضوية والطبيعية",
+    "filters": {
+      "categories": "الفئات",
+      "all": "جميع المنتجات",
+      "priceRange": "نطاق السعر",
+      "min": "الأدنى",
+      "max": "الأقصى"
+    },
+    "resultsCount": "عرض {{count}} منتجات",
+    "noProducts": "لم يتم العثور على منتجات.",
+    "loading": "جاري التحميل...",
+    "filter": "تصفية",
+    "price": {
+      "title": "السعر",
+      "range": "من {{min}} إلى {{max}}",
+      "reset": "إعادة تعيين"
+    },
+    "types": {
+      "title": "الأنواع"
+    },
+    "search": {
+      "placeholder": "بحث عن منتج...",
+      "reset": "إعادة تعيين",
+      "related_products": "قد يعجبك أيضاً"
+    }
+  },
+  "product": {
+    "notFound": "المنتج غير موجود",
+    "back": "العودة إلى المتجر",
+    "addToCart": "أضف إلى السلة",
+    "description": "الوصف",
+    "related": "منتجات ذات صلة",
+    "inStock": "متوفر",
+    "outOfStock": "غير متوفر",
+    "badge_new": "جديد",
+    "badge_promo": "عرض"
+  },
+  "cart": {
+    "title": "سلتي",
+    "empty": "سلتك فارغة",
+    "empty_cart": "سلتك فارغة",
+    "emptyDesc": "اكتشف منتجاتنا وابدأ التسوق",
+    "backToShop": "العودة إلى المتجر",
+    "summary": "ملخص الطلب",
+    "subtotal": "المجموع الفرعي",
+    "shipping": "الشحن",
+    "total": "المجموع",
+    "checkout": "إتمام الطلب",
+    "items": "منتجات",
+    "recommendations": "قد يعجبك أيضا",
+    "promoCode": "كود الخصم",
+    "apply": "تطبيق",
+    "freeShipping": "شحن مجاني!",
+    "quantityUpdated": "تم تحديث الكمية"
+  },
+  "checkout": {
+    "title": "الدفع",
+    "shippingAddress": "عنوان الشحن",
+    "firstName": "الاسم الأول",
+    "lastName": "الاسم الأخير",
+    "email": "البريد الإلكتروني",
+    "phone": "الهاتف",
+    "address": "العنوان",
+    "city": "المدينة",
+    "postalCode": "الرمز البريدي",
+    "country": "البلد",
+    "orderSummary": "ملخص الطلب",
+    "placeOrder": "إكمال الطلب",
+    "processing": "جاري المعالجة...",
+    "success": "تم تقديم الطلب بنجاح!",
+    "paymentMethod": "طريقة الدفع",
+    "cashOnDelivery": "الدفع عند الاستلام",
+    "creditCard": "بطاقة بنكية"
+  },
+  "orderSuccess": {
+    "title": "شكرا لطلبك!",
+    "message": "تم تسجيل طلبك بنجاح. ستتلقى بريدًا إلكترونيًا للتأكيد قريبًا.",
+    "orderNumber": "رقم الطلب",
+    "continueShopping": "مواصلة التسوق",
+    "viewOrders": "عرض طلباتي"
+  },
+  "account": {
+    "title": "حسابي",
+    "dashboard": "لوحة التحكم",
+    "orders": "طلباتي",
+    "settings": "الإعدادات",
+    "login": {
+      "title": "تسجيل الدخول",
+      "email": "البريد الإلكتروني",
+      "password": "كلمة المرور",
+      "submit": "تسجيل الدخول",
+      "noAccount": "ليس لديك حساب؟",
+      "register": "سجل الآن"
+    },
+    "register": {
+      "title": "التسجيل",
+      "firstName": "الاسم الأول",
+      "lastName": "الاسم الأخير",
+      "email": "البريد الإلكتروني",
+      "password": "كلمة المرور",
+      "confirmPassword": "تأكيد كلمة المرور",
+      "submit": "تسجيل",
+      "hasAccount": "لديك حساب بالفعل؟",
+      "login": "تسجيل الدخول"
+    }
+  },
+  "orders": {
+    "title": "طلباتي",
+    "empty": "ليس لديك طلبات بعد.",
+    "status": "الحالة",
+    "date": "التاريخ",
+    "total": "المجموع",
+    "details": "التفاصيل",
+    "order": "طلب"
+  },
+  "loginDialog": {
+    "title": "سجل الدخول للمتابعة",
+    "description": "سجل الدخول أو أنشئ حسابًا لإكمال طلبك بأمان.",
+    "tabs": {
+      "login": "تسجيل الدخول",
+      "register": "التسجيل"
+    },
+    "guestAction": "المتابعة كضيف",
+    "guestDesc": "يمكنك إنشاء حساب لاحقًا."
+  },
+  "stores": {
+    "title": "متاجرنا",
+    "description": "تجمع متاجر هيربيو بين الأناقة والرفاهية. يتم تقديم كل منتج في عبوات راقية، مصممة لإرضاء العين والحنك. مستشارونا في خدمتكم لتوجيهكم.",
+    "searchPlaceholder": "العنوان، الرمز البريدي، المدينة...",
+    "searchAria": "البحث عن متجر",
+    "mapTitle": "خريطة المتاجر",
+    "itinerary": "الاتجاهات",
+    "moreInfo": "لمزيد من المعلومات",
+    "openHours": "مفتوح {{hours}}",
+    "breadcrumbs": {
+      "home": "الرئيسية",
+      "stores": "متاجرنا"
+    }
+  },
+  "footer": {
+    "features": {
+      "shipping": "شحن مجاني",
+      "shippingDesc": "ابتداءً من {{amount}}",
+      "payment": "دفع آمن عبر الإنترنت",
+      "paymentDesc": "آمن بنسبة 100%",
+      "clickCollect": "استلم من المتجر",
+      "clickCollectDesc": "حسب موقعك",
+      "contact": "اتصل بنا",
+      "contactDesc": "من الاثنين إلى الجمعة"
+    },
+    "about": "تعاونية زراعية مغربية مخصصة لإنتاج منتجات عضوية عالية الجودة.",
+    "navigation": "التنقل",
+    "followUs": "تابعونا",
+    "rights": "© {{year}} هيربيو. جميع الحقوق محفوظة.",
+    "contact": "اتصل بنا"
+  },
+  "search": {
+    "placeholder": "البحث عن منتج، فئة...",
+    "noResults": "لم يتم العثور على نتائج.",
+    "productsHeading": "المنتجات",
+    "categoriesHeading": "الفئات",
+    "add": "إضافة",
+    "view": "عرض",
+    "loading": "جاري التحميل...",
+    "addAria": "إضافة {{name}} إلى السلة",
+    "viewAria": "عرض {{name}}"
+  },
+  "cartPreview": {
+    "title": "سلتك",
+    "itemsCount": "{{count}} منتجات",
+    "empty": "سلتك فارغة",
+    "emptyDesc": "أضف منتجات لبدء التسوق",
+    "removeItem": "إزالة المنتج",
+    "subtotal": "المجموع الفرعي",
+    "shippingNote": "يتم حساب الشحن والضرائب عند الدفع.",
+    "viewCart": "عرض السلة",
+    "checkout": "إتمام الطلب"
+  },
+  "settingsDialog": {
+    "title": "اختر لغتك",
+    "description": "اختر لغتك وعملتك",
+    "languageLabel": "اختر لغتك",
+    "languagePlaceholder": "صتر اللغة",
+    "currencyLabel": "اختر عملتك",
+    "currencyPlaceholder": "اختر العملة",
+    "choose": "اختر"
+  },
+  "toasts": {
+    "cart": {
+      "updated": "تم تحديث الكمية",
+      "added": "تمت إضافة المنتج إلى السلة",
+      "removed": "تمت إزالة المنتج من السلة"
+    },
+    "auth": {
+      "logoutSuccess": "تم تسجيل الخروج بنجاح"
+    }
+  },
+  "common": {
+    "welcome": "مرحباً",
+    "search": "بحث",
+    "theme": "المظهر",
+    "loading": "جاري التحميل...",
+    "error": "حدث خطأ ما",
+    "retry": "إعادة المحاولة",
+    "close": "إغلاق",
+    "save": "حفظ",
+    "cancel": "إلغاء",
+    "confirm": "تأكيد",
+    "success": "نجاح",
+    "checkout_error": "خطأ في الشبكة"
+  }
+}

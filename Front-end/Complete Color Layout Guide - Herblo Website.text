@@ -1,0 +1,467 @@
+# 🎨 Complete Color Layout Guide - Herblo Website
+
+## **Primary Color Palette**
+
+```css
+/* Main Brand Colors */
+--primary-green: #10B981;        /* Emerald-500 - Main buttons, accents */
+--primary-dark: #059669;         /* Emerald-600 - Hover states */
+--primary-light: #D1FAE5;        /* Emerald-100 - Subtle backgrounds */
+
+/* Secondary Colors */
+--secondary-orange: #F59E0B;     /* Amber-500 - Secondary CTAs */
+--secondary-dark: #D97706;       /* Amber-600 - Hover states */
+
+/* Background Colors */
+--bg-cream: #FFF7ED;             /* Orange-50 - Warm sections */
+--bg-peach: #FFEDD5;             /* Orange-100 - Alternate sections */
+--bg-yellow: #FEF3C7;            /* Amber-100 - Badges, highlights */
+--bg-white: #FFFFFF;             /* Pure white - Cards, main sections */
+--bg-gray: #F9FAFB;              /* Gray-50 - Footer, subtle areas */
+
+/* Text Colors */
+--text-primary: #78350F;         /* Amber-900 - Main headings */
+--text-secondary: #1F2937;       /* Gray-900 - Subheadings */
+--text-body: #4B5563;            /* Gray-600 - Body text */
+--text-light: #6B7280;           /* Gray-500 - Secondary text */
+--text-caption: #9CA3AF;         /* Gray-400 - Captions, metadata */
+
+/* Border Colors */
+--border-light: #E5E7EB;         /* Gray-200 - Card borders */
+--border-gray: #F3F4F6;          /* Gray-100 - Subtle dividers */
+```
+
+---
+
+## **Section Background Pattern**
+
+### **Alternating Pattern (Warm & Organic Feel)**
+
+```
+Section 1: Hero → Keep existing gradient (green-amber)
+Section 2: Features → #FFF7ED (cream)
+Section 3: Products → #FFFFFF (white)
+Section 4: Testimonials → #FFEDD5 (light peach)
+Section 5: Promotional → #FFF7ED (cream)
+Section 6: Content → #FFFFFF (white)
+Section 7: CTA/Newsletter → Green gradient (#059669 to #047857)
+Section 8: Footer → #F9FAFB (light gray)
+```
+
+**Pattern**: Cream → White → Peach → Cream → White → Green → Gray
+
+---
+
+## **CSS Variables for Tailwind**
+
+Add this to your `tailwind.config.js`:
+
+```javascript
+module.exports = {
+  theme: {
+    extend: {
+      colors: {
+        // Primary
+        'primary': '#10B981',
+        'primary-dark': '#059669',
+        'primary-light': '#D1FAE5',
+        
+        // Secondary
+        'secondary': '#F59E0B',
+        'secondary-dark': '#D97706',
+        
+        // Backgrounds
+        'bg-cream': '#FFF7ED',
+        'bg-peach': '#FFEDD5',
+        'bg-yellow': '#FEF3C7',
+        
+        // Text
+        'text-primary': '#78350F',
+        'text-secondary': '#1F2937',
+        'text-body': '#4B5563',
+        'text-light': '#6B7280',
+        'text-caption': '#9CA3AF',
+        
+        // Borders
+        'border-light': '#E5E7EB',
+        'border-gray': '#F3F4F6',
+      }
+    }
+  }
+}
+```
+
+---
+
+## **Page-Specific Layouts**
+
+### **1. HOME PAGE**
+```
+Hero: Gradient (green-amber) - Keep existing
+Why Choose Us: #FFF7ED
+Products: #FFFFFF
+Testimonials: #FFEDD5
+Kitchen/Honey: #FFF7ED
+FAQ: #FFFFFF
+Newsletter: Green gradient
+```
+
+### **2. SHOP/BOUTIQUE PAGE**
+```
+Header/Filters: #FFFFFF
+Product Grid Section: #F9FAFB
+Featured Products Banner: #FFF7ED
+Product Cards: #FFFFFF (on gray background)
+CTA Section: #FFEDD5
+Newsletter: Green gradient
+```
+
+### **3. PRODUCT DETAIL PAGE**
+```
+Product Images & Info: #FFFFFF
+Product Description: #FFF7ED
+Related Products: #F9FAFB
+Reviews Section: #FFEDD5
+FAQ: #FFFFFF
+CTA: Green gradient
+```
+
+### **4. ABOUT PAGE**
+```
+Hero: #FFF7ED
+Our Story: #FFFFFF
+Mission/Values: #FFEDD5
+Team Section: #FFF7ED
+Impact Stats: #FFFFFF
+CTA: Green gradient
+```
+
+### **5. CONTACT PAGE**
+```
+Contact Form: #FFFFFF
+Contact Info Cards: #FFF7ED
+Map Section: #F9FAFB
+FAQ: #FFFFFF
+```
+
+### **6. CART/PANIER PAGE**
+```
+Cart Items: #FFFFFF
+Summary Card: #FFF7ED
+Shipping Info: #F9FAFB
+Checkout CTA: Green gradient
+```
+
+### **7. BLOG/ARTICLES PAGE**
+```
+Hero: #FFF7ED
+Article Grid: #F9FAFB
+Article Cards: #FFFFFF
+Featured Article: #FFEDD5
+CTA: Green gradient
+```
+
+---
+
+## **Component Color Guidelines**
+
+### **BUTTONS**
+
+```css
+/* Primary Button */
+.btn-primary {
+  background: #10B981;
+  color: white;
+  hover: #059669;
+}
+
+/* Secondary Button */
+.btn-secondary {
+  background: #F59E0B;
+  color: white;
+  hover: #D97706;
+}
+
+/* Outline Button */
+.btn-outline {
+  border: 2px solid #10B981;
+  color: #10B981;
+  background: transparent;
+  hover-bg: #10B981;
+  hover-color: white;
+}
+
+/* Ghost Button */
+.btn-ghost {
+  background: #F3F4F6;
+  color: #4B5563;
+  hover: #E5E7EB;
+}
+```
+
+### **CARDS**
+
+```css
+/* Standard Card */
+.card {
+  background: #FFFFFF;
+  border: 1px solid #E5E7EB;
+  border-radius: 12px;
+  shadow: 0 2px 4px rgba(0,0,0,0.04);
+}
+
+/* Hover State */
+.card:hover {
+  shadow: 0 8px 16px rgba(0,0,0,0.08);
+  border-color: #10B981;
+}
+
+/* Featured Card */
+.card-featured {
+  background: #FFF7ED;
+  border: 1px solid #FFEDD5;
+}
+```
+
+### **BADGES**
+
+```css
+/* Success Badge */
+.badge-success {
+  background: #10B981;
+  color: white;
+}
+
+/* Warning Badge */
+.badge-warning {
+  background: #F59E0B;
+  color: white;
+}
+
+/* Info Badge */
+.badge-info {
+  background: #FEF3C7;
+  color: #92400E;
+}
+
+/* New Badge */
+.badge-new {
+  background: #FFEDD5;
+  color: #C2410C;
+}
+```
+
+### **INPUTS**
+
+```css
+/* Text Input */
+.input {
+  background: #FFFFFF;
+  border: 1px solid #E5E7EB;
+  color: #1F2937;
+  placeholder-color: #9CA3AF;
+}
+
+.input:focus {
+  outline: 2px solid #10B981;
+  border-color: #10B981;
+}
+
+/* Disabled Input */
+.input:disabled {
+  background: #F9FAFB;
+  color: #9CA3AF;
+}
+```
+
+### **NAVIGATION**
+
+```css
+/* Header/Navbar */
+.navbar {
+  background: #FFFFFF;
+  border-bottom: 1px solid #E5E7EB;
+}
+
+/* Active Link */
+.nav-link-active {
+  color: #10B981;
+}
+
+/* Inactive Link */
+.nav-link {
+  color: #4B5563;
+  hover: #10B981;
+}
+
+/* Footer */
+.footer {
+  background: #F9FAFB;
+  border-top: 1px solid #E5E7EB;
+}
+```
+
+---
+
+## **Tailwind Class Quick Reference**
+
+### **Backgrounds**
+```
+bg-[#FFF7ED]  → Cream
+bg-[#FFEDD5]  → Light Peach
+bg-[#FEF3C7]  → Soft Yellow
+bg-white      → Pure White
+bg-[#F9FAFB]  → Light Gray
+```
+
+### **Text Colors**
+```
+text-[#78350F]  → Deep Brown (headings)
+text-[#1F2937]  → Dark Gray (subheadings)
+text-[#4B5563]  → Medium Gray (body)
+text-[#6B7280]  → Light Gray (secondary)
+text-[#9CA3AF]  → Very Light Gray (captions)
+```
+
+### **Buttons**
+```
+bg-[#10B981] hover:bg-[#059669]  → Primary Green
+bg-[#F59E0B] hover:bg-[#D97706]  → Secondary Orange
+```
+
+### **Borders**
+```
+border-[#E5E7EB]  → Light Gray Border
+border-[#10B981]  → Green Border (active)
+```
+
+---
+
+## **Gradient Combinations**
+
+```css
+/* Hero Gradients */
+.gradient-hero {
+  background: linear-gradient(to bottom right, #E8F5E9, #F1F8E9);
+}
+
+/* CTA Gradients */
+.gradient-cta {
+  background: linear-gradient(to right, #059669, #047857);
+}
+
+/* Card Hover Gradients */
+.gradient-icon {
+  background: linear-gradient(to bottom right, #10B981, #059669);
+}
+
+/* Button Gradients */
+.gradient-button {
+  background: linear-gradient(to right, #10B981, #059669);
+}
+```
+
+---
+
+## **Shadow System**
+
+```css
+/* Shadows */
+--shadow-sm: 0 2px 4px rgba(0,0,0,0.04);
+--shadow-md: 0 4px 8px rgba(0,0,0,0.06);
+--shadow-lg: 0 8px 16px rgba(0,0,0,0.08);
+--shadow-xl: 0 12px 24px rgba(0,0,0,0.1);
+
+/* Green Shadows (for CTAs) */
+--shadow-green: 0 4px 12px rgba(16, 185, 129, 0.3);
+--shadow-orange: 0 4px 12px rgba(245, 158, 11, 0.3);
+```
+
+---
+
+## **Usage Examples**
+
+### **Example 1: Section with Cream Background**
+```jsx
+<section className="py-20 px-6 bg-[#FFF7ED]">
+  <div className="max-w-[1200px] mx-auto">
+    <h2 className="text-4xl font-bold text-[#78350F] mb-4">
+      Your Title
+    </h2>
+    <p className="text-base text-[#6B7280]">
+      Your description
+    </p>
+  </div>
+</section>
+```
+
+### **Example 2: Card Component**
+```jsx
+<div className="bg-white border border-[#E5E7EB] rounded-xl p-6 hover:shadow-lg hover:border-[#10B981] transition-all duration-300">
+  <h3 className="text-lg font-bold text-[#1F2937] mb-2">
+    Card Title
+  </h3>
+  <p className="text-sm text-[#6B7280]">
+    Card description
+  </p>
+</div>
+```
+
+### **Example 3: Primary Button**
+```jsx
+<button className="bg-[#10B981] hover:bg-[#059669] text-white px-8 py-3.5 rounded-lg font-semibold shadow-md hover:shadow-lg transition-all duration-200">
+  Click Me
+</button>
+```
+
+### **Example 4: Badge**
+```jsx
+<div className="bg-[#10B981] text-white px-3 py-1.5 rounded-md text-xs font-semibold">
+  Bio
+</div>
+```
+
+---
+
+## **Dark Mode (Optional Future Enhancement)**
+
+If you want to add dark mode later:
+
+```css
+/* Dark Mode Colors */
+--dark-bg: #1F2937;
+--dark-bg-secondary: #111827;
+--dark-text: #F9FAFB;
+--dark-border: #374151;
+```
+
+---
+
+## **Accessibility Notes**
+
+✅ **Contrast Ratios Met:**
+- Text on white: #78350F, #1F2937, #4B5563 all pass WCAG AA
+- White text on #10B981: Passes AA
+- White text on #F59E0B: Passes AA
+
+✅ **Focus States:**
+- All interactive elements should have visible focus rings
+- Use `focus:ring-2 focus:ring-[#10B981]` for inputs and buttons
+
+✅ **Touch Targets:**
+- Minimum 44x44px for all clickable elements
+- Use `py-3.5` (14px) and `px-8` (32px) for buttons
+
+---
+
+## **Summary**
+
+**Main Pattern**: Alternate between cream (#FFF7ED), white (#FFFFFF), and peach (#FFEDD5) for section backgrounds
+
+**Key Colors**:
+- Primary: #10B981 (green)
+- Secondary: #F59E0B (orange)
+- Headings: #78350F (brown)
+- Body: #6B7280 (gray)
+
+**Apply this pattern consistently across all pages for a cohesive, professional look!** 🌿

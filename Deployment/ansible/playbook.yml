@@ -1,0 +1,85 @@
+---
+- name: 🚀 Déploiement complet Hermado-Ecom (Frontend + Backend + DB)
+  hosts: remote
+  become: yes
+
+  vars:
+    project_dir: /data/LiadTech_Hermado-Ecom
+
+  tasks:
+    # =====================================================
+    # 1️⃣ Créer le dossier projet sur la VM
+    # =====================================================
+    - name: 📁 Créer le dossier projet Hermado
+      file:
+        path: "{{ project_dir }}"
+        state: directory
+        owner: ubuntu
+        group: ubuntu
+        mode: "0755"
+
+    # =====================================================
+    # 2️⃣ Synchroniser les fichiers depuis Azure DevOps
+    # =====================================================
+    - name: 🔄 Synchroniser le projet Hermado depuis Azure DevOps vers la VM
+      synchronize:
+        src: "{{ source_dir }}/"
+        dest: "{{ project_dir }}"
+        recursive: yes
+        delete: yes
+        rsync_opts:
+          - "--exclude=.git/"
+          - "--exclude=node_modules/"
+          - "--exclude=.next/"
+          - "--exclude=dist/"
+      delegate_to: localhost
+
+    # =====================================================
+    # 3️⃣ Déploiement via Docker Compose
+    # =====================================================
+    - name: 🐳 Lancer le déploiement Docker Compose pour Hermado
+      shell: |
+        set -e
+        cd {{ project_dir }}
+
+        echo "🧹 Nettoyage des conteneurs (volumes préservés)..."
+        docker-compose down --remove-orphans || true
+
+        echo "⚙️ Construction des nouvelles images Hermado..."
+        docker-compose build --no-cache
+
+        echo "🚀 Phased Startup: Démarrage de la DB et Redis..."
+        docker-compose up -d db redis
+
+        echo "⏳ Attente de l'initialisation de la DB (max 3 minutes)..."
+        for i in {1..30}; do
+          if docker exec Hermado_db pg_isready -U postgres; then
+            echo "✅ Base de données prête !"
+            break
+          fi
+          if [ $i -eq 30 ]; then
+            echo "❌ ERREUR: La base de données ne s'est pas initialisée à temps."
+            echo "🔎 EXTRACTION DES LOGS DE LA DB POUR DÉBOGAGE :"
+            docker logs Hermado_db
+            exit 1
+          fi
+          echo "⏳ Attente de l'initialisation... ($i/30)"
+          sleep 6
+        done
+
+        echo "🚀 Démarrage du Backend et Frontend..."
+        docker-compose up -d backend frontend
+
+        echo "🔎 État final des conteneurs :"
+        docker-compose ps
+      args:
+        executable: /bin/bash
+      register: compose_result
+      ignore_errors: false
+
+    # =====================================================
+    # 4️⃣ Résumé du déploiement
+    # =====================================================
+    - name: 📋 Afficher le résultat du déploiement Hermado
+      debug:
+        var: compose_result.stdout_lines

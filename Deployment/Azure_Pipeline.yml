@@ -1,0 +1,175 @@
+name: LiadTech Hermado Ecom Pipeline SonarQube Deployment
+
+trigger:
+  branches:
+    include:
+      - deployment/init
+      - master
+variables:
+  - group: Hermado_SonarQube_Secrets
+  - name: NODE_VERSION
+    value: "20.x"
+  - name: npm_config_cache
+    value: $(Pipeline.Workspace)/.npm
+  - name: sonarQubeServiceConnection
+    value: "SonarQubeLiadTechHermado"
+  - name: JAVA_HOME
+    value: "/usr/lib/jvm/java-17-openjdk"
+
+stages:
+  # ======================================================
+  # === STAGE 1 : BUILD & SONARQUBE ANALYSIS ============
+  # ======================================================
+  - stage: Build
+    displayName: "🔧 Compilation et Analyse SonarQube"
+    jobs:
+      - job: BuildAndAnalyze
+        displayName: "Build et Analyse du Projet Herbio"
+        steps:
+          - script: |
+              echo "📂 Liste du contenu du projet Hermado-Ecom :"
+              ls -R $(Build.SourcesDirectory)
+            displayName: "Afficher structure du projet"
+
+          - task: NodeTool@0
+            inputs:
+              versionSpec: "$(NODE_VERSION)"
+            displayName: "Installer Node.js"
+
+          - task: Cache@2
+            inputs:
+              key: 'npm | "$(Agent.OS)" | hermado'
+              restoreKeys: |
+                npm | "$(Agent.OS)"
+              path: $(npm_config_cache)
+            displayName: "Cache npm"
+            continueOnError: true
+
+          # FRONTEND INSTALLATION
+          - script: |
+              echo "📦 Installation des dépendances Front-end (Vite + React)"
+              cd Front-end
+              npm install --legacy-peer-deps
+            displayName: "Installer dépendances Front-end"
+
+          # BACKEND INSTALLATION
+          - script: |
+              echo "📦 Installation des dépendances Back-end (Node + Express)"
+              cd Back-end
+              npm install
+            displayName: "Installer dépendances Back-end"
+
+          # SONARQUBE PREPARATION
+          - script: |
+              echo "🧹 Suppression variable SONARQUBE_SCANNER_PARAMS"
+              echo "##vso[task.setvariable variable=SONARQUBE_SCANNER_PARAMS;issecret=true]{}"
+            displayName: "Neutraliser paramètres Sonar"
+
+          - task: SonarQubePrepare@7
+            inputs:
+              SonarQube: "$(sonarQubeServiceConnection)"
+              scannerMode: "CLI"
+              configMode: "manual"
+              cliProjectKey: "LiadHermado"
+              cliProjectName: "LiadHermado"
+              cliSources: "Front-end,Back-end"
+              extraProperties: |
+                sonar.host.url=$(SONAR_HOST_URL)
+                sonar.token=$(SONAR_TOKEN)
+                sonar.login=$(SONAR_TOKEN)
+                sonar.projectKey=LiadHermado
+                sonar.projectName=LiadHermado
+                sonar.sourceEncoding=UTF-8
+                sonar.sources=Front-end,Back-end
+                sonar.exclusions=**/node_modules/**,**/dist/**,**/build/**,**/*.png,**/*.jpg,**/*.svg,**/*.pdf,**/*.ico
+                sonar.qualitygate.wait=false
+            env:
+              SONAR_TOKEN: $(SONAR_TOKEN)
+            displayName: "Préparer l'analyse SonarQube"
+
+          - task: SonarQubeAnalyze@7
+            displayName: "Analyser avec SonarQube"
+            env:
+              SONAR_TOKEN: $(SONAR_TOKEN)
+
+          - task: SonarQubePublish@7
+            inputs:
+              pollingTimeoutSec: "300"
+            displayName: "Publier résultats SonarQube"
+
+  # ======================================================
+  # === STAGE 2 : SONARQUBE REPORT GENERATION ===========
+  # ======================================================
+  - stage: Rapport
+    displayName: "📊 Génération Rapport SonarQube"
+    dependsOn: Build
+    condition: succeededOrFailed()
+    jobs:
+      - job: GenerateReports
+        displayName: "Génération et Publication des Rapports"
+        steps:
+          - task: NodeTool@0
+            inputs:
+              versionSpec: "18.x"
+            displayName: "Installer Node.js pour rapport"
+
+          - task: Bash@3
+            displayName: "Installer dépendances scripts"
+            inputs:
+              targetType: "inline"
+              workingDirectory: "$(System.DefaultWorkingDirectory)/Deployment/scripts"
+              script: |
+                rm -rf node_modules package-lock.json
+                npm install blob
+                npm install
+
+          - task: Bash@3
+            displayName: "Générer rapport SonarQube"
+            env:
+              SONAR_HOST_URL: $(SONAR_HOST_URL)
+              SONAR_TOKEN: $(SONAR_TOKEN)
+            inputs:
+              targetType: "inline"
+              workingDirectory: "$(System.DefaultWorkingDirectory)/Deployment/scripts"
+              script: |
+                node generate-report.js
+
+          - task: PublishBuildArtifacts@1
+            displayName: "Publier rapports SonarQube"
+            inputs:
+              PathtoPublish: "$(Build.SourcesDirectory)/Deployment/output"
+              ArtifactName: "sonar-reports-Hermado"
+              publishLocation: "Container"
+
+  # ======================================================
+  # === STAGE 3 : DEPLOYMENT VIA ANSIBLE ================
+  # ======================================================
+  - stage: Deploy
+    displayName: "🚀 Déploiement Ansible Herbio"
+    dependsOn: Rapport
+    condition: succeeded()
+    jobs:
+      - job: DeployHermado
+        displayName: "Déploiement via Ansible sur l’infra LiadTech"
+        pool:
+          name: Default
+          demands:
+            - Agent.Name -equals Agent_liadmern_to_144.217.11.177
+        steps:
+          - script: |
+              echo "📂 Vérification des fichiers Ansible..."
+              ls -la $(System.DefaultWorkingDirectory)/Deployment/ansible
+              echo "📄 Contenu de inventory.ini :"
+              cat $(System.DefaultWorkingDirectory)/Deployment/ansible/inventory.ini
+            displayName: "Vérifier fichiers Ansible"
+
+          - task: Bash@3
+            displayName: "Exécuter le playbook Ansible Herbio"
+            inputs:
+              targetType: "inline"
+              workingDirectory: "Deployment/ansible"
+              script: |
+                ansible-playbook -i inventory.ini playbook.yml \
+                  -e "source_dir=$(Build.SourcesDirectory)" \
+                  -e "project=Hermado-Ecom" \
+                  -u ubuntu -b -vvv

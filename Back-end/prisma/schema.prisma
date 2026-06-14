@@ -1,0 +1,310 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id               String         @id @default(uuid())
+  email            String         @unique
+  password         String
+  firstName        String
+  lastName         String
+  phone            String?
+  role             UserRole       @default(CUSTOMER)
+  isActive         Boolean        @default(true)
+  isVerified       Boolean        @default(false)
+  avatar           String?
+  dateOfBirth      DateTime?
+  createdAt        DateTime       @default(now())
+  updatedAt        DateTime       @updatedAt
+  resetCode        String?
+  resetCodeExpires DateTime?
+  addresses        Address[]
+  cartItems        CartItem[]
+  orders           Order[]
+  refreshTokens    RefreshToken[]
+  reviews          Review[]
+
+  @@map("users")
+}
+
+model Address {
+  id         String   @id @default(uuid())
+  userId     String?  @map("user_id")
+  firstName  String
+  lastName   String
+  company    String?
+  address1   String
+  address2   String?
+  city       String
+  region     String
+  postalCode String
+  country    String   @default("Morocco")
+  phone      String?
+  isDefault  Boolean  @default(false)
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+  email      String?
+  user       User?    @relation(fields: [userId], references: [id], onDelete: Cascade)
+  orders     Order[]
+
+  @@map("addresses")
+}
+
+model Category {
+  id            String     @id @default(uuid())
+  name          String     @unique
+  nameAr        String?    @map("name_ar")
+  slug          String     @unique
+  description   String?
+  descriptionAr String?    @map("description_ar")
+  image         String?
+  isActive      Boolean    @default(true)
+  parentId      String?
+  types         String[]
+  colors        String[]
+  createdAt     DateTime   @default(now())
+  updatedAt     DateTime   @updatedAt
+  parent        Category?  @relation("CategoryHierarchy", fields: [parentId], references: [id])
+  children      Category[] @relation("CategoryHierarchy")
+  products      Product[]
+
+  @@map("categories")
+}
+
+model Product {
+  id                 String           @id @default(uuid())
+  name               String
+  nameAr             String?          @map("name_ar")
+  slug               String           @unique
+  description        String?
+  descriptionAr      String?          @map("description_ar")
+  shortDescription   String?
+  shortDescriptionAr String?          @map("short_description_ar")
+  sku                String           @unique
+  price              Decimal          @db.Decimal(10, 2)
+  comparePrice       Decimal?         @db.Decimal(10, 2)
+  costPrice          Decimal?         @db.Decimal(10, 2)
+  trackQuantity      Boolean          @default(true)
+  quantity           Int              @default(0)
+  weight             Decimal?         @db.Decimal(8, 3)
+  dimensions         String?
+  isActive           Boolean          @default(true)
+  isFeatured         Boolean          @default(false)
+  metaTitle          String?
+  metaDescription    String?
+  tags               String[]
+  images             String[]
+  colors             String[]
+  type               String
+  size               String?
+  discountPrice      Decimal?         @map("discount_price") @db.Decimal(10, 2)
+  promoStart         DateTime?        @map("promo_start")
+  promoEnd           DateTime?        @map("promo_end")
+  categoryId         String
+  createdAt          DateTime         @default(now())
+  updatedAt          DateTime         @updatedAt
+  cartItems          CartItem[]
+  homepagePromos     HomepagePromo[]
+  orderItems         OrderItem[]
+  variants           ProductVariant[]
+  category           Category         @relation(fields: [categoryId], references: [id])
+  reviews            Review[]
+
+  @@map("products")
+}
+
+model HeroSlide {
+  id        String   @id @default(uuid())
+  imageUrl  String   @map("image_url")
+  title     String?
+  subtitle  String?
+  order     Int      @default(0)
+  isActive  Boolean  @default(true) @map("is_active")
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  @@map("hero_slides")
+}
+
+model HomepagePromo {
+  id              String   @id @default(uuid())
+  isActive        Boolean  @default(true) @map("is_active")
+  promoEndDate    DateTime @map("promo_end_date")
+  sectionTitle    String   @default("Offre Exclusive Finit Bientôt !") @map("section_title")
+  sectionSubtitle String   @default("Notre plus grande démarque saisonnière à ce jour.") @map("section_subtitle")
+  imageUrl        String?  @map("image_url")
+  productId       String?  @map("product_id")
+  updatedAt       DateTime @updatedAt @map("updated_at")
+  product         Product? @relation(fields: [productId], references: [id])
+
+  @@map("homepage_promo")
+}
+
+model GalleryImage {
+  id        Int      @id @default(autoincrement())
+  slot      Int      @unique
+  imageUrl  String   @map("image_url")
+  altText   String?  @default("") @map("alt_text")
+  updatedAt DateTime @default(now()) @updatedAt @map("updated_at")
+
+  @@map("gallery_images")
+}
+
+model BlackFridayConfig {
+  id          Int      @id @default(autoincrement())
+  isActive    Boolean  @default(true) @map("is_active")
+  emoji       String?  @default("👟")
+  line1       String?  @default("BLACK")
+  line2       String?  @default("FRIDAY")
+  badgeText   String?  @default("Super Soldes") @map("badge_text")
+  bgColor     String?  @default("#db6513") @map("bg_color")
+  textColor   String?  @default("#dc2626") @map("text_color")
+  borderColor String?  @default("#dc2626") @map("border_color")
+  updatedAt   DateTime @default(now()) @updatedAt @map("updated_at")
+
+  @@map("blackfriday_config")
+}
+
+model Setting {
+  id        String   @id @default(uuid())
+  key       String   @unique
+  value     String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("settings")
+}
+
+model ProductVariant {
+  id        String   @id @default(uuid())
+  productId String
+  name      String
+  value     String
+  price     Decimal? @db.Decimal(10, 2)
+  quantity  Int?
+  sku       String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  product   Product  @relation(fields: [productId], references: [id], onDelete: Cascade)
+
+  @@map("product_variants")
+}
+
+model CartItem {
+  id        String   @id @default(uuid())
+  userId    String   @map("user_id")
+  productId String
+  quantity  Int      @default(1)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  product   Product  @relation(fields: [productId], references: [id], onDelete: Cascade)
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, productId])
+  @@map("cart_items")
+}
+
+model Order {
+  id                String        @id @default(uuid())
+  orderNumber       String        @unique
+  userId            String?       @map("user_id")
+  guestEmail        String?
+  guestFirstName    String?
+  guestLastName     String?
+  addressId         String
+  status            OrderStatus   @default(PENDING)
+  paymentStatus     PaymentStatus @default(PENDING)
+  paymentMethod     String?
+  paymentId         String?
+  subtotal          Decimal       @db.Decimal(10, 2)
+  taxAmount         Decimal       @default(0) @db.Decimal(10, 2)
+  shippingAmount    Decimal       @default(0) @db.Decimal(10, 2)
+  discountAmount    Decimal       @default(0) @db.Decimal(10, 2)
+  totalAmount       Decimal       @db.Decimal(10, 2)
+  currency          String        @default("MAD")
+  notes             String?
+  shippingMethod    String?
+  trackingNumber    String?
+  estimatedDelivery DateTime?
+  deliveredAt       DateTime?
+  createdAt         DateTime      @default(now())
+  updatedAt         DateTime      @updatedAt
+  items             OrderItem[]
+  address           Address       @relation(fields: [addressId], references: [id])
+  user              User?         @relation(fields: [userId], references: [id])
+
+  @@map("orders")
+}
+
+model OrderItem {
+  id        String   @id @default(uuid())
+  orderId   String
+  productId String
+  quantity  Int
+  price         Decimal  @db.Decimal(10, 2)
+  total         Decimal  @db.Decimal(10, 2)
+  selectedSize  String?
+  selectedColor String?
+  createdAt     DateTime @default(now())
+  order     Order    @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  product   Product  @relation(fields: [productId], references: [id])
+
+  @@map("order_items")
+}
+
+model Review {
+  id         String   @id @default(uuid())
+  userId     String   @map("user_id")
+  productId  String
+  rating     Int      @db.SmallInt
+  title      String?
+  comment    String?
+  isVerified Boolean  @default(false)
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+  product    Product  @relation(fields: [productId], references: [id], onDelete: Cascade)
+  user       User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, productId])
+  @@map("reviews")
+}
+
+model RefreshToken {
+  id        String   @id @default(uuid())
+  token     String   @unique
+  userId    String   @map("user_id")
+  expiresAt DateTime
+  createdAt DateTime @default(now())
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("refresh_tokens")
+}
+
+enum UserRole {
+  CUSTOMER
+  ADMIN
+  SUPER_ADMIN
+}
+
+enum OrderStatus {
+  PENDING
+  CONFIRMED
+  PROCESSING
+  SHIPPED
+  DELIVERED
+  CANCELLED
+  REFUNDED
+}
+
+enum PaymentStatus {
+  PENDING
+  PAID
+  FAILED
+  REFUNDED
+  PARTIALLY_REFUNDED
+}

@@ -1,0 +1,264 @@
+{
+  "nav": {
+    "home": "Home",
+    "boutique": "Boutique",
+    "categories": "Categories",
+    "catalogue": "Catalog",
+    "contact": "Contact",
+    "magasins": "Our stores",
+    "account": "My Account",
+    "logout": "Logout",
+    "cart": "Cart",
+    "stores": "Our stores"
+  },
+  "header": {
+    "searchPlaceholder": "Search for a product...",
+    "categories": "OUR CATEGORIES",
+    "viewAll": "View all",
+    "menu": "Menu",
+    "login": "Login",
+    "allProducts": "All products"
+  },
+  "home": {
+    "hero": {
+      "slide1": {
+        "title": "Organic Products from Morocco",
+        "description": "Discover our selection of natural and organic products."
+      },
+      "slide2": {
+        "title": "Superior Quality",
+        "description": "Carefully selected products for you."
+      },
+      "shopNow": "Shop Now"
+    },
+    "categories": {
+      "title": "Our Categories",
+      "herboristerie": "Herbalism",
+      "huiles": "Natural Oils",
+      "miel": "Honey & Derivatives",
+      "cosmetique": "Organic Cosmetics",
+      "grains": "Couscous & Grains",
+      "spices": "Spices & Marinades",
+      "fruits": "Fruits & Vegetables",
+      "teas": "Herbs & Teas"
+    },
+    "gallery": {
+      "title": "Our Products in Pictures"
+    },
+    "sections": {
+      "exceptionalProducts": "OUR EXCEPTIONAL PRODUCTS",
+      "bestProducts": "OUR BEST PRODUCTS",
+      "discover": "Discover",
+      "gourmetProducts": "GOURMET PRODUCTS",
+      "gourmetDescription": "Discover our selection of local products and refined pastries."
+    }
+  },
+  "boutique": {
+    "title": "OUR SHOP",
+    "subtitle": "Discover our complete range of organic and natural products",
+    "filters": {
+      "categories": "Categories",
+      "all": "All products",
+      "priceRange": "Price Range",
+      "min": "Min",
+      "max": "Max"
+    },
+    "resultsCount": "Showing {{count}} products",
+    "noProducts": "No products found.",
+    "loading": "Loading...",
+    "filter": "Filter",
+    "price": {
+      "title": "Price",
+      "range": "Between {{min}} and {{max}}",
+      "reset": "Reset"
+    },
+    "types": {
+      "title": "Types"
+    },
+    "search": {
+      "placeholder": "Search...",
+      "reset": "Reset"
+    }
+  },
+  "product": {
+    "notFound": "Product not found",
+    "back": "Back to shop",
+    "addToCart": "Add to Cart",
+    "description": "Description",
+    "related": "Related Products",
+    "inStock": "In stock",
+    "outOfStock": "Out of stock"
+  },
+  "cart": {
+    "title": "My Cart",
+    "empty": "Your cart is empty",
+    "emptyDesc": "Discover our products and start shopping",
+    "backToShop": "Back to Shop",
+    "summary": "Order Summary",
+    "subtotal": "Subtotal",
+    "shipping": "Shipping",
+    "total": "Total",
+    "checkout": "Proceed to Checkout",
+    "items": "Items",
+    "recommendations": "You may also like",
+    "promoCode": "Promo code",
+    "apply": "Apply",
+    "freeShipping": "Free shipping!",
+    "quantityUpdated": "Quantity updated"
+  },
+  "checkout": {
+    "title": "Checkout",
+    "shippingAddress": "Shipping Address",
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "email": "Email",
+    "phone": "Phone",
+    "address": "Address",
+    "city": "City",
+    "postalCode": "Postal Code",
+    "country": "Country",
+    "orderSummary": "Order Summary",
+    "placeOrder": "Place Order",
+    "processing": "Processing...",
+    "success": "Order placed successfully!",
+    "paymentMethod": "Payment Method",
+    "cashOnDelivery": "Cash on Delivery",
+    "creditCard": "Credit Card"
+  },
+  "orderSuccess": {
+    "title": "Thank you for your order!",
+    "message": "Your order has been successfully recorded. You will receive a confirmation email shortly.",
+    "orderNumber": "Order Number",
+    "continueShopping": "Continue Shopping",
+    "viewOrders": "View My Orders"
+  },
+  "account": {
+    "title": "My Account",
+    "dashboard": "Dashboard",
+    "orders": "My Orders",
+    "settings": "Settings",
+    "login": {
+      "title": "Login",
+      "email": "Email",
+      "password": "Password",
+      "submit": "Login",
+      "noAccount": "No account yet?",
+      "register": "Register"
+    },
+    "register": {
+      "title": "Register",
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "email": "Email",
+      "password": "Password",
+      "confirmPassword": "Confirm Password",
+      "submit": "Register",
+      "hasAccount": "Already have an account?",
+      "login": "Login"
+    }
+  },
+  "orders": {
+    "title": "My Orders",
+    "empty": "You have no orders yet.",
+    "status": "Status",
+    "date": "Date",
+    "total": "Total",
+    "details": "Details",
+    "order": "Order"
+  },
+  "loginDialog": {
+    "title": "Login to continue",
+    "description": "Login or create an account to securely finalize your order.",
+    "tabs": {
+      "login": "Login",
+      "register": "Register"
+    },
+    "guestAction": "Continue as Guest",
+    "guestDesc": "You can create an account later."
+  },
+  "stores": {
+    "title": "OUR SHOPS",
+    "description": "Herbio Concept Stores combine elegance and indulgence. Each product is presented in refined packaging, designed to please the eyes and the palate. Our consultants are at your disposal to guide you.",
+    "searchPlaceholder": "Address, postal code, city…",
+    "searchAria": "Search for a shop",
+    "mapTitle": "Shops map",
+    "itinerary": "Directions",
+    "moreInfo": "More info",
+    "openHours": "Open {{hours}}",
+    "breadcrumbs": {
+      "home": "Home",
+      "stores": "Our stores"
+    }
+  },
+  "footer": {
+    "features": {
+      "shipping": "FREE SHIPPING",
+      "shippingDesc": "From {{amount}}",
+      "payment": "ONLINE PAYMENT",
+      "paymentDesc": "100% secure",
+      "clickCollect": "CLICK & COLLECT",
+      "clickCollectDesc": "Depending on location",
+      "contact": "GET IN TOUCH",
+      "contactDesc": "Monday to Friday"
+    },
+    "about": "Moroccan agricultural cooperative dedicated to the production of high-quality organic products.",
+    "navigation": "Navigation",
+    "followUs": "Follow Us",
+    "rights": "© {{year}} Herbio. All rights reserved.",
+    "contact": "Contact"
+  },
+  "search": {
+    "placeholder": "Search for a product, category…",
+    "noResults": "No results found.",
+    "productsHeading": "Products",
+    "categoriesHeading": "Categories",
+    "add": "Add",
+    "view": "View",
+    "loading": "Loading...",
+    "addAria": "Add {{name}} to cart",
+    "viewAria": "View {{name}}"
+  },
+  "cartPreview": {
+    "title": "Your Cart",
+    "itemsCount": "{{count}} items",
+    "empty": "Your cart is empty",
+    "emptyDesc": "Add products to start shopping",
+    "removeItem": "Remove item",
+    "subtotal": "Subtotal",
+    "shippingNote": "Shipping and taxes are calculated at checkout.",
+    "viewCart": "View Cart",
+    "checkout": "Checkout"
+  },
+  "settingsDialog": {
+    "title": "CHOOSE YOUR LANGUAGE",
+    "description": "Select your language and currency",
+    "languageLabel": "Select your language",
+    "languagePlaceholder": "Choose language",
+    "currencyLabel": "Select your currency",
+    "currencyPlaceholder": "Choose currency",
+    "choose": "Choose"
+  },
+  "toasts": {
+    "cart": {
+      "updated": "Quantity updated",
+      "added": "Product added to cart",
+      "removed": "Product removed from cart"
+    },
+    "auth": {
+      "logoutSuccess": "Logged out successfully"
+    }
+  },
+  "common": {
+    "welcome": "Welcome",
+    "search": "Search",
+    "theme": "Theme",
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "retry": "Retry",
+    "close": "Close",
+    "save": "Save",
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "success": "Success"
+  }
+}

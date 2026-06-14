@@ -1,0 +1,98 @@
+services:
+  frontend:
+    build:
+      context: ./Front-end
+      dockerfile: Dockerfile
+      args:
+        - VITE_API_BASE=https://hermado-ecom.liadtech-hosting.com
+        - VITE_ADMIN_SLUG=hermado-42d93863
+        - VITE_API_URL=https://hermado.com
+    container_name: Hermado_frontend
+    networks:
+      - Hermado_Ecom_Network
+    ports:
+      - "1010:80"
+    restart: always
+    environment:
+      - NODE_ENV=production
+      - VITE_API_BASE=https://hermado-ecom.liadtech-hosting.com
+      - VITE_CATALOG_API_URL=https://hermado-ecom.liadtech-hosting.com/api/ecommerce/public/catalog
+      - VITE_ERP_API_URL=https://hermado-ecom.liadtech-hosting.com/api/ecommerce/public/order
+    volumes:
+      - hermado_uploads:/usr/share/nginx/html/uploads:ro
+    depends_on:
+      - backend
+      - db
+      - redis
+
+  backend:
+    build:
+      context: ./Back-end
+      dockerfile: Dockerfile
+    container_name: Hermado_backend
+    environment:
+      NODE_ENV: production
+      PORT: 3001
+      DATABASE_URL: postgresql://postgres:postgres@db:5432/hermado_ecom
+      CATALOG_API_URL: https://hermado-ecom.liadtech-hosting.com/api/ecommerce/public/catalog
+      CORS_ORIGIN: https://hermado.com
+      FRONTEND_URL: https://hermado-ecom.liadtech-hosting.com
+      ERP_ORDER_URL: https://hermado-ecom.liadtech-hosting.com/api/ecommerce/public/order
+      REDIS_URL: redis://Hermado_redis:6379
+      SMTP_HOST: "smtp.gmail.com"
+      SMTP_PORT: 587
+      SMTP_SECURE: "false"
+      SMTP_USER: "company.healthy.pro@gmail.com"
+      SMTP_PASS: "omnk wupe xljv yfpg"
+      EMAIL_FROM_ADDRESS: "noreply@mongarage.fr"
+      EMAIL_FROM_NAME: "Mon Garage"
+    networks:
+      - Hermado_Ecom_Network
+    ports:
+      - "1011:3001"
+    restart: always
+    volumes:
+      - hermado_uploads:/usr/src/app/uploads
+    depends_on:
+      - db
+      - redis
+
+  redis:
+    image: redis:alpine
+    container_name: Hermado_redis
+    restart: always
+    networks:
+      - Hermado_Ecom_Network
+    ports:
+      - "1012:6379"
+
+  db:
+    image: postgres:15-alpine
+    container_name: Hermado_db
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: hermado_ecom
+      PGDATA: /var/lib/postgresql/data/pgdata
+    volumes:
+      - hermado_pg_data:/var/lib/postgresql/data
+    networks:
+      - Hermado_Ecom_Network
+    ports:
+      - "127.0.0.1:1013:5432"
+    restart: always
+    healthcheck:
+      test: [ "CMD", "pg_isready", "-U", "postgres" ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+networks:
+  Hermado_Ecom_Network:
+    driver: bridge
+
+volumes:
+  hermado_pg_data:
+    driver: local
+  hermado_uploads:
+    driver: local

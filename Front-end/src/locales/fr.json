@@ -1,0 +1,264 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "boutique": "Boutique",
+    "categories": "Catégories",
+    "catalogue": "Catalogue",
+    "contact": "Contact",
+    "magasins": "Nos magasins",
+    "account": "Mon Compte",
+    "logout": "Déconnexion",
+    "cart": "Panier",
+    "stores": "Nos boutiques"
+  },
+  "header": {
+    "searchPlaceholder": "Rechercher un produit...",
+    "categories": "NOS CATÉGORIES",
+    "viewAll": "Tout voir",
+    "menu": "Menu",
+    "login": "Connexion",
+    "allProducts": "Tous les produits"
+  },
+  "home": {
+    "hero": {
+      "slide1": {
+        "title": "Produits Bio du Maroc",
+        "description": "Découvrez notre sélection de produits naturels et biologiques."
+      },
+      "slide2": {
+        "title": "Qualité Supérieure",
+        "description": "Des produits soigneusement sélectionnés pour vous."
+      },
+      "shopNow": "Acheter maintenant"
+    },
+    "categories": {
+      "title": "Nos Catégories",
+      "herboristerie": "Herboristerie",
+      "huiles": "Huiles Naturelles",
+      "miel": "Miel & Dérivés",
+      "cosmetique": "Cosmétique Bio",
+      "grains": "Couscous & Grains",
+      "spices": "Epices & Marinades",
+      "fruits": "Fruits & Légumes",
+      "teas": "Herbes & Tisanes"
+    },
+    "gallery": {
+      "title": "Nos Produits en Image"
+    },
+    "sections": {
+      "exceptionalProducts": "NOS PRODUITS D'EXCEPTION",
+      "bestProducts": "NOS MEILLEURS PRODUITS",
+      "discover": "Découvrir",
+      "gourmetProducts": "PRODUITS GOURMANDS",
+      "gourmetDescription": "Découvrez notre sélection de produits du terroir et de pâtisseries raffinées."
+    }
+  },
+  "boutique": {
+    "title": "NOTRE BOUTIQUE",
+    "subtitle": "Découvrez notre gamme complète de produits bio et naturels",
+    "filters": {
+      "categories": "Catégories",
+      "all": "Tous les produits",
+      "priceRange": "Tranche de prix",
+      "min": "Min",
+      "max": "Max"
+    },
+    "resultsCount": "Affichage de {{count}} produits",
+    "noProducts": "Aucun produit trouvé.",
+    "loading": "Chargement...",
+    "filter": "Filtrer",
+    "price": {
+      "title": "Prix",
+      "range": "Entre {{min}} et {{max}}",
+      "reset": "Réinitialiser"
+    },
+    "types": {
+      "title": "Types"
+    },
+    "search": {
+      "placeholder": "Rechercher...",
+      "reset": "Réinitialiser"
+    }
+  },
+  "product": {
+    "notFound": "Produit non trouvé",
+    "back": "Retour à la boutique",
+    "addToCart": "Ajouter au panier",
+    "description": "Description",
+    "related": "Produits similaires",
+    "inStock": "En stock",
+    "outOfStock": "Rupture de stock"
+  },
+  "cart": {
+    "title": "Mon Panier",
+    "empty": "Votre panier est vide",
+    "emptyDesc": "Découvrez nos produits et commencez vos achats",
+    "backToShop": "Retour à la boutique",
+    "summary": "Résumé de la commande",
+    "subtotal": "Sous-total",
+    "shipping": "Livraison",
+    "total": "Total",
+    "checkout": "Passer la commande",
+    "items": "Articles",
+    "recommendations": "Vous aimerez aussi",
+    "promoCode": "Code promo",
+    "apply": "Appliquer",
+    "freeShipping": "Livraison gratuite !",
+    "quantityUpdated": "Quantité mise à jour"
+  },
+  "checkout": {
+    "title": "Paiement",
+    "shippingAddress": "Adresse de livraison",
+    "firstName": "Prénom",
+    "lastName": "Nom",
+    "email": "Email",
+    "phone": "Téléphone",
+    "address": "Adresse",
+    "city": "Ville",
+    "postalCode": "Code postal",
+    "country": "Pays",
+    "orderSummary": "Résumé de la commande",
+    "placeOrder": "Commander",
+    "processing": "Traitement en cours...",
+    "success": "Commande réussie !",
+    "paymentMethod": "Méthode de paiement",
+    "cashOnDelivery": "Paiement à la livraison",
+    "creditCard": "Carte bancaire"
+  },
+  "orderSuccess": {
+    "title": "Merci pour votre commande !",
+    "message": "Votre commande a été enregistrée avec succès. Vous recevrez un email de confirmation sous peu.",
+    "orderNumber": "Numéro de commande",
+    "continueShopping": "Continuer mes achats",
+    "viewOrders": "Voir mes commandes"
+  },
+  "account": {
+    "title": "Mon Compte",
+    "dashboard": "Tableau de bord",
+    "orders": "Mes Commandes",
+    "settings": "Paramètres",
+    "login": {
+      "title": "Connexion",
+      "email": "Email",
+      "password": "Mot de passe",
+      "submit": "Se connecter",
+      "noAccount": "Pas encore de compte ?",
+      "register": "S'inscrire"
+    },
+    "register": {
+      "title": "Inscription",
+      "firstName": "Prénom",
+      "lastName": "Nom",
+      "email": "Email",
+      "password": "Mot de passe",
+      "confirmPassword": "Confirmer le mot de passe",
+      "submit": "S'inscrire",
+      "hasAccount": "Déjà un compte ?",
+      "login": "Se connecter"
+    }
+  },
+  "orders": {
+    "title": "Mes Commandes",
+    "empty": "Vous n'avez pas encore de commandes.",
+    "status": "Statut",
+    "date": "Date",
+    "total": "Total",
+    "details": "Détails",
+    "order": "Commande"
+  },
+  "loginDialog": {
+    "title": "Connectez-vous pour continuer",
+    "description": "Connectez-vous ou créez un compte pour finaliser votre commande en toute sécurité.",
+    "tabs": {
+      "login": "Connexion",
+      "register": "Inscription"
+    },
+    "guestAction": "Continuer en tant qu'invité",
+    "guestDesc": "Vous pourrez créer un compte plus tard."
+  },
+  "stores": {
+    "title": "NOS BOUTIQUES",
+    "description": "Les Concept Stores Herbio allient élégance et gourmandise. Chaque produit est présenté dans un emballage raffiné, conçu pour le plaisir des yeux et du palais. Nos conseillers sont à votre disposition pour vous guider.",
+    "searchPlaceholder": "Adresse, code postal, ville…",
+    "searchAria": "Rechercher une boutique",
+    "mapTitle": "Carte des boutiques",
+    "itinerary": "Itinéraire",
+    "moreInfo": "Plus d'infos",
+    "openHours": "Ouvert {{hours}}",
+    "breadcrumbs": {
+      "home": "Accueil",
+      "stores": "Nos magasins"
+    }
+  },
+  "footer": {
+    "features": {
+      "shipping": "LIVRAISON GRATUITE",
+      "shippingDesc": "À partir de {{amount}}",
+      "payment": "PAIEMENT EN LIGNE",
+      "paymentDesc": "100% sécurisé",
+      "clickCollect": "CLICK & COLLECT",
+      "clickCollectDesc": "Selon votre localisation",
+      "contact": "PRENDRE CONTACT",
+      "contactDesc": "Du lundi au vendredi"
+    },
+    "about": "Coopérative agricole marocaine dédiée à la production de produits biologiques de qualité supérieure.",
+    "navigation": "Navigation",
+    "followUs": "Suivez-nous",
+    "rights": "© {{year}} Herbio. Tous droits réservés.",
+    "contact": "Contact"
+  },
+  "search": {
+    "placeholder": "Rechercher un produit, une catégorie…",
+    "noResults": "Aucun résultat trouvé.",
+    "productsHeading": "Produits",
+    "categoriesHeading": "Catégories",
+    "add": "Ajouter",
+    "view": "Voir",
+    "loading": "Chargement...",
+    "addAria": "Ajouter {{name}} au panier",
+    "viewAria": "Voir {{name}}"
+  },
+  "cartPreview": {
+    "title": "Votre panier",
+    "itemsCount": "{{count}} articles",
+    "empty": "Votre panier est vide",
+    "emptyDesc": "Ajoutez des produits pour commencer vos achats",
+    "removeItem": "Supprimer l'élément",
+    "subtotal": "Sous-total",
+    "shippingNote": "Les frais d'expédition et les taxes sont calculés lors du paiement.",
+    "viewCart": "Afficher le panier",
+    "checkout": "Passer à la caisse"
+  },
+  "settingsDialog": {
+    "title": "CHOISISSEZ VOTRE LANGUE",
+    "description": "Sélectionnez votre langue et votre devise",
+    "languageLabel": "Sélectionnez votre langue",
+    "languagePlaceholder": "Choisir la langue",
+    "currencyLabel": "Sélectionnez votre devise",
+    "currencyPlaceholder": "Choisir la devise",
+    "choose": "Choisir"
+  },
+  "toasts": {
+    "cart": {
+      "updated": "Quantité mise à jour",
+      "added": "Produit ajouté au panier",
+      "removed": "Produit retiré du panier"
+    },
+    "auth": {
+      "logoutSuccess": "Déconnexion réussie"
+    }
+  },
+  "common": {
+    "welcome": "Bienvenue",
+    "search": "Rechercher",
+    "theme": "Thème",
+    "loading": "Chargement...",
+    "error": "Une erreur s'est produite",
+    "retry": "Réessayer",
+    "close": "Fermer",
+    "save": "Enregistrer",
+    "cancel": "Annuler",
+    "confirm": "Confirmer",
+    "success": "Succès"
+  }
+}
