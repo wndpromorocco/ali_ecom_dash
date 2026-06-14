@@ -90,7 +90,7 @@ export default function OrderModal({ isOpen, onClose, items, totalPrice }: Order
             productsText = "\n" + items.map(item => `- ${item.name} x${item.quantity || 1} ${(item.selectedSize || item.size) ? `(Taille: ${item.selectedSize || item.size})` : ''} ${(item.selectedColor || item.color) ? `(Couleur: ${getColorName(item.selectedColor || item.color)})` : ''}`).join("\n");
         }
 
-        const message = `Bonjour Hermado, Nouvelle commande :\n\nProduit : ${productsText}\nPrix : ${totalPrice} MAD\nClient : ${formData.name}\nVille : ${formData.city}\nAdresse : ${formData.address}\nTel : ${formData.phone}`;
+        const message = `Bonjour Fadel trading, Nouvelle commande :\n\nProduit : ${productsText}\nPrix : ${totalPrice} MAD\nClient : ${formData.name}\nVille : ${formData.city}\nAdresse : ${formData.address}\nTel : ${formData.phone}`;
 
         // Send POST request to backend API BEFORE redirecting to WA.me
         try {

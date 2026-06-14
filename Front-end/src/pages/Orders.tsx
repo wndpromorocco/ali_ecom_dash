@@ -99,7 +99,7 @@ const Orders = () => {
                 <div className="bg-muted/30 rounded-3xl p-12 text-center border-2 border-dashed">
                     <Package className="w-12 h-12 mx-auto mb-4 text-muted-foreground opacity-40" />
                     <h2 className="text-xl font-bold mb-2">Aucune commande trouvée</h2>
-                    <p className="text-muted-foreground mb-8 text-balance">Vous n'avez pas encore passé de commande chez HERMADO.</p>
+                    <p className="text-muted-foreground mb-8 text-balance">Vous n'avez pas encore passé de commande chez Fadel trading.</p>
                     <Link to="/boutique">
                         <Button size="lg" className="rounded-full px-8">Découvrir la boutique</Button>
                     </Link>

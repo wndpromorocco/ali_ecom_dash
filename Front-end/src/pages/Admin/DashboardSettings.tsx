@@ -318,7 +318,7 @@ const DashboardSettings = () => {
                                     <div className="mt-auto pt-10 border-t border-white/5 flex items-end justify-end">
                                         <div className="bg-[#25d366] p-4 rounded-2xl rounded-br-none max-w-[240px] shadow-lg relative transform -rotate-1 hover:rotate-0 transition-transform cursor-default">
                                             <p className="text-white text-[12px] font-bold leading-tight">
-                                                Bonjour Hermado ! Je souhaite commander le modèle "Luxury Leather" en taille 42. Est-il disponible ?
+                                                Bonjour Fadel trading ! Je souhaite commander le modèle "Luxury Leather" en taille 42. Est-il disponible ?
                                             </p>
                                             <span className="absolute bottom-1 right-2 text-[9px] text-white/70 font-bold">14:32</span>
                                             <div className="absolute -bottom-2 -left-2 w-10 h-10 bg-[#db6513]/10 rounded-full blur-xl animate-pulse"></div>

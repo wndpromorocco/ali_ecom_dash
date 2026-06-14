@@ -55,7 +55,7 @@ const Checkout = () => {
   };
 
   const subtotal = totalPrice;
-  const shipping = 0.00; // HERMADO: Global Free Shipping
+  const shipping = 0.00; // Fadel trading: Global Free Shipping
   const total = subtotal + shipping;
 
   const buildWhatsAppMessage = (formData, cartItems, totalValue) => {
@@ -67,7 +67,7 @@ const Checkout = () => {
       .join("\n");
 
     const message = `
-🛍️ *NOUVELLE COMMANDE — HERMADO*
+🛍️ *NOUVELLE COMMANDE — FADEL TRADING*
 ━━━━━━━━━━━━━━━━━━━━━━
 👤 *CLIENT*
 - Prénom : ${formData.firstName}
@@ -188,7 +188,7 @@ ${itemsList}
             pour confirmer et organiser la livraison.
           </p>
           <p className="text-[11px] text-[#db6513] font-bold uppercase tracking-wider mb-8">
-            Merci de faire confiance à Hermado 🧡
+            Merci de faire confiance à Fadel trading 🧡
           </p>
           <a
             href="/"

@@ -37,7 +37,7 @@ const Footer = () => {
           <div className="flex flex-col items-center md:items-start space-y-6">
             <Link to="/" className="flex items-center focus:outline-none group">
               <span className="text-white font-black text-[22px] uppercase tracking-[0.3em]">
-                HERMADO
+                Fadel trading
               </span>
             </Link>
             <p className="text-gray-400 text-[13px] leading-relaxed max-w-[280px]">
@@ -127,7 +127,7 @@ const Footer = () => {
         {/* ── Bottom bar ── */}
         <div className="pt-8 border-t border-white/5 flex flex-col items-center">
           <p className="text-gray-600 text-[11px] font-medium tracking-wide text-center uppercase">
-            © {new Date().getFullYear()} Hermado — Développé par <span className="text-[#db6513] font-black">Liadtech</span>
+            © {new Date().getFullYear()} Fadel trading — Développé par <span className="text-[#db6513] font-black">Liadtech</span>
           </p>
         </div>
 

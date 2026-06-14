@@ -247,7 +247,7 @@ export default function Boutique() {
             </p>
           </div>
           <h1 className="text-[32px] sm:text-[40px] md:text-[56px] font-black uppercase tracking-tighter text-gray-900 leading-[1] md:leading-[0.9] mb-4">
-            Boutique <span className="text-[#db6513]">Hermado</span>
+            Boutique <span className="text-[#db6513]">Fadel trading</span>
           </h1>
           <p className="text-[12px] md:text-[13px] text-gray-500 max-w-lg mx-auto md:mx-0 font-medium leading-relaxed">
             Découvrez notre sélection exclusive de chaussures et accessoires en cuir premium, conçus pour allier élégance et confort.

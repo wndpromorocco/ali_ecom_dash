@@ -265,7 +265,7 @@ const Account = () => {
             <p className="text-muted-foreground max-w-2xl mx-auto text-lg leading-relaxed">
               {activeTab === 'existing'
                 ? "Accédez à votre compte pour gérer vos commandes."
-                : "Rejoignez HERMADO pour une expérience d'achat personnalisée."
+                : "Rejoignez Fadel trading pour une expérience d'achat personnalisée."
               }
             </p>
           </section>

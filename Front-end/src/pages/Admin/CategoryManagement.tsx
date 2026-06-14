@@ -378,7 +378,7 @@ const CategoryManagement = () => {
                             </DialogTitle>
                             <DialogDescription className="text-[10px] font-bold text-gray-500 uppercase tracking-[0.2em] mt-2">
                                 {modalConfig.mode === 'add'
-                                    ? 'Enrichissement du catalogue Hermado.'
+                                    ? 'Enrichissement du catalogue Fadel trading.'
                                     : 'Cette action supprimera définitivement l\'élément sélectionné.'}
                             </DialogDescription>
                         </DialogHeader>

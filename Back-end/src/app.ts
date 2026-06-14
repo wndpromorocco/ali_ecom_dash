@@ -133,7 +133,7 @@ class App {
 
       res.status(200).json({
         success: true,
-        message: 'Hermado E-commerce API is running', // Updated message
+        message: 'Fadel trading E-commerce API is running', // Updated message
         timestamp: new Date().toISOString(),
         environment: config.nodeEnv,
         version: config.apiVersion,
@@ -162,7 +162,7 @@ class App {
     apiRouter.get('/', (req: Request, res: Response) => {
       res.json({
         success: true,
-        message: 'Hermado E-commerce API', // Updated message
+        message: 'Fadel trading E-commerce API', // Updated message
         version: config.apiVersion,
         endpoints: {
           health: '/health',

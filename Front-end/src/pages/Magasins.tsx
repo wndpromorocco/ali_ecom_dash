@@ -51,7 +51,7 @@ const Magasins = () => {
       <div className="container mx-auto px-4">
         <h1 className="text-2xl md:text-3xl font-semibold tracking-wide mb-2">Nos Magasins</h1>
         <p className="text-sm md:text-base text-muted-foreground mb-6">
-          Trouvez le magasin HERMADO le plus proche de chez vous.
+          Trouvez le magasin Fadel trading le plus proche de chez vous.
         </p>
         {/* Contact info from footer */}
         <div className="bg-muted rounded-xl p-4 md:p-6 mb-6">
@@ -91,7 +91,7 @@ const Magasins = () => {
           <div className="lg:col-span-8">
             <div className="relative w-full h-[420px] md:h-[520px] rounded-xl overflow-hidden border border-border">
               <iframe
-                title="Carte des magasins Hermado"
+                title="Carte des magasins Fadel trading"
                 className="absolute inset-0 w-full h-full"
                 src="https://www.google.com/maps?q=Rabat%2C%20Morocco&output=embed"
                 loading="lazy"

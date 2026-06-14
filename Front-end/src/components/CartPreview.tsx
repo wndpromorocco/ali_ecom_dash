@@ -81,7 +81,7 @@ const CartPreview: React.FC<CartPreviewProps> = ({ isOpen, onClose }) => {
       const details = parts.length > 0 ? ` (${parts.join(', ')})` : '';
       return `- ${item.quantity}x ${item.name}${details} - ${formatPrice(item.price * item.quantity)}`;
     }).join('\n');
-    const message = `Bonjour Hermado, je souhaite commander les articles suivants:
+    const message = `Bonjour Fadel trading, je souhaite commander les articles suivants:
 \n${itemsList}
 \n*Total:* ${formatPrice(totalPrice)}
 \n*Mes Informations:*

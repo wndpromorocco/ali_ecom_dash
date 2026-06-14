@@ -53,7 +53,7 @@ const SearchDialog = ({ open, onOpenChange }: SearchDialogProps) => {
       <div className="p-4 sm:p-6 pb-2">
         <div className="relative flex items-center w-full border-b border-gray-200 focus-within:border-[#5C2E00] transition-colors duration-300 py-2 group">
           <CommandInput
-            placeholder="Rechercher l'excellence Hermado..."
+            placeholder="Rechercher l'excellence Fadel trading..."
             className="w-full bg-transparent border-none focus:ring-0 focus:outline-none focus-visible:ring-0 text-[16px] sm:text-lg placeholder:text-gray-300 font-medium h-12"
           />
         </div>

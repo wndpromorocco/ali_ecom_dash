@@ -22,7 +22,7 @@ describe('AdminLogin', () => {
 
     test('TC-LOGIN-01: renders login form correctly', () => {
         renderWithProviders(<AdminLogin />);
-        expect(screen.getByText(/HERMADO/i)).toBeInTheDocument();
+        expect(screen.getByText(/Fadel trading/i)).toBeInTheDocument();
         expect(screen.getByText(/ADMIN/i)).toBeInTheDocument();
         expect(screen.getByLabelText(/Email Professionnel/i)).toBeInTheDocument();
         expect(screen.getByLabelText(/Mot de Passe/i)).toBeInTheDocument();

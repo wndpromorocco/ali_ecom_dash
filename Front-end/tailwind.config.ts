@@ -27,7 +27,7 @@ export default {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {
-          DEFAULT: "#5C2E00", // HERMADO Brun
+          DEFAULT: "#5C2E00", // Fadel trading Brun
           foreground: "hsl(var(--primary-foreground))",
           dark: "hsl(var(--primary-dark))",
         },

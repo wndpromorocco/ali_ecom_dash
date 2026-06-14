@@ -81,11 +81,11 @@ export default function Header() {
             <Link to="/" className="flex items-center gap-2 lg:gap-4 focus:outline-none group">
               <img
                 src="/images/logo.png"
-                alt="HERMADO Symbol"
+                alt="Fadel trading Symbol"
                 className="h-10 sm:h-12 md:h-12 lg:h-16 w-auto object-contain transition-all duration-300 group-hover:scale-105"
               />
               <span className="text-xl md:text-2xl lg:text-3xl font-black tracking-tighter text-[#5C2E00] uppercase italic leading-none whitespace-nowrap">
-                HERMADO
+                Fadel trading
               </span>
             </Link>
           </div>
@@ -179,7 +179,7 @@ export default function Header() {
             {/* Drawer Content */}
             <div className="absolute top-0 left-0 bottom-0 w-[80%] sm:w-[350px] bg-white shadow-2xl animate-in slide-in-from-left duration-300 flex flex-col">
               <div className="flex items-center justify-between px-5 py-4 border-b border-gray-100">
-                <img src="/images/logo.png" alt="HERMADO" className="h-10 w-auto object-contain" />
+                <img src="/images/logo.png" alt="Fadel trading" className="h-10 w-auto object-contain" />
                 <button onClick={() => setOpen(false)} className="p-2 rounded-full hover:bg-gray-50 text-gray-400 hover:text-[#5C2E00] transition-colors">
                   <CloseIcon className="w-5 h-5" />
                 </button>
@@ -231,7 +231,7 @@ export default function Header() {
 
               <div className="p-8 border-t border-gray-50 bg-[#faf8f6]">
                 <p className="text-[10px] font-black tracking-widest uppercase text-gray-400 text-center">
-                  © HERMADO MAROC
+                  © Fadel trading MAROC
                 </p>
               </div>
             </div>

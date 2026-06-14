@@ -12,7 +12,7 @@ export const sendWhatsAppConfirmation = async (phone: string, orderNumber: strin
             formattedPhone = '+' + formattedPhone;
         }
 
-        const message = `Bonjour ${clientName},\n\nNous confirmons la réception de votre commande #${orderNumber} sur Hermado !\n\nNotre équipe préparera votre commande avec soin. Merci pour votre confiance ! ❤️`;
+        const message = `Bonjour ${clientName},\n\nNous confirmons la réception de votre commande #${orderNumber} sur Fadel trading !\n\nNotre équipe préparera votre commande avec soin. Merci pour votre confiance ! ❤️`;
 
         console.log(`[WhatsApp Bot] Sending automated confirmation to ${formattedPhone}`);
 

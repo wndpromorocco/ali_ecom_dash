@@ -454,7 +454,7 @@ function RelatedProducts({ products, currentProductId, category }: { products: a
   return (
     <div className="max-w-7xl mx-auto px-5 py-20 border-t border-[#5C2E00]/10 mt-10">
       <div className="text-center mb-12">
-        <p className="text-[10px] font-black uppercase tracking-[0.2em] text-[#db6513] mb-2">Hermado Exclusives</p>
+        <p className="text-[10px] font-black uppercase tracking-[0.2em] text-[#db6513] mb-2">Fadel trading Exclusives</p>
         <h2 className="text-[28px] font-black text-[#5C2E00] uppercase tracking-tighter">Modèles Similaires</h2>
       </div>
 

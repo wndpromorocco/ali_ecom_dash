@@ -374,7 +374,7 @@ const HotDeal = memo(({ promo }: { promo: any }) => {
         {/* Skeleton/Placeholder while loading */}
         {!imageLoaded && (
           <div className="absolute inset-0 bg-gray-900 animate-pulse flex items-center justify-center">
-            <div className="text-[10px] font-black uppercase tracking-[0.3em] text-white/20">Hermado Exclusive</div>
+            <div className="text-[10px] font-black uppercase tracking-[0.3em] text-white/20">Fadel trading Exclusive</div>
           </div>
         )}
 
@@ -517,7 +517,7 @@ function InstagramSection() {
         <div className="grid grid-cols-3 md:grid-cols-6 h-[200px] md:h-[250px] gap-0">
           {photos.map((img, i) => (
             <div key={i} className="relative overflow-hidden">
-              <img src={img} alt="Hermado Instagram" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+              <img src={img} alt="Fadel trading Instagram" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
               <div className="absolute inset-0 bg-black/30 opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                 <svg className="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
               </div>

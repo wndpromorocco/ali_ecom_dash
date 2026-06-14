@@ -24,7 +24,7 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
   cursor: pointer;
 }
 
-/* HERMADO Typography */
+/* Fadel trading Typography */
 
 /* Scroll Animations */
 @keyframes fadeInUp {
@@ -201,7 +201,7 @@ All colors MUST be HSL.
     --popover-foreground: 0 0% 10%;
 
     /* MFF Black & Gold Theme - Default */
-    /* HERMADO Brun #5C2E00 approx HSL(30, 100%, 18%) */
+    /* Fadel trading Brun #5C2E00 approx HSL(30, 100%, 18%) */
     --primary: 30 100% 18%;
     /* Brun */
     --primary-foreground: 0 0% 100%;

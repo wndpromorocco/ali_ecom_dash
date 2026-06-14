@@ -87,7 +87,7 @@ const AdminLayout = () => {
                                     <div className="w-8 h-8 bg-[#db6513] rounded-md flex items-center justify-center shadow-md">
                                         <span className="text-white font-black text-[14px]">H</span>
                                     </div>
-                                    <p className="text-white font-black text-[13px] uppercase tracking-wide leading-none">HERMADO</p>
+                                    <p className="text-white font-black text-[13px] uppercase tracking-wide leading-none">Fadel trading</p>
                                 </div>
                                 <button onClick={() => setIsMobileOpen(false)} className="text-gray-400 hover:text-white">
                                     <X className="w-5 h-5" />
@@ -144,7 +144,7 @@ const AdminLayout = () => {
                     </div>
                     {!collapsed && (
                         <div className="min-w-0">
-                            <p className="text-white font-black text-[13px] uppercase tracking-wide leading-none truncate">HERMADO</p>
+                            <p className="text-white font-black text-[13px] uppercase tracking-wide leading-none truncate">Fadel trading</p>
                             <p className="text-gray-500 text-[9px] uppercase tracking-widest font-bold mt-0.5 leading-none">Admin Panel</p>
                         </div>
                     )}

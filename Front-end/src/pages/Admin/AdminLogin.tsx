@@ -57,7 +57,7 @@ const AdminLogin = () => {
                         <span className="text-white font-black text-xl">H</span>
                     </div>
                     <div>
-                        <h1 className="text-white font-black text-2xl uppercase tracking-tighter leading-none">HERMADO</h1>
+                        <h1 className="text-white font-black text-2xl uppercase tracking-tighter leading-none">Fadel trading</h1>
                         <p className="text-[#db6513] text-[10px] font-bold uppercase tracking-[0.3em] mt-1">Plateforme Administration</p>
                     </div>
                 </div>
@@ -117,7 +117,7 @@ const AdminLogin = () => {
                     <div className="w-16 h-16 bg-[#db6513] rounded-2xl flex items-center justify-center shadow-2xl shadow-orange-900/40 mb-4">
                         <span className="text-white font-black text-2xl uppercase">H</span>
                     </div>
-                    <h1 className="text-white font-black text-2xl uppercase tracking-tighter">HERMADO <span className="text-[#db6513]">ADMIN</span></h1>
+                    <h1 className="text-white font-black text-2xl uppercase tracking-tighter">Fadel trading <span className="text-[#db6513]">ADMIN</span></h1>
                 </div>
 
                 <div
@@ -132,7 +132,7 @@ const AdminLogin = () => {
                         <div className="p-12 space-y-6">
                             <div className="mb-10">
                                 <h1 className="text-4xl font-black text-white uppercase tracking-tight leading-none mb-3">
-                                    HERMADO <span className="text-[#db6513]">ADMIN</span>
+                                    Fadel trading <span className="text-[#db6513]">ADMIN</span>
                                 </h1>
                                 <p className="text-[12px] font-bold text-gray-500 uppercase tracking-[0.2em]">
                                     ACCÈS SÉCURISÉ AU TABLEAU DE BORD
@@ -194,7 +194,7 @@ const AdminLogin = () => {
 
                             <div className="border-t border-white/8 mt-10 pt-5 text-center">
                                 <p className="text-[9px] font-bold text-gray-700 uppercase tracking-[0.25em]">
-                                    © 2026 HERMADO · Digital Platform
+                                    © 2026 Fadel trading · Digital Platform
                                 </p>
                             </div>
                         </div>
