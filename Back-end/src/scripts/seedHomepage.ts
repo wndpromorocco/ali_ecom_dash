@@ -87,9 +87,9 @@ async function main() {
     line1: 'WEEK-END',
     line2: 'CHOC ELECTROS',
     badgeText: 'VENTE FLASH MAD',
-    bgColor: '#db6513',
-    textColor: '#ffffff',
-    borderColor: '#dc2626',
+    bgColor: '#0F172A',
+    textColor: '#FFFFFF',
+    borderColor: '#06B6D4',
   };
   const existingBf = await prisma.blackFridayConfig.findFirst();
   if (existingBf) {

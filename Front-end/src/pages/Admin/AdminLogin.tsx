@@ -91,7 +91,7 @@ const AdminLogin = () => {
                 {/* Bottom: Version */}
                 <div className="relative z-10">
                     <div className="inline-flex items-center gap-2 px-3 py-1 bg-white/5 border border-white/10 rounded-full">
-                        <div className="w-1.5 h-1.5 rounded-full bg-[#2563EB] animate-pulse" />
+                        <div className="w-1.5 h-1.5 rounded-full bg-[#06B6D4] animate-pulse" />
                         <span className="text-[10px] font-black text-gray-500 uppercase tracking-widest">V2.4 · INVENTORY MANAGEMENT SYSTEM</span>
                     </div>
                 </div>

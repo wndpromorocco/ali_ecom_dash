@@ -245,7 +245,7 @@ function ProductInfo({ product, settings }: { product: any, settings: any }) {
           {isPromoActive && (
             <>
               <span className="text-[20px] text-[#1E3A8A]/40 line-through font-bold mb-1">{product.price} MAD</span>
-              <span className="mb-2 bg-[#2563EB] text-[#1E3A8A] text-[10px] font-black uppercase tracking-widest px-3 py-1 shadow-sm">−{discountAmount}%</span>
+              <span className="mb-2 bg-[#06B6D4] text-white text-[10px] font-black uppercase tracking-widest px-3 py-1 shadow-sm">−{discountAmount}%</span>
             </>
           )}
         </div>

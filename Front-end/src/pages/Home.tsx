@@ -147,7 +147,7 @@ function Hero({ slides = [] }) {
             <button
               key={i}
               onClick={() => setCurrent(i)}
-              className={`h-1.5 rounded-full transition-all duration-500 ${current === i ? 'w-10 bg-[#1E3A8A] shadow-sm' : 'w-3 bg-[#1E3A8A]/20 hover:bg-[#1E3A8A]/40'}`}
+              className={`h-1.5 rounded-full transition-all duration-500 ${current === i ? 'w-10 bg-[#06B6D4] shadow-sm' : 'w-3 bg-[#1E3A8A]/20 hover:bg-[#1E3A8A]/40'}`}
             />
           ))}
         </div>
@@ -228,28 +228,28 @@ function GalleryGrid({ images = [], bf = null }) {
           {bf?.isActive !== false ? (
             <div
               className="col-span-1 md:row-span-2 flex flex-col items-center justify-center p-6 rounded-sm h-[180px] md:h-full overflow-hidden text-center transition-all duration-300"
-              style={{ backgroundColor: bf?.bgColor || "#2563EB" }}
+              style={{ backgroundColor: bf?.bgColor || "#0F172A" }}
             >
-              <span className="text-4xl mb-4">{bf?.emoji || "👟"}</span>
+              <span className="text-4xl mb-4">{bf?.emoji || "⚡"}</span>
               <p
                 className="font-black text-[22px] uppercase leading-none italic"
-                style={{ color: bf?.textColor || "#dc2626" }}
+                style={{ color: bf?.textColor || "#FFFFFF" }}
               >
                 {bf?.line1 || "BLACK"}
               </p>
               <p
                 className="font-black text-[22px] uppercase leading-none italic mb-4"
-                style={{ color: bf?.textColor || "#dc2626" }}
+                style={{ color: bf?.textColor || "#FFFFFF" }}
               >
                 {bf?.line2 || "FRIDAY"}
               </p>
               <div
                 className="border-2 rounded-full px-4 py-1"
-                style={{ borderColor: bf?.borderColor || "#dc2626" }}
+                style={{ borderColor: bf?.borderColor || "#06B6D4" }}
               >
                 <span
                   className="font-black text-[9px] uppercase tracking-[0.2em]"
-                  style={{ color: bf?.textColor || "#dc2626" }}
+                  style={{ color: bf?.textColor || "#FFFFFF" }}
                 >
                   {bf?.badgeText || "Super Soldes"}
                 </span>

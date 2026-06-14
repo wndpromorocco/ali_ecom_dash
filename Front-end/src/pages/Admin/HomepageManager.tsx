@@ -88,13 +88,13 @@ const HomepageManager = () => {
     // Black Friday State
     const [bfConfig, setBfConfig] = useState({
         is_active: true,
-        emoji: '👟',
+        emoji: '⚡',
         line1: 'BLACK',
         line2: 'FRIDAY',
         badge_text: 'Super Soldes',
-        bg_color: '#2563EB',
-        text_color: '#dc2626',
-        border_color: '#dc2626',
+        bg_color: '#0F172A',
+        text_color: '#FFFFFF',
+        border_color: '#06B6D4',
     });
     const [bfSaving, setBfSaving] = useState(false);
 
@@ -197,8 +197,8 @@ const HomepageManager = () => {
                         line2: json.data.line2 || 'FRIDAY',
                         badge_text: json.data.badgeText || 'Super Soldes',
                         bg_color: json.data.bgColor || '#2563EB',
-                        text_color: json.data.textColor || '#dc2626',
-                        border_color: json.data.borderColor || '#dc2626',
+                        text_color: json.data.textColor || '#FFFFFF',
+                        border_color: json.data.borderColor || '#06B6D4',
                     });
                 }
             }

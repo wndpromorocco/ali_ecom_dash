@@ -158,7 +158,7 @@ export default function Header() {
                     animate={{ scale: 1, opacity: 1 }}
                     exit={{ scale: 0, opacity: 0 }}
                     key={totalItems}
-                    className="absolute -top-1 -right-1 bg-[#2563EB] text-white text-[9px] font-black h-4 min-w-[16px] px-1 rounded-full flex items-center justify-center border-2 border-white pointer-events-none shadow-sm"
+                    className="absolute -top-1 -right-1 bg-[#06B6D4] text-white text-[9px] font-black h-4 min-w-[16px] px-1 rounded-full flex items-center justify-center border-2 border-white pointer-events-none shadow-sm"
                   >
                     {totalItems}
                   </motion.span>

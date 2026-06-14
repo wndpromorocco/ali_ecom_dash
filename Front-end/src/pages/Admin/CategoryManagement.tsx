@@ -158,7 +158,7 @@ const CategoryManagement = () => {
                 </div>
                 <div className="bg-white p-2 border border-gray-100 shadow-sm flex flex-col sm:flex-row items-stretch sm:items-center gap-3 rounded-sm w-full md:w-auto">
                     <div className="flex items-center gap-2 px-3 sm:border-r border-gray-50">
-                        <div className="w-2 h-2 rounded-full bg-[#2563EB] animate-pulse" />
+                        <div className="w-2 h-2 rounded-full bg-[#06B6D4] animate-pulse" />
                         <span className="text-[9px] font-black uppercase tracking-widest text-gray-400">Mode Edition Live</span>
                     </div>
                     <Button

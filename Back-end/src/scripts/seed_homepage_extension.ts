@@ -23,13 +23,13 @@ async function main() {
         create: {
             id: 1,
             isActive: true,
-            emoji: '👟',
+            emoji: '⚡',
             line1: 'BLACK',
             line2: 'FRIDAY',
             badgeText: 'Super Soldes',
-            bgColor: '#F5C200',
-            textColor: '#dc2626',
-            borderColor: '#dc2626',
+            bgColor: '#0F172A',
+            textColor: '#FFFFFF',
+            borderColor: '#06B6D4',
         },
     });
 

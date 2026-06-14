@@ -147,9 +147,9 @@ export const MOCK_BLACKFRIDAY = {
     line1: 'BLACK',
     line2: 'FRIDAY',
     badgeText: 'SOLDES FOLES',
-    bgColor: '#db6513',
-    textColor: '#dc2626',
-    borderColor: '#dc2626',
+    bgColor: '#0F172A',
+    textColor: '#FFFFFF',
+    borderColor: '#06B6D4',
 };
 
 export const MOCK_USER = {
