@@ -65,7 +65,7 @@ function Hero({ slides = [] }) {
     return (
       <section className="relative bg-white overflow-hidden md:h-[480px] h-[400px]">
         {/* Background Decoratives */}
-        <div className="absolute top-0 right-0 h-full bg-[#db6513] w-[58%]" style={{ clipPath: "polygon(10% 0%, 100% 0%, 100% 100%, 0% 100%)" }} />
+        <div className="absolute top-0 right-0 h-full bg-[#2563EB] w-[58%]" style={{ clipPath: "polygon(10% 0%, 100% 0%, 100% 100%, 0% 100%)" }} />
         <div className="absolute top-0 right-0 h-full w-[54%] bg-white/10" style={{ clipPath: "polygon(2% 0%, 9% 0%, 7% 100%, 0% 100%)" }} />
         <div className="absolute top-0 right-0 h-full w-[48%] bg-white/5" style={{ clipPath: "polygon(2% 0%, 8% 0%, 6% 100%, 0% 100%)" }} />
 
@@ -77,7 +77,7 @@ function Hero({ slides = [] }) {
             <div className="flex flex-wrap items-center justify-center md:justify-start gap-4">
               <Link
                 to="/boutique"
-                className="flex min-h-[48px] items-center gap-3 bg-[#5C2E00] hover:bg-[#db6513] text-white hover:text-[#5C2E00] text-[10px] font-black uppercase tracking-[0.2em] px-7 py-3.5 rounded-full transition-all duration-300 shadow-xl"
+                className="flex min-h-[48px] items-center gap-3 bg-[#1E3A8A] hover:bg-[#2563EB] text-white hover:text-[#1E3A8A] text-[10px] font-black uppercase tracking-[0.2em] px-7 py-3.5 rounded-full transition-all duration-300 shadow-xl"
               >
                 <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12 11.58-15c-.2-.68-.83-1.15-1.57-1.15H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z" />
@@ -105,7 +105,7 @@ function Hero({ slides = [] }) {
     <section className="relative bg-white overflow-hidden md:h-[480px] h-[420px] shadow-sm z-20">
       {/* Background Decoratives - simplified for dynamic slides to avoid overlap issues */}
       <div className="absolute inset-0 bg-gray-50/50" />
-      <div className="absolute top-0 right-0 h-full bg-[#db6513] w-[35%] md:w-[45%]" style={{ clipPath: "polygon(15% 0%, 100% 0%, 100% 100%, 0% 100%)" }} />
+      <div className="absolute top-0 right-0 h-full bg-[#2563EB] w-[35%] md:w-[45%]" style={{ clipPath: "polygon(15% 0%, 100% 0%, 100% 100%, 0% 100%)" }} />
 
       <div className="relative z-10 max-w-6xl mx-auto h-full flex flex-col md:flex-row items-center justify-center pt-8 md:pt-0 px-4 sm:px-5 gap-4 md:gap-10">
         <div className="w-full md:w-5/12 text-center md:text-left animate-in fade-in slide-in-from-left-8 duration-700 order-2 md:order-1">
@@ -123,7 +123,7 @@ function Hero({ slides = [] }) {
           <div className="flex flex-wrap items-center justify-center md:justify-start gap-4">
             <Link
               to="/boutique"
-              className="w-full sm:w-auto min-h-[48px] flex items-center justify-center gap-3 bg-[#5C2E00] hover:bg-[#db6513] text-white hover:text-[#5C2E00] text-[10px] font-black uppercase tracking-[0.2em] px-8 py-4 rounded-full transition-all duration-300 shadow-xl shadow-[#5C2E00]/20 active:scale-95"
+              className="w-full sm:w-auto min-h-[48px] flex items-center justify-center gap-3 bg-[#1E3A8A] hover:bg-[#2563EB] text-white hover:text-[#1E3A8A] text-[10px] font-black uppercase tracking-[0.2em] px-8 py-4 rounded-full transition-all duration-300 shadow-xl shadow-[#1E3A8A]/20 active:scale-95"
             >
               Collection Boutique
             </Link>
@@ -147,7 +147,7 @@ function Hero({ slides = [] }) {
             <button
               key={i}
               onClick={() => setCurrent(i)}
-              className={`h-1.5 rounded-full transition-all duration-500 ${current === i ? 'w-10 bg-[#5C2E00] shadow-sm' : 'w-3 bg-[#5C2E00]/20 hover:bg-[#5C2E00]/40'}`}
+              className={`h-1.5 rounded-full transition-all duration-500 ${current === i ? 'w-10 bg-[#1E3A8A] shadow-sm' : 'w-3 bg-[#1E3A8A]/20 hover:bg-[#1E3A8A]/40'}`}
             />
           ))}
         </div>
@@ -161,10 +161,10 @@ function Hero({ slides = [] }) {
  ───────────────────────────────────────────── */
 function PreFooter() {
   const items = [
-    { label: "Livraison Gratuite", icon: <Truck strokeWidth={1.5} className="w-7 h-7 text-[#db6513]" /> },
-    { label: "Politique de Retour", icon: <RefreshCw strokeWidth={1.5} className="w-7 h-7 text-[#db6513]" /> },
-    { label: "Assistance 24/7", icon: <Headphones strokeWidth={1.5} className="w-7 h-7 text-[#db6513]" /> },
-    { label: "Paiement à la Livraison", icon: <HandCoins strokeWidth={1.5} className="w-7 h-7 text-[#db6513]" /> },
+    { label: "Livraison Gratuite", icon: <Truck strokeWidth={1.5} className="w-7 h-7 text-[#2563EB]" /> },
+    { label: "Politique de Retour", icon: <RefreshCw strokeWidth={1.5} className="w-7 h-7 text-[#2563EB]" /> },
+    { label: "Assistance 24/7", icon: <Headphones strokeWidth={1.5} className="w-7 h-7 text-[#2563EB]" /> },
+    { label: "Paiement à la Livraison", icon: <HandCoins strokeWidth={1.5} className="w-7 h-7 text-[#2563EB]" /> },
   ];
 
   return (
@@ -228,7 +228,7 @@ function GalleryGrid({ images = [], bf = null }) {
           {bf?.isActive !== false ? (
             <div
               className="col-span-1 md:row-span-2 flex flex-col items-center justify-center p-6 rounded-sm h-[180px] md:h-full overflow-hidden text-center transition-all duration-300"
-              style={{ backgroundColor: bf?.bgColor || "#db6513" }}
+              style={{ backgroundColor: bf?.bgColor || "#2563EB" }}
             >
               <span className="text-4xl mb-4">{bf?.emoji || "👟"}</span>
               <p
@@ -295,16 +295,16 @@ function LatestProducts() {
     <section id="latest-products" className="max-w-[1320px] mx-auto px-4 md:px-10 mb-16 md:mb-24 mt-8 md:mt-12 scroll-mt-20">
       <div className="flex flex-col items-center mb-8 md:mb-10">
         <div className="flex items-center gap-4 md:gap-10">
-          <button className="hidden sm:flex w-9 h-9 rounded-full border border-[#5C2E00]/10 items-center justify-center text-[#5C2E00]/40 hover:border-[#db6513] hover:text-[#db6513] hover:bg-[#db6513]/10 transition-all duration-300 group">
+          <button className="hidden sm:flex w-9 h-9 rounded-full border border-[#1E3A8A]/10 items-center justify-center text-[#1E3A8A]/40 hover:border-[#2563EB] hover:text-[#2563EB] hover:bg-[#2563EB]/10 transition-all duration-300 group">
             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
             </svg>
           </button>
           <div className="text-center">
-            <h2 className="text-[18px] md:text-[22px] font-black uppercase tracking-[0.1em] md:tracking-[0.15em] text-[#5C2E00]">Derniers Produits</h2>
-            <p className="text-[8px] md:text-[10px] text-[#5C2E00]/60 font-semibold uppercase tracking-[0.2em] md:tracking-[0.25em] mt-1.5 px-4 md:px-0">Découvrez nos styles les plus populaires</p>
+            <h2 className="text-[18px] md:text-[22px] font-black uppercase tracking-[0.1em] md:tracking-[0.15em] text-[#1E3A8A]">Derniers Produits</h2>
+            <p className="text-[8px] md:text-[10px] text-[#1E3A8A]/60 font-semibold uppercase tracking-[0.2em] md:tracking-[0.25em] mt-1.5 px-4 md:px-0">Découvrez nos styles les plus populaires</p>
           </div>
-          <button className="hidden sm:flex w-9 h-9 rounded-full border border-[#5C2E00]/10 items-center justify-center text-[#5C2E00]/40 hover:border-[#db6513] hover:text-[#db6513] hover:bg-[#db6513]/10 transition-all duration-300 group">
+          <button className="hidden sm:flex w-9 h-9 rounded-full border border-[#1E3A8A]/10 items-center justify-center text-[#1E3A8A]/40 hover:border-[#2563EB] hover:text-[#2563EB] hover:bg-[#2563EB]/10 transition-all duration-300 group">
             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
             </svg>
@@ -313,7 +313,7 @@ function LatestProducts() {
       </div>
       {isLoading ? (
         <div className="flex justify-center p-12">
-          <div className="text-[10px] font-black uppercase tracking-widest text-[#5C2E00]/50 animate-pulse">Chargement de la collection...</div>
+          <div className="text-[10px] font-black uppercase tracking-widest text-[#1E3A8A]/50 animate-pulse">Chargement de la collection...</div>
         </div>
       ) : (
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 md:gap-8">
@@ -397,14 +397,14 @@ const HotDeal = memo(({ promo }: { promo: any }) => {
               </div>
             ))}
           </div>
-          <Link to="/boutique" className="inline-flex min-h-[48px] items-center justify-center bg-[#db6513] hover:bg-[#5C2E00] text-[#5C2E00] hover:text-white text-[11px] font-black uppercase tracking-[0.2em] px-12 py-4 rounded-full transition-all shadow-xl hover:scale-105 active:scale-95 shadow-[#db6513]/20">
+          <Link to="/boutique" className="inline-flex min-h-[48px] items-center justify-center bg-[#2563EB] hover:bg-[#1E3A8A] text-[#1E3A8A] hover:text-white text-[11px] font-black uppercase tracking-[0.2em] px-12 py-4 rounded-full transition-all shadow-xl hover:scale-105 active:scale-95 shadow-[#2563EB]/20">
             Acheter Maintenant
           </Link>
         </div>
       </div>
       <div className="md:w-1/2 bg-gray-50 flex flex-col items-center justify-center p-12 relative overflow-hidden">
-        <div className="absolute -top-24 -right-24 w-64 h-64 bg-[#db6513]/5 rounded-full blur-3xl" />
-        <div className="absolute -bottom-24 -left-24 w-64 h-64 bg-[#5C2E00]/5 rounded-full blur-3xl" />
+        <div className="absolute -top-24 -right-24 w-64 h-64 bg-[#2563EB]/5 rounded-full blur-3xl" />
+        <div className="absolute -bottom-24 -left-24 w-64 h-64 bg-[#1E3A8A]/5 rounded-full blur-3xl" />
 
         <div className="flex flex-col items-center text-center relative z-10">
           <img
@@ -418,7 +418,7 @@ const HotDeal = memo(({ promo }: { promo: any }) => {
               {product?.name || "ÉLECTROMÉNAGER CONFORT PREMIUM"}
             </h3>
             <div className="flex items-center gap-3 justify-center mb-4">
-              <span className="text-[22px] font-black text-[#5C2E00]">
+              <span className="text-[22px] font-black text-[#1E3A8A]">
                 {product?.discountPrice || product?.price || "---"} MAD
               </span>
               {(product?.discountPrice && product.price > product.discountPrice) && (
@@ -439,7 +439,7 @@ const HotDeal = memo(({ promo }: { promo: any }) => {
                   quantity: 1
                 });
               }}
-              className="flex min-h-[48px] items-center justify-center bg-[#5C2E00] hover:bg-white text-white hover:text-[#5C2E00] hover:border-[#5C2E00] border-2 border-transparent text-[10px] font-black uppercase tracking-[0.2em] px-10 py-4 rounded-full transition-all shadow-xl mx-auto shadow-[#5C2E00]/20 active:scale-95"
+              className="flex min-h-[48px] items-center justify-center bg-[#1E3A8A] hover:bg-white text-white hover:text-[#1E3A8A] hover:border-[#1E3A8A] border-2 border-transparent text-[10px] font-black uppercase tracking-[0.2em] px-10 py-4 rounded-full transition-all shadow-xl mx-auto shadow-[#1E3A8A]/20 active:scale-95"
             >
               Ajouter au Panier
             </button>
@@ -454,13 +454,15 @@ const HotDeal = memo(({ promo }: { promo: any }) => {
   BRANDS STRIP
 ───────────────────────────────────────────── */
 function BrandsStrip() {
+  // `scale` per brand fine-tunes optical weight (square emblems vs wide wordmarks).
+  // Tune these if a logo still reads slightly large/small — values are literal so Tailwind JIT picks them up.
   const brands = [
-    { name: 'Bosch', logo: 'https://cdn.worldvectorlogo.com/logos/bosch-2.svg' },
-    { name: 'Samsung', logo: 'https://cdn.worldvectorlogo.com/logos/samsung-8.svg' },
-    { name: 'LG Electronics', logo: 'https://cdn.worldvectorlogo.com/logos/lg-electronics.svg' },
-    { name: 'Whirlpool', logo: 'https://cdn.worldvectorlogo.com/logos/whirlpool-2.svg' },
-    { name: 'Philips', logo: 'https://cdn.worldvectorlogo.com/logos/philips-6.svg' },
-    { name: 'Sony', logo: 'https://cdn.worldvectorlogo.com/logos/sony-2.svg' },
+    { name: 'Bosch', logo: 'https://cdn.worldvectorlogo.com/logos/bosch-2.svg', scale: 'scale-90' },
+    { name: 'Samsung', logo: 'https://cdn.worldvectorlogo.com/logos/samsung-8.svg', scale: 'scale-100' },
+    { name: 'LG Electronics', logo: 'https://cdn.worldvectorlogo.com/logos/lg-electronics.svg', scale: 'scale-105' },
+    { name: 'Whirlpool', logo: 'https://cdn.worldvectorlogo.com/logos/whirlpool-2.svg', scale: 'scale-100' },
+    { name: 'Philips', logo: 'https://cdn.worldvectorlogo.com/logos/philips-6.svg', scale: 'scale-90' },
+    { name: 'Sony', logo: 'https://cdn.worldvectorlogo.com/logos/sony-2.svg', scale: 'scale-125' },
   ];
 
   // Repeat the logos 4 times to fill the screen and ensure a seamless loop
@@ -474,22 +476,22 @@ function BrandsStrip() {
               The animation moves -50% (halfway), so it loops back to the start of the second main group. */}
           <div className="flex items-center shrink-0">
             {repeatedBrands.map((brand, i) => (
-              <div key={`${brand.name}-${i}-1`} className="flex items-center justify-center mx-8 lg:mx-16">
+              <div key={`${brand.name}-${i}-1`} className="flex items-center justify-center shrink-0 w-[120px] md:w-[160px] px-2">
                 <img
                   src={brand.logo}
                   alt={brand.name}
-                  className="h-12 md:h-16 lg:h-20 w-auto object-contain grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-500 cursor-pointer mix-blend-multiply"
+                  className={`h-8 md:h-10 w-auto max-w-[100px] md:max-w-[130px] object-contain mx-auto ${brand.scale} grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-500 cursor-pointer mix-blend-multiply`}
                 />
               </div>
             ))}
           </div>
           <div className="flex items-center shrink-0">
             {repeatedBrands.map((brand, i) => (
-              <div key={`${brand.name}-${i}-2`} className="flex items-center justify-center mx-8 lg:mx-16">
+              <div key={`${brand.name}-${i}-2`} className="flex items-center justify-center shrink-0 w-[120px] md:w-[160px] px-2">
                 <img
                   src={brand.logo}
                   alt={brand.name}
-                  className="h-12 md:h-16 lg:h-20 w-auto object-contain grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-500 cursor-pointer mix-blend-multiply"
+                  className={`h-8 md:h-10 w-auto max-w-[100px] md:max-w-[130px] object-contain mx-auto ${brand.scale} grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-500 cursor-pointer mix-blend-multiply`}
                 />
               </div>
             ))}
@@ -568,7 +570,7 @@ export default function HomePage() {
   if (isLoading && !homepageData) {
     return (
       <div className="min-h-screen flex items-center justify-center">
-        <div className="text-[10px] font-black uppercase tracking-widest text-[#5C2E00]/40 animate-pulse italic">
+        <div className="text-[10px] font-black uppercase tracking-widest text-[#1E3A8A]/40 animate-pulse italic">
           Expérience de Luxe en cours...
         </div>
       </div>
@@ -578,7 +580,7 @@ export default function HomePage() {
   const { heroSlides, promo, gallery, bf } = homepageData || { heroSlides: [], promo: null, gallery: [], bf: null };
 
   return (
-    <div className="font-sans bg-white selection:bg-[#db6513]/30 selection:text-[#5C2E00]">
+    <div className="font-sans bg-white selection:bg-[#2563EB]/30 selection:text-[#1E3A8A]">
       <Hero slides={heroSlides} />
       <BrandsStrip />
       <GalleryGrid images={gallery} bf={bf} />

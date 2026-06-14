@@ -51,7 +51,7 @@ const SearchDialog = ({ open, onOpenChange }: SearchDialogProps) => {
   return (
     <CommandDialog open={open} onOpenChange={onOpenChange} className="sm:max-w-4xl w-full h-full sm:h-auto max-w-full rounded-none sm:rounded-xl">
       <div className="p-4 sm:p-6 pb-2">
-        <div className="relative flex items-center w-full border-b border-gray-200 focus-within:border-[#5C2E00] transition-colors duration-300 py-2 group">
+        <div className="relative flex items-center w-full border-b border-gray-200 focus-within:border-[#1E3A8A] transition-colors duration-300 py-2 group">
           <CommandInput
             placeholder="Rechercher l'excellence Fadel trading..."
             className="w-full bg-transparent border-none focus:ring-0 focus:outline-none focus-visible:ring-0 text-[16px] sm:text-lg placeholder:text-gray-300 font-medium h-12"
@@ -63,10 +63,10 @@ const SearchDialog = ({ open, onOpenChange }: SearchDialogProps) => {
           <div className="text-[12px] font-black uppercase tracking-widest text-gray-300 italic">Aucun chef-d'œuvre trouvé.</div>
         </CommandEmpty>
 
-        <CommandGroup heading={<span className="text-[10px] font-black uppercase tracking-[0.2em] text-[#5C2E00] px-2 mb-2 block">COLLECTIONS & PRODUITS</span>}>
+        <CommandGroup heading={<span className="text-[10px] font-black uppercase tracking-[0.2em] text-[#1E3A8A] px-2 mb-2 block">COLLECTIONS & PRODUITS</span>}>
           {isLoading ? (
             <div className="p-12 text-center">
-              <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-[#db6513] mx-auto"></div>
+              <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-[#2563EB] mx-auto"></div>
             </div>
           ) : (
             apiProducts.map((p) => (
@@ -87,24 +87,24 @@ const SearchDialog = ({ open, onOpenChange }: SearchDialogProps) => {
 
                   <div className="flex-1 min-w-0">
                     <div className="flex items-center gap-2 mb-1">
-                      <span className="px-2 py-0.5 bg-[#5C2E00]/5 text-[8px] font-black text-[#db6513] uppercase tracking-widest rounded leading-none">
+                      <span className="px-2 py-0.5 bg-[#1E3A8A]/5 text-[8px] font-black text-[#2563EB] uppercase tracking-widest rounded leading-none">
                         {p.category}
                       </span>
                       {p.type && (
                         <span className="text-[8px] font-bold text-gray-300 uppercase tracking-widest leading-none">• {p.type}</span>
                       )}
                     </div>
-                    <h3 className="text-[15px] font-black uppercase tracking-tight text-[#5C2E00] leading-tight mb-1 group-hover:text-[#db6513] transition-colors truncate">
+                    <h3 className="text-[15px] font-black uppercase tracking-tight text-[#1E3A8A] leading-tight mb-1 group-hover:text-[#2563EB] transition-colors truncate">
                       {p.name}
                     </h3>
-                    <div className="text-[16px] font-black text-[#5C2E00] tracking-tighter">
+                    <div className="text-[16px] font-black text-[#1E3A8A] tracking-tighter">
                       {formatPrice(p.price)}
                     </div>
                   </div>
                 </div>
 
                 {/* Interaction Indicator */}
-                <div className="flex-shrink-0 text-gray-200 group-hover:text-[#db6513] transition-colors">
+                <div className="flex-shrink-0 text-gray-200 group-hover:text-[#2563EB] transition-colors">
                   <ChevronRight className="h-5 w-5" />
                 </div>
               </CommandItem>
@@ -112,13 +112,13 @@ const SearchDialog = ({ open, onOpenChange }: SearchDialogProps) => {
           )}
         </CommandGroup>
 
-        <CommandGroup heading={<span className="text-[11px] font-black uppercase tracking-widest text-[#5C2E00] px-2 mt-4 mb-2 block">Catégories Prisées</span>}>
+        <CommandGroup heading={<span className="text-[11px] font-black uppercase tracking-widest text-[#1E3A8A] px-2 mt-4 mb-2 block">Catégories Prisées</span>}>
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 p-2">
             {categories.slice(0, 6).map((c) => (
               <CommandItem
                 key={c}
                 onSelect={() => { onOpenChange(false); navigate('/boutique'); }}
-                className="flex items-center justify-center p-3 rounded-xl border border-gray-100 hover:border-[#db6513]/30 hover:bg-gray-50 text-[10px] font-black uppercase tracking-widest text-[#5C2E00] transition-all"
+                className="flex items-center justify-center p-3 rounded-xl border border-gray-100 hover:border-[#2563EB]/30 hover:bg-gray-50 text-[10px] font-black uppercase tracking-widest text-[#1E3A8A] transition-all"
               >
                 {c}
               </CommandItem>

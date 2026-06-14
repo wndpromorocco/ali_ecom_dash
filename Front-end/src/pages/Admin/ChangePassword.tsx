@@ -62,19 +62,19 @@ const ChangePassword = () => {
                     <Button
                         variant="ghost"
                         onClick={() => navigate(`/${ADMIN}/dashboard`)}
-                        className="mb-8 text-gray-400 hover:text-[#db6513] transition-colors p-0 hover:bg-transparent font-bold uppercase text-[10px] tracking-widest"
+                        className="mb-8 text-gray-400 hover:text-[#2563EB] transition-colors p-0 hover:bg-transparent font-bold uppercase text-[10px] tracking-widest"
                     >
                         <ArrowLeft className="mr-2 h-4 w-4" /> Retour au Dashboard
                     </Button>
 
                     <h1 className="text-3xl font-black uppercase tracking-tighter mb-8 text-gray-900">
-                        SÉCURITÉ <span className="text-[#db6513]">ACCÈS</span>
+                        SÉCURITÉ <span className="text-[#2563EB]">ACCÈS</span>
                     </h1>
 
                     <Card className="border border-gray-100 rounded-sm shadow-2xl overflow-hidden bg-white">
                         <CardHeader className="bg-gray-900 text-white p-6 border-b border-gray-800">
                             <CardTitle className="text-[12px] font-black uppercase tracking-[0.2em] flex items-center gap-2">
-                                <Lock className="h-4 w-4 text-[#db6513]" />
+                                <Lock className="h-4 w-4 text-[#2563EB]" />
                                 Modifier le Mot de Passe
                             </CardTitle>
                             <CardDescription className="text-gray-400 text-[9px] font-bold uppercase tracking-widest mt-1">
@@ -90,7 +90,7 @@ const ChangePassword = () => {
                                             type={showCurrent ? "text" : "password"}
                                             value={currentPassword}
                                             onChange={(e) => setCurrentPassword(e.target.value)}
-                                            className="rounded-sm border-gray-200 h-12 pr-10 focus-visible:ring-[#db6513] font-bold"
+                                            className="rounded-sm border-gray-200 h-12 pr-10 focus-visible:ring-[#2563EB] font-bold"
                                             required
                                         />
                                         <button
@@ -110,7 +110,7 @@ const ChangePassword = () => {
                                             type={showNew ? "text" : "password"}
                                             value={newPassword}
                                             onChange={(e) => setNewPassword(e.target.value)}
-                                            className="rounded-sm border-gray-200 h-12 pr-10 focus-visible:ring-[#db6513] font-bold"
+                                            className="rounded-sm border-gray-200 h-12 pr-10 focus-visible:ring-[#2563EB] font-bold"
                                             required
                                             minLength={8}
                                         />
@@ -130,7 +130,7 @@ const ChangePassword = () => {
                                         type="password"
                                         value={confirmPassword}
                                         onChange={(e) => setConfirmPassword(e.target.value)}
-                                        className="rounded-sm border-gray-200 h-12 focus-visible:ring-[#db6513] font-bold"
+                                        className="rounded-sm border-gray-200 h-12 focus-visible:ring-[#2563EB] font-bold"
                                         required
                                     />
                                 </div>
@@ -141,7 +141,7 @@ const ChangePassword = () => {
                                     className="w-full bg-gray-900 hover:bg-black text-white rounded-sm font-black uppercase tracking-[0.2em] h-14 shadow-xl transition-all border-b-4 border-gray-800 active:border-b-0 active:translate-y-1 text-xs"
                                 >
                                     {isSaving ? (
-                                        <Loader2 className="mr-2 h-4 w-4 animate-spin text-[#db6513]" />
+                                        <Loader2 className="mr-2 h-4 w-4 animate-spin text-[#2563EB]" />
                                     ) : (
                                         <ShieldCheck className="mr-2 h-4 w-4" />
                                     )}

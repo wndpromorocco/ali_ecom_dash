@@ -187,12 +187,12 @@ ${itemsList}
             Notre équipe vous contactera dans les plus brefs délais
             pour confirmer et organiser la livraison.
           </p>
-          <p className="text-[11px] text-[#db6513] font-bold uppercase tracking-wider mb-8">
+          <p className="text-[11px] text-[#2563EB] font-bold uppercase tracking-wider mb-8">
             Merci de faire confiance à Fadel trading 🧡
           </p>
           <a
             href="/"
-            className="inline-block bg-[#db6513] hover:bg-[#c45610] text-white text-[11px] font-black uppercase tracking-widest px-8 py-3 rounded-sm transition-all shadow-md shadow-[#db651330]"
+            className="inline-block bg-[#2563EB] hover:bg-[#1D4ED8] text-white text-[11px] font-black uppercase tracking-widest px-8 py-3 rounded-sm transition-all shadow-md shadow-[#2563EB30]"
           >
             Retour à l'accueil
           </a>
@@ -481,7 +481,7 @@ ${itemsList}
                         <Button
                           onClick={handlePlaceOrder}
                           disabled={!agreeToTerms || isProcessing}
-                          className="w-full flex items-center justify-center gap-3 bg-[#db6513] hover:bg-[#c45610] disabled:bg-gray-300 disabled:cursor-not-allowed text-white text-[12px] font-black uppercase tracking-[0.15em] px-6 py-4 rounded-sm transition-all duration-200 shadow-md shadow-[#db651330] hover:-translate-y-0.5 h-auto"
+                          className="w-full flex items-center justify-center gap-3 bg-[#2563EB] hover:bg-[#1D4ED8] disabled:bg-gray-300 disabled:cursor-not-allowed text-white text-[12px] font-black uppercase tracking-[0.15em] px-6 py-4 rounded-sm transition-all duration-200 shadow-md shadow-[#2563EB30] hover:-translate-y-0.5 h-auto"
                         >
                           {isProcessing ? (
                             <div className="flex items-center gap-2">

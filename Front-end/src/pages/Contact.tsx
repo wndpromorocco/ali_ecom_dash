@@ -9,9 +9,9 @@ const globalStyles = `
 
   :root {
     --brown:       #3D1A00;
-    --brown-mid:   #5C2E00;
+    --brown-mid:   #1E3A8A;
     --gold:        #D4A017;
-    --gold-bright: #db6513;
+    --gold-bright: #2563EB;
     --gold-pale:   #FDF6DC;
     --cream:       #FAF8F3;
     --white:       #FFFFFF;

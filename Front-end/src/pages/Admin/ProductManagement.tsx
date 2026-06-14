@@ -335,7 +335,7 @@ const ProductManagement = ({ isAddingNewDefault = false }: { isAddingNewDefault?
                         }}
                         className={`w-full sm:w-auto flex items-center justify-center gap-2 text-[11px] font-black uppercase tracking-[0.15em] px-5 py-2.5 rounded-sm transition-all shadow-md hover:-translate-y-0.5 ${isAddingNew
                             ? 'border-2 border-gray-300 text-gray-600 hover:border-gray-500 hover:text-gray-800 bg-transparent'
-                            : 'bg-[#db6513] hover:bg-[#c45610] text-white shadow-[#db651330]'
+                            : 'bg-[#2563EB] hover:bg-[#1D4ED8] text-white shadow-[#2563EB30]'
                             }`}
                     >
                         {isAddingNew
@@ -348,9 +348,9 @@ const ProductManagement = ({ isAddingNewDefault = false }: { isAddingNewDefault?
 
             {/* ── STATS — always visible (compact when form is open) ─── */}
             <div className={`grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8 transition-all duration-300 ${isAddingNew ? 'opacity-70' : ''}`}>
-                <Card className="bg-white border border-gray-100 rounded-sm px-5 py-4 flex items-center gap-4 shadow-sm hover:shadow-md hover:border-orange-100 transition-all duration-200">
-                    <div className="w-10 h-10 rounded-full bg-[#fdf0e8] flex items-center justify-center flex-shrink-0">
-                        <Package className="h-5 w-5 text-[#db6513]" />
+                <Card className="bg-white border border-gray-100 rounded-sm px-5 py-4 flex items-center gap-4 shadow-sm hover:shadow-md hover:border-blue-100 transition-all duration-200">
+                    <div className="w-10 h-10 rounded-full bg-[#dbeafe] flex items-center justify-center flex-shrink-0">
+                        <Package className="h-5 w-5 text-[#2563EB]" />
                     </div>
                     <div>
                         <p className="text-[9px] font-black uppercase tracking-[0.2em] text-gray-400">Total Produits</p>
@@ -384,7 +384,7 @@ const ProductManagement = ({ isAddingNewDefault = false }: { isAddingNewDefault?
                         <Card className="border border-gray-100 rounded-sm shadow-xl overflow-hidden">
 
                             {/* FIX #11: sticky form header with responsive top offset */}
-                            <div className="bg-gray-900 border-l-4 border-[#db6513] px-6 py-4 flex items-center justify-between text-white sticky top-[56px] lg:top-[48px] z-30">
+                            <div className="bg-gray-900 border-l-4 border-[#2563EB] px-6 py-4 flex items-center justify-between text-white sticky top-[56px] lg:top-[48px] z-30">
                                 <div>
                                     <CardTitle className="text-lg font-black uppercase tracking-wider">
                                         {editingProduct ? 'MODIFIER LE PRODUIT' : 'AJOUTER UNE PIÈCE'}
@@ -393,8 +393,8 @@ const ProductManagement = ({ isAddingNewDefault = false }: { isAddingNewDefault?
                                         Configurez les détails techniques du modèle.
                                     </CardDescription>
                                 </div>
-                                <div className="w-9 h-9 rounded-full bg-[#db6513]/10 flex items-center justify-center">
-                                    <History className="h-4 w-4 text-[#db6513]" />
+                                <div className="w-9 h-9 rounded-full bg-[#2563EB]/10 flex items-center justify-center">
+                                    <History className="h-4 w-4 text-[#2563EB]" />
                                 </div>
                             </div>
 
@@ -406,7 +406,7 @@ const ProductManagement = ({ isAddingNewDefault = false }: { isAddingNewDefault?
 
                                         {/* Section label */}
                                         <div className="flex items-center gap-2 pb-3 border-b border-gray-100">
-                                            <ImageIcon className="h-3.5 w-3.5 text-[#db6513]" />
+                                            <ImageIcon className="h-3.5 w-3.5 text-[#2563EB]" />
                                             <span className="text-[10px] font-black uppercase tracking-[0.2em] text-gray-500">Médias & Statut</span>
                                         </div>
 
@@ -415,7 +415,7 @@ const ProductManagement = ({ isAddingNewDefault = false }: { isAddingNewDefault?
                                             <Label className="text-[10px] font-black uppercase tracking-[0.15em] text-gray-400 mb-3 block">
                                                 Photo Principale
                                             </Label>
-                                            <div className="group relative h-48 sm:h-52 bg-gray-50 border border-dashed border-gray-200 flex items-center justify-center overflow-hidden transition-all hover:border-[#e8721f]/60 rounded-sm">
+                                            <div className="group relative h-48 sm:h-52 bg-gray-50 border border-dashed border-gray-200 flex items-center justify-center overflow-hidden transition-all hover:border-[#3B82F6]/60 rounded-sm">
                                                 {imagePreviews[0] ? (
                                                     <>
                                                         <img
@@ -435,8 +435,8 @@ const ProductManagement = ({ isAddingNewDefault = false }: { isAddingNewDefault?
                                                     </>
                                                 ) : (
                                                     <label className="text-center cursor-pointer w-full h-full flex flex-col items-center justify-center gap-2">
-                                                        <div className="w-10 h-10 rounded-full bg-[#fdf0e8] flex items-center justify-center">
-                                                            <Upload className="h-5 w-5 text-[#e8721f]" />
+                                                        <div className="w-10 h-10 rounded-full bg-[#dbeafe] flex items-center justify-center">
+                                                            <Upload className="h-5 w-5 text-[#3B82F6]" />
                                                         </div>
                                                         <p className="text-[9px] font-bold text-gray-400 uppercase tracking-widest">
                                                             Cliquer pour uploader
@@ -455,7 +455,7 @@ const ProductManagement = ({ isAddingNewDefault = false }: { isAddingNewDefault?
                                             </Label>
                                             <div className="grid grid-cols-3 gap-2">
                                                 {[1, 2, 3].map((idx) => (
-                                                    <div key={idx} className="group relative aspect-square bg-gray-50 border border-gray-100 flex items-center justify-center overflow-hidden transition-all hover:border-[#e8721f]/50 rounded-sm">
+                                                    <div key={idx} className="group relative aspect-square bg-gray-50 border border-gray-100 flex items-center justify-center overflow-hidden transition-all hover:border-[#3B82F6]/50 rounded-sm">
                                                         {imagePreviews[idx] ? (
                                                             <>
                                                                 <img
@@ -492,7 +492,7 @@ const ProductManagement = ({ isAddingNewDefault = false }: { isAddingNewDefault?
                                                 <Switch
                                                     checked={formData.isActive}
                                                     onCheckedChange={(val) => setFormData(prev => ({ ...prev, isActive: val }))}
-                                                    className="data-[state=checked]:bg-[#db6513]"
+                                                    className="data-[state=checked]:bg-[#2563EB]"
                                                 />
                                             </div>
                                             <div className="flex items-center justify-between px-4 py-3.5">
@@ -505,7 +505,7 @@ const ProductManagement = ({ isAddingNewDefault = false }: { isAddingNewDefault?
                                                 <Switch
                                                     checked={formData.quantity > 0}
                                                     onCheckedChange={(val) => setFormData(prev => ({ ...prev, quantity: val ? 10 : 0 }))}
-                                                    className="data-[state=checked]:bg-[#db6513]"
+                                                    className="data-[state=checked]:bg-[#2563EB]"
                                                 />
                                             </div>
                                         </div>
@@ -517,7 +517,7 @@ const ProductManagement = ({ isAddingNewDefault = false }: { isAddingNewDefault?
                                         {/* ── Section 1: Identité ─────────────────────── */}
                                         <div>
                                             <div className="flex items-center gap-2 pb-3 mb-5 border-b border-gray-100">
-                                                <Package className="h-3.5 w-3.5 text-[#db6513]" />
+                                                <Package className="h-3.5 w-3.5 text-[#2563EB]" />
                                                 <span className="text-[10px] font-black uppercase tracking-[0.2em] text-gray-500">01 — Identité du Modèle</span>
                                             </div>
 
@@ -529,7 +529,7 @@ const ProductManagement = ({ isAddingNewDefault = false }: { isAddingNewDefault?
                                                         name="name"
                                                         value={formData.name}
                                                         onChange={handleInputChange}
-                                                        className="h-10 rounded-sm border-gray-200 text-[12px] font-bold focus:border-[#e8721f] focus:ring-2 focus:ring-orange-100"
+                                                        className="h-10 rounded-sm border-gray-200 text-[12px] font-bold focus:border-[#3B82F6] focus:ring-2 focus:ring-blue-100"
                                                         required
                                                     />
                                                 </div>
@@ -540,7 +540,7 @@ const ProductManagement = ({ isAddingNewDefault = false }: { isAddingNewDefault?
                                                         value={formData.nameAr}
                                                         onChange={handleInputChange}
                                                         dir="rtl"
-                                                        className="h-10 rounded-sm border-gray-200 text-[12px] font-bold text-right focus:border-[#e8721f] focus:ring-2 focus:ring-orange-100"
+                                                        className="h-10 rounded-sm border-gray-200 text-[12px] font-bold text-right focus:border-[#3B82F6] focus:ring-2 focus:ring-blue-100"
                                                     />
                                                 </div>
                                             </div>
@@ -551,7 +551,7 @@ const ProductManagement = ({ isAddingNewDefault = false }: { isAddingNewDefault?
                                                     name="description"
                                                     value={formData.description}
                                                     onChange={handleInputChange}
-                                                    className="w-full min-h-[100px] px-3 py-2.5 border border-gray-200 rounded-sm text-[12px] text-gray-700 placeholder-gray-300 bg-white resize-none focus:outline-none focus:border-[#e8721f] focus:ring-2 focus:ring-orange-100 transition-colors duration-200"
+                                                    className="w-full min-h-[100px] px-3 py-2.5 border border-gray-200 rounded-sm text-[12px] text-gray-700 placeholder-gray-300 bg-white resize-none focus:outline-none focus:border-[#3B82F6] focus:ring-2 focus:ring-blue-100 transition-colors duration-200"
                                                     placeholder="Spécifications techniques, garantie, puissance (Watt)..."
                                                 />
                                             </div>
@@ -560,7 +560,7 @@ const ProductManagement = ({ isAddingNewDefault = false }: { isAddingNewDefault?
                                         {/* ── Section 2: Classification ────────────────── */}
                                         <div>
                                             <div className="flex items-center gap-2 pb-3 mb-5 border-b border-gray-100">
-                                                <Ruler className="h-3.5 w-3.5 text-[#db6513]" />
+                                                <Ruler className="h-3.5 w-3.5 text-[#2563EB]" />
                                                 <span className="text-[10px] font-black uppercase tracking-[0.2em] text-gray-500">02 — Classification & Référence</span>
                                             </div>
 
@@ -569,7 +569,7 @@ const ProductManagement = ({ isAddingNewDefault = false }: { isAddingNewDefault?
                                                 <div className="space-y-1.5">
                                                     <Label className="text-[10px] font-black uppercase tracking-widest text-gray-700">Cible / Rubrique</Label>
                                                     <Select value={formData.categoryId} onValueChange={(val) => setFormData(p => ({ ...p, categoryId: val }))}>
-                                                        <SelectTrigger className="h-10 rounded-sm border-gray-200 text-[11px] font-black uppercase tracking-widest cursor-pointer focus:border-[#e8721f] focus:ring-2 focus:ring-orange-100">
+                                                        <SelectTrigger className="h-10 rounded-sm border-gray-200 text-[11px] font-black uppercase tracking-widest cursor-pointer focus:border-[#3B82F6] focus:ring-2 focus:ring-blue-100">
                                                             <SelectValue placeholder="Choisir..." />
                                                         </SelectTrigger>
                                                         <SelectContent className="rounded-sm border-gray-100">
@@ -584,7 +584,7 @@ const ProductManagement = ({ isAddingNewDefault = false }: { isAddingNewDefault?
                                                 <div className="space-y-1.5">
                                                     <Label className="text-[10px] font-black uppercase tracking-widest text-gray-700">Modèle / Type</Label>
                                                     <Select value={formData.type} onValueChange={(val) => setFormData(p => ({ ...p, type: val }))}>
-                                                        <SelectTrigger className="h-10 rounded-sm border-gray-200 text-[11px] font-black uppercase tracking-widest cursor-pointer focus:border-[#e8721f] focus:ring-2 focus:ring-orange-100">
+                                                        <SelectTrigger className="h-10 rounded-sm border-gray-200 text-[11px] font-black uppercase tracking-widest cursor-pointer focus:border-[#3B82F6] focus:ring-2 focus:ring-blue-100">
                                                             <SelectValue placeholder="Choisir..." />
                                                         </SelectTrigger>
                                                         <SelectContent className="rounded-sm border-gray-100">
@@ -606,7 +606,7 @@ const ProductManagement = ({ isAddingNewDefault = false }: { isAddingNewDefault?
                                                         name="sku"
                                                         value={formData.sku}
                                                         onChange={handleInputChange}
-                                                        className="h-10 rounded-sm border-gray-200 text-[12px] font-bold focus:border-[#e8721f] focus:ring-2 focus:ring-orange-100"
+                                                        className="h-10 rounded-sm border-gray-200 text-[12px] font-bold focus:border-[#3B82F6] focus:ring-2 focus:ring-blue-100"
                                                         required
                                                     />
                                                 </div>
@@ -617,7 +617,7 @@ const ProductManagement = ({ isAddingNewDefault = false }: { isAddingNewDefault?
                                                         value={formData.warranty}
                                                         onChange={handleInputChange}
                                                         placeholder="12 mois / 2 ans"
-                                                        className="h-10 rounded-sm border-gray-200 text-[12px] font-bold focus:border-[#e8721f] focus:ring-2 focus:ring-orange-100"
+                                                        className="h-10 rounded-sm border-gray-200 text-[12px] font-bold focus:border-[#3B82F6] focus:ring-2 focus:ring-blue-100"
                                                     />
                                                 </div>
                                             </div>
@@ -626,19 +626,19 @@ const ProductManagement = ({ isAddingNewDefault = false }: { isAddingNewDefault?
                                         {/* ── Section 3: Prix & Promotion ──────────────── */}
                                         <div>
                                             <div className="flex items-center gap-2 pb-3 mb-5 border-b border-gray-100">
-                                                <Percent className="h-3.5 w-3.5 text-[#db6513]" />
+                                                <Percent className="h-3.5 w-3.5 text-[#2563EB]" />
                                                 <span className="text-[10px] font-black uppercase tracking-[0.2em] text-gray-500">03 — Prix & Promotion</span>
                                             </div>
 
-                                            <div className="bg-[#fdf0e8] border border-orange-100 rounded-sm p-5 space-y-5">
+                                            <div className="bg-[#dbeafe] border border-blue-100 rounded-sm p-5 space-y-5">
                                                 {/* FIX #10: consistent promotion switch styling */}
                                                 <div className="flex items-center gap-3">
                                                     <Switch
                                                         checked={isPromotion}
                                                         onCheckedChange={setIsPromotion}
-                                                        className="data-[state=checked]:bg-[#db6513] data-[state=unchecked]:bg-gray-200"
+                                                        className="data-[state=checked]:bg-[#2563EB] data-[state=unchecked]:bg-gray-200"
                                                     />
-                                                    <Label className="text-[10px] font-black uppercase tracking-[0.2em] text-[#c45610] cursor-pointer flex items-center gap-1.5">
+                                                    <Label className="text-[10px] font-black uppercase tracking-[0.2em] text-[#1D4ED8] cursor-pointer flex items-center gap-1.5">
                                                         <Percent className="h-3.5 w-3.5" />
                                                         Appliquer une Promotion active
                                                     </Label>
@@ -651,22 +651,22 @@ const ProductManagement = ({ isAddingNewDefault = false }: { isAddingNewDefault?
                                                             name="price"
                                                             value={formData.price}
                                                             onChange={handleInputChange}
-                                                            className="h-11 rounded-sm border-gray-200 text-base font-black tracking-wide bg-white focus:border-[#e8721f] focus:ring-2 focus:ring-orange-100"
+                                                            className="h-11 rounded-sm border-gray-200 text-base font-black tracking-wide bg-white focus:border-[#3B82F6] focus:ring-2 focus:ring-blue-100"
                                                             required
                                                         />
                                                     </div>
                                                     {isPromotion && (
                                                         <div className="space-y-1.5 animate-in zoom-in-95 duration-200">
-                                                            <Label className="text-[10px] font-black uppercase tracking-widest text-[#db6513]">Prix Promo (MAD)</Label>
+                                                            <Label className="text-[10px] font-black uppercase tracking-widest text-[#2563EB]">Prix Promo (MAD)</Label>
                                                             <Input
                                                                 name="discountPrice"
                                                                 value={formData.discountPrice}
                                                                 onChange={handleInputChange}
-                                                                className="h-11 rounded-sm border-[#e8721f] border-2 text-base font-black bg-white focus:ring-2 focus:ring-orange-100"
+                                                                className="h-11 rounded-sm border-[#3B82F6] border-2 text-base font-black bg-white focus:ring-2 focus:ring-blue-100"
                                                             />
                                                             {formData.price && formData.discountPrice && parseFloat(formData.price) > 0 && parseFloat(formData.discountPrice) > 0 && (
                                                                 <div className="animate-in fade-in slide-in-from-left-2 duration-300">
-                                                                    <p className="text-[10px] font-black text-[#c45610] uppercase tracking-[0.2em] flex items-center gap-1.5">
+                                                                    <p className="text-[10px] font-black text-[#1D4ED8] uppercase tracking-[0.2em] flex items-center gap-1.5">
                                                                         <TrendingDown className="h-3.5 w-3.5" />
                                                                         Économie: -{discountPercent}%
                                                                     </p>
@@ -678,10 +678,10 @@ const ProductManagement = ({ isAddingNewDefault = false }: { isAddingNewDefault?
 
                                                 {/* FIX: Force 24h & text-transform: uppercase */}
                                                 {isPromotion && (
-                                                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 pt-4 border-t border-[#db651330] animate-in fade-in duration-400">
+                                                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 pt-4 border-t border-[#2563EB30] animate-in fade-in duration-400">
                                                         <div className="space-y-1.5">
                                                             <Label className="text-[10px] font-black uppercase tracking-widest text-gray-500 flex items-center gap-1.5">
-                                                                <Calendar className="h-3 w-3 text-[#db6513]" /> Date de Début
+                                                                <Calendar className="h-3 w-3 text-[#2563EB]" /> Date de Début
                                                             </Label>
                                                             <Input
                                                                 type="datetime-local"
@@ -689,12 +689,12 @@ const ProductManagement = ({ isAddingNewDefault = false }: { isAddingNewDefault?
                                                                 value={formData.promoStart}
                                                                 onChange={handleInputChange}
                                                                 step="1"
-                                                                className="h-10 rounded-sm border-gray-200 text-[11px] font-bold [&::-webkit-datetime-edit-ampm-field]:hidden [&::-webkit-datetime-edit-hour-field]:text-[11px] transition-all focus:border-[#db6513] focus:ring-[#db651330] uppercase"
+                                                                className="h-10 rounded-sm border-gray-200 text-[11px] font-bold [&::-webkit-datetime-edit-ampm-field]:hidden [&::-webkit-datetime-edit-hour-field]:text-[11px] transition-all focus:border-[#2563EB] focus:ring-[#2563EB30] uppercase"
                                                             />
                                                         </div>
                                                         <div className="space-y-1.5">
                                                             <Label className="text-[10px] font-black uppercase tracking-widest text-gray-500 flex items-center gap-1.5">
-                                                                <Clock className="h-3 w-3 text-[#db6513]" /> Date de Fin
+                                                                <Clock className="h-3 w-3 text-[#2563EB]" /> Date de Fin
                                                             </Label>
                                                             <Input
                                                                 type="datetime-local"
@@ -702,7 +702,7 @@ const ProductManagement = ({ isAddingNewDefault = false }: { isAddingNewDefault?
                                                                 value={formData.promoEnd}
                                                                 onChange={handleInputChange}
                                                                 step="1"
-                                                                className="h-10 rounded-sm border-gray-200 text-[11px] font-bold [&::-webkit-datetime-edit-ampm-field]:hidden [&::-webkit-datetime-edit-hour-field]:text-[11px] transition-all focus:border-[#db6513] focus:ring-[#db651330] uppercase"
+                                                                className="h-10 rounded-sm border-gray-200 text-[11px] font-bold [&::-webkit-datetime-edit-ampm-field]:hidden [&::-webkit-datetime-edit-hour-field]:text-[11px] transition-all focus:border-[#2563EB] focus:ring-[#2563EB30] uppercase"
                                                             />
                                                         </div>
                                                     </div>
@@ -713,7 +713,7 @@ const ProductManagement = ({ isAddingNewDefault = false }: { isAddingNewDefault?
                                         {/* ── Section 4: Couleur ───────────────────────── */}
                                         <div>
                                             <div className="flex items-center gap-2 pb-3 mb-5 border-b border-gray-100">
-                                                <Palette className="h-3.5 w-3.5 text-[#db6513]" />
+                                                <Palette className="h-3.5 w-3.5 text-[#2563EB]" />
                                                 <span className="text-[10px] font-black uppercase tracking-[0.2em] text-gray-500">04 — Couleur Signature</span>
                                             </div>
 
@@ -737,8 +737,8 @@ const ProductManagement = ({ isAddingNewDefault = false }: { isAddingNewDefault?
                                                                         }}
                                                                         title={color}
                                                                         className={`relative flex-shrink-0 flex flex-col items-center gap-1.5 p-2 w-16 transition-all rounded-sm ${isSelected
-                                                                            ? 'bg-white border-2 border-[#db6513] shadow-md scale-105'
-                                                                            : 'bg-white/60 border border-gray-200 hover:border-[#db651330]'
+                                                                            ? 'bg-white border-2 border-[#2563EB] shadow-md scale-105'
+                                                                            : 'bg-white/60 border border-gray-200 hover:border-[#2563EB30]'
                                                                             }`}
                                                                     >
                                                                         <div
@@ -749,7 +749,7 @@ const ProductManagement = ({ isAddingNewDefault = false }: { isAddingNewDefault?
                                                                             {color}
                                                                         </span>
                                                                         {isSelected && (
-                                                                            <div className="absolute -top-1.5 -right-1.5 w-4 h-4 bg-[#db6513] rounded-full flex items-center justify-center">
+                                                                            <div className="absolute -top-1.5 -right-1.5 w-4 h-4 bg-[#2563EB] rounded-full flex items-center justify-center">
                                                                                 <CheckCircle2 className="w-3 h-3 text-white" />
                                                                             </div>
                                                                         )}
@@ -768,7 +768,7 @@ const ProductManagement = ({ isAddingNewDefault = false }: { isAddingNewDefault?
                                                                             <span className="text-[10px] font-black text-gray-900 uppercase tracking-tight">{c}</span>
                                                                         </div>
                                                                     ))}
-                                                                    <Badge className="bg-[#db6513] text-white text-[8px] font-black uppercase rounded-sm px-2.5 py-1 border-none tracking-widest self-center ml-auto">
+                                                                    <Badge className="bg-[#2563EB] text-white text-[8px] font-black uppercase rounded-sm px-2.5 py-1 border-none tracking-widest self-center ml-auto">
                                                                         LOOK BOUTIQUE
                                                                     </Badge>
                                                                 </div>
@@ -779,7 +779,7 @@ const ProductManagement = ({ isAddingNewDefault = false }: { isAddingNewDefault?
                                                     <div className="py-8 text-center border border-dashed border-gray-200 rounded-sm">
                                                         <p className="text-[9px] font-black text-gray-400 uppercase tracking-[0.2em] mb-1">Aucune couleur configurée</p>
                                                         {/* FIX: Use secret admin slug */}
-                                                        <Link to={`/${ADMIN}/categories`} className="text-[9px] font-black text-[#db6513] hover:underline uppercase tracking-widest">
+                                                        <Link to={`/${ADMIN}/categories`} className="text-[9px] font-black text-[#2563EB] hover:underline uppercase tracking-widest">
                                                             Ajouter des couleurs →
                                                         </Link>
                                                     </div>
@@ -791,7 +791,7 @@ const ProductManagement = ({ isAddingNewDefault = false }: { isAddingNewDefault?
                                         <Button
                                             type="submit"
                                             disabled={isSaving}
-                                            className="w-full bg-[#db6513] hover:bg-[#c45610] text-white py-3.5 rounded-sm font-black uppercase tracking-[0.2em] text-sm shadow-lg shadow-[#db651330] transition-all group"
+                                            className="w-full bg-[#2563EB] hover:bg-[#1D4ED8] text-white py-3.5 rounded-sm font-black uppercase tracking-[0.2em] text-sm shadow-lg shadow-[#2563EB30] transition-all group"
                                         >
                                             {isSaving ? (
                                                 <span className="flex items-center gap-2">
@@ -820,7 +820,7 @@ const ProductManagement = ({ isAddingNewDefault = false }: { isAddingNewDefault?
                     {/* Table header */}
                     <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 p-4 border-b border-gray-100">
                         <div className="flex items-center gap-3">
-                            <div className="w-8 h-8 rounded-sm bg-[#db6513] flex items-center justify-center">
+                            <div className="w-8 h-8 rounded-sm bg-[#2563EB] flex items-center justify-center">
                                 <Package className="h-4 w-4 text-white" />
                             </div>
                             <div>
@@ -839,10 +839,10 @@ const ProductManagement = ({ isAddingNewDefault = false }: { isAddingNewDefault?
                                     placeholder="Rechercher…"
                                     value={tableSearch}
                                     onChange={e => setTableSearch(e.target.value)}
-                                    className="pl-8 pr-3 py-1.5 text-[11px] border border-gray-200 rounded-sm bg-gray-50 text-gray-700 placeholder-gray-300 focus:outline-none focus:border-[#e8721f] focus:ring-1 focus:ring-orange-100 w-44 transition-colors"
+                                    className="pl-8 pr-3 py-1.5 text-[11px] border border-gray-200 rounded-sm bg-gray-50 text-gray-700 placeholder-gray-300 focus:outline-none focus:border-[#3B82F6] focus:ring-1 focus:ring-blue-100 w-44 transition-colors"
                                 />
                             </div>
-                            <button className="text-[9px] font-black uppercase tracking-widest border border-[#db651330] text-[#db6513] bg-[#fdf0e8] px-3 py-1.5 rounded-sm hover:bg-[#db6513] hover:text-white transition-all duration-200 whitespace-nowrap">
+                            <button className="text-[9px] font-black uppercase tracking-widest border border-[#2563EB30] text-[#2563EB] bg-[#dbeafe] px-3 py-1.5 rounded-sm hover:bg-[#2563EB] hover:text-white transition-all duration-200 whitespace-nowrap">
                                 Auto-Sync ON
                             </button>
                         </div>
@@ -897,8 +897,8 @@ const ProductManagement = ({ isAddingNewDefault = false }: { isAddingNewDefault?
                                         <TableRow className="hover:bg-transparent">
                                             <TableCell colSpan={6} className="py-16 text-center">
                                                 <div className="flex flex-col items-center gap-3">
-                                                    <div className="w-14 h-14 rounded-full bg-[#fdf0e8] flex items-center justify-center">
-                                                        <Package className="h-7 w-7 text-orange-300" />
+                                                    <div className="w-14 h-14 rounded-full bg-[#dbeafe] flex items-center justify-center">
+                                                        <Package className="h-7 w-7 text-blue-300" />
                                                     </div>
                                                     <div>
                                                         <p className="text-[12px] font-black uppercase tracking-widest text-gray-400">
@@ -911,7 +911,7 @@ const ProductManagement = ({ isAddingNewDefault = false }: { isAddingNewDefault?
                                                     {!tableSearch && (
                                                         <button
                                                             onClick={() => setIsAddingNew(true)}
-                                                            className="mt-1 text-[9px] font-black uppercase tracking-widest text-[#db6513] border border-[#db651330] bg-[#fdf0e8] px-4 py-2 rounded-sm hover:bg-[#db6513] hover:text-white transition-all"
+                                                            className="mt-1 text-[9px] font-black uppercase tracking-widest text-[#2563EB] border border-[#2563EB30] bg-[#dbeafe] px-4 py-2 rounded-sm hover:bg-[#2563EB] hover:text-white transition-all"
                                                         >
                                                             + Nouveau Produit
                                                         </button>
@@ -930,7 +930,7 @@ const ProductManagement = ({ isAddingNewDefault = false }: { isAddingNewDefault?
                                         return (
                                             <TableRow
                                                 key={product.id}
-                                                className="border-b border-gray-50 hover:bg-[#fdf0e8]/30 transition-colors duration-150 group"
+                                                className="border-b border-gray-50 hover:bg-[#dbeafe]/30 transition-colors duration-150 group"
                                             >
                                                 <TableCell className="px-4 py-3">
                                                     <div className="w-11 h-11 bg-white overflow-hidden rounded-sm border border-gray-100 group-hover:shadow-md transition-shadow">
@@ -955,7 +955,7 @@ const ProductManagement = ({ isAddingNewDefault = false }: { isAddingNewDefault?
                                                     <p className="text-[9px] font-semibold uppercase tracking-widest text-gray-400 mt-1.5">SKU: {product.sku}</p>
                                                 </TableCell>
                                                 <TableCell className="px-4 py-3">
-                                                    <Badge className="text-[8px] font-black uppercase tracking-widest bg-[#fdf0e8] text-[#db6513] border border-orange-100 px-2 py-0.5 rounded-sm">
+                                                    <Badge className="text-[8px] font-black uppercase tracking-widest bg-[#dbeafe] text-[#2563EB] border border-blue-100 px-2 py-0.5 rounded-sm">
                                                         {(product as any).category}
                                                     </Badge>
                                                 </TableCell>
@@ -963,7 +963,7 @@ const ProductManagement = ({ isAddingNewDefault = false }: { isAddingNewDefault?
                                                     {isPromoProduct ? (
                                                         <div className="flex flex-col">
                                                             <span className="text-[10px] text-gray-400 line-through font-bold">{product.price}</span>
-                                                            <span className="text-[13px] font-black text-[#db6513]">
+                                                            <span className="text-[13px] font-black text-[#2563EB]">
                                                                 {(product as any).discountPrice} <span className="text-[9px] text-gray-400 font-semibold ml-0.5">MAD</span>
                                                             </span>
                                                         </div>
@@ -1017,7 +1017,7 @@ const ProductManagement = ({ isAddingNewDefault = false }: { isAddingNewDefault?
                                                         <div className="flex justify-end gap-2">
                                                             <button
                                                                 onClick={() => handleEdit(product)}
-                                                                className="w-7 h-7 rounded-sm border border-gray-200 flex items-center justify-center text-gray-400 hover:border-[#e8721f] hover:text-[#db6513] hover:bg-[#fdf0e8] transition-all duration-200"
+                                                                className="w-7 h-7 rounded-sm border border-gray-200 flex items-center justify-center text-gray-400 hover:border-[#3B82F6] hover:text-[#2563EB] hover:bg-[#dbeafe] transition-all duration-200"
                                                                 title="Modifier"
                                                             >
                                                                 <Pencil className="h-3.5 w-3.5" />

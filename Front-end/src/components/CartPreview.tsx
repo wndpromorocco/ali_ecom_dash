@@ -162,13 +162,13 @@ const CartPreview: React.FC<CartPreviewProps> = ({ isOpen, onClose }) => {
                   {step === 'checkout' && (
                     <button
                       onClick={() => setStep('cart')}
-                      className="p-2 hover:bg-white rounded-full transition-all text-gray-400 hover:text-[#5C2E00]"
+                      className="p-2 hover:bg-white rounded-full transition-all text-gray-400 hover:text-[#1E3A8A]"
                     >
                       <ArrowLeft className="w-5 h-5" />
                     </button>
                   )}
                   <div>
-                    <h2 className="text-xl sm:text-2xl font-black uppercase tracking-tighter text-[#5C2E00]">
+                    <h2 className="text-xl sm:text-2xl font-black uppercase tracking-tighter text-[#1E3A8A]">
                       {step === 'cart' ? 'Votre Panier' : 'Détails de Livraison'}
                     </h2>
                     <p className="text-[10px] font-bold uppercase tracking-widest text-gray-400 mt-1">
@@ -178,7 +178,7 @@ const CartPreview: React.FC<CartPreviewProps> = ({ isOpen, onClose }) => {
                 </div>
                 <button
                   onClick={onClose}
-                  className="p-3 rounded-full hover:bg-white hover:shadow-md transition-all text-[#5C2E00] focus:outline-none bg-white/50 z-[10000]"
+                  className="p-3 rounded-full hover:bg-white hover:shadow-md transition-all text-[#1E3A8A] focus:outline-none bg-white/50 z-[10000]"
                   style={{ pointerEvents: 'auto' }}
                   aria-label="Fermer le panier"
                 >
@@ -203,7 +203,7 @@ const CartPreview: React.FC<CartPreviewProps> = ({ isOpen, onClose }) => {
                           <p className="text-[12px] font-black uppercase tracking-widest text-gray-300 mb-8">Votre panier est vide</p>
                           <Button
                             onClick={onClose}
-                            className="bg-[#5C2E00] hover:bg-[#db6513] text-white font-black uppercase text-[10px] tracking-widest px-8 h-12 rounded-full transition-all"
+                            className="bg-[#1E3A8A] hover:bg-[#2563EB] text-white font-black uppercase text-[10px] tracking-widest px-8 h-12 rounded-full transition-all"
                           >
                             Continuer mes achats
                           </Button>
@@ -213,7 +213,7 @@ const CartPreview: React.FC<CartPreviewProps> = ({ isOpen, onClose }) => {
                           <div key={item.id} className="group relative flex flex-col gap-4 pb-8 border-b border-gray-50 last:border-0 last:pb-0">
                             <div className="flex justify-between items-start">
                               <div className="flex-1 pr-4">
-                                <h3 className="text-[13px] font-black uppercase tracking-tight text-gray-900 leading-tight group-hover:text-[#db6513] transition-colors">{item.name}</h3>
+                                <h3 className="text-[13px] font-black uppercase tracking-tight text-gray-900 leading-tight group-hover:text-[#2563EB] transition-colors">{item.name}</h3>
                                 <p className="text-[10px] font-bold text-gray-400 mt-1">
                                   {item.selectedSize || item.size ? `Pointure: ${item.selectedSize || item.size}` : ''}
                                   {(item.selectedSize || item.size) && (item.selectedColor || item.color) ? ' | ' : ''}
@@ -221,21 +221,21 @@ const CartPreview: React.FC<CartPreviewProps> = ({ isOpen, onClose }) => {
                                   {!item.selectedSize && !item.size && !item.selectedColor && !item.color ? 'Non spécifiée' : ''}
                                 </p>
                               </div>
-                              <span className="text-[14px] font-black text-[#5C2E00] tabular-nums">{formatPrice(item.price)}</span>
+                              <span className="text-[14px] font-black text-[#1E3A8A] tabular-nums">{formatPrice(item.price)}</span>
                             </div>
 
                             <div className="flex items-center justify-between mt-2">
                               <div className="flex items-center bg-gray-50 rounded-full p-1 border border-gray-100">
                                 <button
                                   onClick={() => updateQuantity(item.cartItemId || item.id, item.quantity - 1)}
-                                  className="w-8 h-8 flex items-center justify-center rounded-full bg-white shadow-sm hover:text-[#db6513] transition-colors"
+                                  className="w-8 h-8 flex items-center justify-center rounded-full bg-white shadow-sm hover:text-[#2563EB] transition-colors"
                                 >
                                   <Minus className="h-3 w-3" />
                                 </button>
-                                <span className="text-[12px] font-black w-10 text-center text-[#5C2E00]">{item.quantity}</span>
+                                <span className="text-[12px] font-black w-10 text-center text-[#1E3A8A]">{item.quantity}</span>
                                 <button
                                   onClick={() => updateQuantity(item.cartItemId || item.id, item.quantity + 1)}
-                                  className="w-8 h-8 flex items-center justify-center rounded-full bg-white shadow-sm hover:text-[#db6513] transition-colors"
+                                  className="w-8 h-8 flex items-center justify-center rounded-full bg-white shadow-sm hover:text-[#2563EB] transition-colors"
                                 >
                                   <Plus className="h-3 w-3" />
                                 </button>
@@ -248,7 +248,7 @@ const CartPreview: React.FC<CartPreviewProps> = ({ isOpen, onClose }) => {
                                 >
                                   Supprimer
                                 </button>
-                                <span className="text-[13px] font-black text-[#db6513] tabular-nums">
+                                <span className="text-[13px] font-black text-[#2563EB] tabular-nums">
                                   {formatPrice(item.price * item.quantity)}
                                 </span>
                               </div>
@@ -262,10 +262,10 @@ const CartPreview: React.FC<CartPreviewProps> = ({ isOpen, onClose }) => {
                       <div className="border-t border-gray-100 p-6 sm:p-8 pt-6 space-y-6 bg-gray-50/30">
                         <div className="flex justify-between items-end">
                           <span className="text-[10px] font-black uppercase tracking-[0.2em] text-gray-400">Total</span>
-                          <span className="text-[24px] font-black text-[#db6513] tracking-tighter leading-none">{formatPrice(totalPrice)}</span>
+                          <span className="text-[24px] font-black text-[#2563EB] tracking-tighter leading-none">{formatPrice(totalPrice)}</span>
                         </div>
                         <button
-                          className="w-full bg-[#5C2E00] hover:bg-[#db6513] text-white font-black uppercase text-[11px] tracking-[0.2em] py-5 shadow-xl transition-all hover:scale-[1.02] active:scale-95 flex items-center justify-center gap-3 rounded-sm group"
+                          className="w-full bg-[#1E3A8A] hover:bg-[#2563EB] text-white font-black uppercase text-[11px] tracking-[0.2em] py-5 shadow-xl transition-all hover:scale-[1.02] active:scale-95 flex items-center justify-center gap-3 rounded-sm group"
                           onClick={() => setStep('checkout')}
                         >
                           Valider la commande
@@ -287,7 +287,7 @@ const CartPreview: React.FC<CartPreviewProps> = ({ isOpen, onClose }) => {
                               value={formData.fullName}
                               onChange={handleInputChange}
                               placeholder="Votre nom complet"
-                              className="w-full pl-10 pr-4 py-3 bg-gray-50 border border-gray-100 text-[13px] focus:outline-none focus:ring-1 focus:ring-orange-200 rounded-sm"
+                              className="w-full pl-10 pr-4 py-3 bg-gray-50 border border-gray-100 text-[13px] focus:outline-none focus:ring-1 focus:ring-blue-200 rounded-sm"
                             />
                           </div>
                         </div>
@@ -301,7 +301,7 @@ const CartPreview: React.FC<CartPreviewProps> = ({ isOpen, onClose }) => {
                               value={formData.city}
                               onChange={handleInputChange}
                               placeholder="Votre ville"
-                              className="w-full pl-10 pr-4 py-3 bg-gray-50 border border-gray-100 text-[13px] focus:outline-none focus:ring-1 focus:ring-orange-200 rounded-sm"
+                              className="w-full pl-10 pr-4 py-3 bg-gray-50 border border-gray-100 text-[13px] focus:outline-none focus:ring-1 focus:ring-blue-200 rounded-sm"
                             />
                           </div>
                         </div>
@@ -315,7 +315,7 @@ const CartPreview: React.FC<CartPreviewProps> = ({ isOpen, onClose }) => {
                               value={formData.address}
                               onChange={handleInputChange}
                               placeholder="Votre adresse exacte"
-                              className="w-full pl-10 pr-4 py-3 bg-gray-50 border border-gray-100 text-[13px] focus:outline-none focus:ring-1 focus:ring-orange-200 rounded-sm"
+                              className="w-full pl-10 pr-4 py-3 bg-gray-50 border border-gray-100 text-[13px] focus:outline-none focus:ring-1 focus:ring-blue-200 rounded-sm"
                             />
                           </div>
                         </div>
@@ -329,7 +329,7 @@ const CartPreview: React.FC<CartPreviewProps> = ({ isOpen, onClose }) => {
                               value={formData.phone}
                               onChange={handleInputChange}
                               placeholder="06 -- -- -- --"
-                              className="w-full pl-10 pr-4 py-3 bg-gray-50 border border-gray-100 text-[13px] focus:outline-none focus:ring-1 focus:ring-orange-200 rounded-sm"
+                              className="w-full pl-10 pr-4 py-3 bg-gray-50 border border-gray-100 text-[13px] focus:outline-none focus:ring-1 focus:ring-blue-200 rounded-sm"
                             />
                           </div>
                         </div>
@@ -344,15 +344,15 @@ const CartPreview: React.FC<CartPreviewProps> = ({ isOpen, onClose }) => {
                               onChange={handleInputChange}
                               placeholder="Ex: 42"
                               readOnly={!!lockedSize}
-                              className={`w-full pl-10 pr-4 py-3 border text-[13px] focus:outline-none focus:ring-1 focus:ring-orange-200 rounded-sm ${lockedSize ? 'bg-gray-100 text-gray-700 cursor-not-allowed border-gray-200' : 'bg-gray-50 border-gray-100'}`}
+                              className={`w-full pl-10 pr-4 py-3 border text-[13px] focus:outline-none focus:ring-1 focus:ring-blue-200 rounded-sm ${lockedSize ? 'bg-gray-100 text-gray-700 cursor-not-allowed border-gray-200' : 'bg-gray-50 border-gray-100'}`}
                             />
                           </div>
                         </div>
                       </div>
 
-                      <div className="bg-orange-50/50 p-4 border border-orange-100 rounded-sm">
-                        <p className="text-[11px] text-[#5C2E00] flex items-start gap-2 leading-relaxed">
-                          <Send className="w-4 h-4 mt-0.5 text-[#db6513]" />
+                      <div className="bg-blue-50/50 p-4 border border-blue-100 rounded-sm">
+                        <p className="text-[11px] text-[#1E3A8A] flex items-start gap-2 leading-relaxed">
+                          <Send className="w-4 h-4 mt-0.5 text-[#2563EB]" />
                           En cliquant sur le bouton ci-dessous, vous serez redirigé vers WhatsApp pour confirmer votre commande manuellement.
                         </p>
                       </div>

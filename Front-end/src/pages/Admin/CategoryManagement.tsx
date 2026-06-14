@@ -143,7 +143,7 @@ const CategoryManagement = () => {
 
     if (isLoading && categories.length === 0) return (
         <div className="h-[400px] flex items-center justify-center">
-            <Loader2 className="h-8 w-8 animate-spin text-[#db6513]" />
+            <Loader2 className="h-8 w-8 animate-spin text-[#2563EB]" />
         </div>
     );
 
@@ -152,18 +152,18 @@ const CategoryManagement = () => {
             <div className="flex flex-col md:flex-row md:justify-between md:items-end gap-4">
                 <div>
                     <h1 className="text-2xl sm:text-4xl font-black uppercase tracking-tighter text-gray-900 leading-none">
-                        CATALOGUE & <span className="text-[#db6513]">ATTRIBUTS</span>
+                        CATALOGUE & <span className="text-[#2563EB]">ATTRIBUTS</span>
                     </h1>
                     <p className="text-[10px] text-gray-400 font-bold uppercase tracking-widest mt-2 leading-none">GESTION DE LA HIÉRARCHIE DU CATALOGUE</p>
                 </div>
                 <div className="bg-white p-2 border border-gray-100 shadow-sm flex flex-col sm:flex-row items-stretch sm:items-center gap-3 rounded-sm w-full md:w-auto">
                     <div className="flex items-center gap-2 px-3 sm:border-r border-gray-50">
-                        <div className="w-2 h-2 rounded-full bg-[#db6513] animate-pulse" />
+                        <div className="w-2 h-2 rounded-full bg-[#2563EB] animate-pulse" />
                         <span className="text-[9px] font-black uppercase tracking-widest text-gray-400">Mode Edition Live</span>
                     </div>
                     <Button
                         onClick={() => setModalConfig({ open: true, type: 'cible', mode: 'add' })}
-                        className="w-full sm:w-auto bg-[#db6513] hover:bg-[#c45610] text-white rounded-sm px-6 h-10 font-black uppercase text-[10px] tracking-widest transition-all"
+                        className="w-full sm:w-auto bg-[#2563EB] hover:bg-[#1D4ED8] text-white rounded-sm px-6 h-10 font-black uppercase text-[10px] tracking-widest transition-all"
                     >
                         <Plus className="w-3.5 h-3.5 mr-2" /> Nouvelle Catégorie
                     </Button>
@@ -175,7 +175,7 @@ const CategoryManagement = () => {
                 <Card className="rounded-sm border-gray-100 shadow-xl overflow-hidden min-h-[280px] sm:min-h-[400px] lg:min-h-[500px] bg-white md:col-span-1">
                     <CardHeader className="bg-gray-900 p-6 text-white border-b border-gray-800">
                         <CardTitle className="text-[12px] font-black uppercase tracking-[0.2em] flex items-center gap-2">
-                            <Tags className="w-4 h-4 text-[#db6513]" /> 1. Catégories Principales
+                            <Tags className="w-4 h-4 text-[#2563EB]" /> 1. Catégories Principales
                         </CardTitle>
                         <CardDescription className="text-gray-500 text-[9px] font-bold uppercase tracking-widest mt-1">Familles principales du catalogue</CardDescription>
                     </CardHeader>
@@ -184,14 +184,14 @@ const CategoryManagement = () => {
                             {cibles.map(cible => (
                                 <div
                                     key={cible.id}
-                                    className={`group flex items-center justify-between p-4 cursor-pointer transition-all hover:bg-[#fdf0e8] duration-150 ${selectedCategory?.id === cible.id ? 'bg-[#fdf0e8]/50 border-l-[3px] border-l-[#db6513] shadow-inner' : 'border-l-[3px] border-l-transparent'}`}
+                                    className={`group flex items-center justify-between p-4 cursor-pointer transition-all hover:bg-[#dbeafe] duration-150 ${selectedCategory?.id === cible.id ? 'bg-[#dbeafe]/50 border-l-[3px] border-l-[#2563EB] shadow-inner' : 'border-l-[3px] border-l-transparent'}`}
                                     onClick={() => {
                                         setSelectedCategory(cible);
                                         setSelectedSubCategory(null);
                                     }}
                                 >
                                     <div className="flex flex-col">
-                                        <span className={`text-[11px] font-black uppercase tracking-wide transition-colors group-hover:text-[#db6513] ${selectedCategory?.id === cible.id ? 'text-[#db6513]' : 'text-gray-600'}`}>{cible.name}</span>
+                                        <span className={`text-[11px] font-black uppercase tracking-wide transition-colors group-hover:text-[#2563EB] ${selectedCategory?.id === cible.id ? 'text-[#2563EB]' : 'text-gray-600'}`}>{cible.name}</span>
                                         <span className="text-[9px] font-bold text-gray-400 uppercase tracking-widest mt-0.5">{cible.nameAr || '---'}</span>
                                     </div>
                                     <div className="flex items-center gap-2">
@@ -204,7 +204,7 @@ const CategoryManagement = () => {
                                         >
                                             <X className="w-3.5 h-3.5" />
                                         </button>
-                                        <ChevronRight className={`w-4 h-4 transition-transform ${selectedCategory?.id === cible.id ? 'translate-x-1 text-[#db6513]' : 'text-gray-200'}`} />
+                                        <ChevronRight className={`w-4 h-4 transition-transform ${selectedCategory?.id === cible.id ? 'translate-x-1 text-[#2563EB]' : 'text-gray-200'}`} />
                                     </div>
                                 </div>
                             ))}
@@ -229,7 +229,7 @@ const CategoryManagement = () => {
                         <div className="flex justify-between items-center">
                             <div>
                                 <CardTitle className="text-[12px] font-black uppercase tracking-[0.2em] flex items-center gap-2">
-                                    <Cylinder className="w-4 h-4 text-[#db6513]" /> 2. Sous-catégories
+                                    <Cylinder className="w-4 h-4 text-[#2563EB]" /> 2. Sous-catégories
                                 </CardTitle>
                                 <CardDescription className="text-gray-400 text-[9px] font-bold uppercase tracking-widest mt-1">
                                     Sous-catégories pour {selectedCategory?.name || '...'}
@@ -238,7 +238,7 @@ const CategoryManagement = () => {
                             {selectedCategory && (
                                 <button
                                     onClick={() => setModalConfig({ open: true, type: 'type', mode: 'add' })}
-                                    className="w-8 h-8 bg-[#db6513] text-white flex items-center justify-center hover:bg-[#c45610] transition-all rounded-sm shadow-md"
+                                    className="w-8 h-8 bg-[#2563EB] text-white flex items-center justify-center hover:bg-[#1D4ED8] transition-all rounded-sm shadow-md"
                                 >
                                     <Plus className="w-4 h-4" />
                                 </button>
@@ -250,11 +250,11 @@ const CategoryManagement = () => {
                             {types.map(type => (
                                 <div
                                     key={type.id}
-                                    className={`group flex items-center justify-between p-4 cursor-pointer transition-all hover:bg-[#fdf0e8] duration-150 ${selectedSubCategory?.id === type.id ? 'bg-[#fdf0e8]/50 border-l-[3px] border-l-[#db6513] shadow-inner' : 'border-l-[3px] border-l-transparent'}`}
+                                    className={`group flex items-center justify-between p-4 cursor-pointer transition-all hover:bg-[#dbeafe] duration-150 ${selectedSubCategory?.id === type.id ? 'bg-[#dbeafe]/50 border-l-[3px] border-l-[#2563EB] shadow-inner' : 'border-l-[3px] border-l-transparent'}`}
                                     onClick={() => setSelectedSubCategory(type)}
                                 >
                                     <div className="flex flex-col">
-                                        <span className={`text-[11px] font-black uppercase tracking-wide transition-colors group-hover:text-[#db6513] ${selectedSubCategory?.id === type.id ? 'text-[#db6513]' : 'text-gray-600'}`}>{type.name}</span>
+                                        <span className={`text-[11px] font-black uppercase tracking-wide transition-colors group-hover:text-[#2563EB] ${selectedSubCategory?.id === type.id ? 'text-[#2563EB]' : 'text-gray-600'}`}>{type.name}</span>
                                         <span className="text-[9px] font-bold text-gray-400 uppercase tracking-widest mt-1">{type.colors?.length || 0} ATTRIBUTS</span>
                                     </div>
                                     <div className="flex items-center gap-2">
@@ -267,7 +267,7 @@ const CategoryManagement = () => {
                                         >
                                             <X className="w-3.5 h-3.5" />
                                         </button>
-                                        <ChevronRight className={`w-4 h-4 transition-transform ${selectedSubCategory?.id === type.id ? 'translate-x-1 text-[#db6513]' : 'text-gray-200'}`} />
+                                        <ChevronRight className={`w-4 h-4 transition-transform ${selectedSubCategory?.id === type.id ? 'translate-x-1 text-[#2563EB]' : 'text-gray-200'}`} />
                                     </div>
                                 </div>
                             ))}
@@ -292,7 +292,7 @@ const CategoryManagement = () => {
                         <div className="flex justify-between items-center">
                             <div>
                                 <CardTitle className="text-[12px] font-black uppercase tracking-[0.2em] flex items-center gap-2">
-                                    <Palette className="w-4 h-4 text-[#db6513]" /> 3. Attributs Techniques
+                                    <Palette className="w-4 h-4 text-[#2563EB]" /> 3. Attributs Techniques
                                 </CardTitle>
                                 <CardDescription className="text-gray-400 text-[9px] font-bold uppercase tracking-widest mt-1">
                                     Attributs pour {selectedSubCategory?.name || '...'}
@@ -301,7 +301,7 @@ const CategoryManagement = () => {
                             {selectedSubCategory && (
                                 <button
                                     onClick={() => setModalConfig({ open: true, type: 'color', mode: 'add' })}
-                                    className="w-8 h-8 bg-[#db6513] text-white flex items-center justify-center hover:bg-[#c45610] transition-all rounded-sm shadow-md"
+                                    className="w-8 h-8 bg-[#2563EB] text-white flex items-center justify-center hover:bg-[#1D4ED8] transition-all rounded-sm shadow-md"
                                 >
                                     <Plus className="w-4 h-4" />
                                 </button>
@@ -311,10 +311,10 @@ const CategoryManagement = () => {
                     <CardContent className="p-6">
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
                             {colors.map((color: string) => (
-                                <div key={color} className="group relative flex items-center gap-3 p-3 bg-gray-50 border border-gray-100 rounded-sm shadow-sm transition-all hover:border-[#db651330]">
+                                <div key={color} className="group relative flex items-center gap-3 p-3 bg-gray-50 border border-gray-100 rounded-sm shadow-sm transition-all hover:border-[#2563EB30]">
                                     <div
                                         className="w-5 h-5 shadow-inner border border-black/5 transition-transform group-hover:scale-110 rounded-sm"
-                                        style={{ backgroundColor: '#db651315' }}
+                                        style={{ backgroundColor: '#2563EB15' }}
                                     />
                                     <span className="text-[9px] font-black uppercase tracking-[0.1em] text-gray-700 truncate">{color}</span>
                                     <button
@@ -342,7 +342,7 @@ const CategoryManagement = () => {
                         <DialogHeader>
                             <DialogTitle className="text-xl font-black uppercase tracking-wider text-white">
                                 {modalConfig.mode === 'add' ? (
-                                    <>AJOUTER <span className="text-[#db6513]">{modalConfig.type === 'cible' ? 'UNE CATÉGORIE' : modalConfig.type === 'type' ? 'UNE SOUS-CATÉGORIE' : 'UN ATTRIBUT'}</span></>
+                                    <>AJOUTER <span className="text-[#2563EB]">{modalConfig.type === 'cible' ? 'UNE CATÉGORIE' : modalConfig.type === 'type' ? 'UNE SOUS-CATÉGORIE' : 'UN ATTRIBUT'}</span></>
                                 ) : (
                                     <>SUPPRIMER <span className="text-red-500">CONFIRMATION</span></>
                                 )}
@@ -368,14 +368,14 @@ const CategoryManagement = () => {
                                             value={newInputValue}
                                             onChange={(e) => setNewInputValue(e.target.value)}
                                             placeholder="Ex: 1000W, 300L, Samsung"
-                                            className="w-full border-[#2D3748] rounded-sm px-3 py-2.5 text-[12px] text-white placeholder-gray-500 bg-[#111827] focus:outline-none focus:border-[#db6513] focus:ring-2 focus:ring-[#db6513]/10 transition-colors duration-200 h-12 uppercase font-bold"
+                                            className="w-full border-[#2D3748] rounded-sm px-3 py-2.5 text-[12px] text-white placeholder-gray-500 bg-[#111827] focus:outline-none focus:border-[#2563EB] focus:ring-2 focus:ring-[#2563EB]/10 transition-colors duration-200 h-12 uppercase font-bold"
                                         />
                                     ) : (
                                         <Input
                                             value={newInputValue}
                                             onChange={(e) => setNewInputValue(e.target.value)}
                                             placeholder="Ex: Réfrigérateurs"
-                                            className="w-full border-[#2D3748] rounded-sm px-3 py-2.5 text-[12px] text-white placeholder-gray-500 bg-[#111827] focus:outline-none focus:border-[#db6513] focus:ring-2 focus:ring-[#db6513]/10 transition-colors duration-200 h-12 uppercase font-bold"
+                                            className="w-full border-[#2D3748] rounded-sm px-3 py-2.5 text-[12px] text-white placeholder-gray-500 bg-[#111827] focus:outline-none focus:border-[#2563EB] focus:ring-2 focus:ring-[#2563EB]/10 transition-colors duration-200 h-12 uppercase font-bold"
                                         />
                                     )}
                                 </div>
@@ -387,7 +387,7 @@ const CategoryManagement = () => {
                                             value={newArValue}
                                             onChange={(e) => setNewArValue(e.target.value)}
                                             placeholder="أدخل الاسم هنا..."
-                                            className="w-full border-[#2D3748] rounded-sm px-3 py-2.5 text-lg text-white placeholder-gray-600 bg-[#111827] focus:outline-none focus:border-[#db6513] focus:ring-2 focus:ring-[#db6513]/10 transition-colors duration-200 h-12 text-right dir-rtl font-bold"
+                                            className="w-full border-[#2D3748] rounded-sm px-3 py-2.5 text-lg text-white placeholder-gray-600 bg-[#111827] focus:outline-none focus:border-[#2563EB] focus:ring-2 focus:ring-[#2563EB]/10 transition-colors duration-200 h-12 text-right dir-rtl font-bold"
                                         />
                                     </div>
                                 )}

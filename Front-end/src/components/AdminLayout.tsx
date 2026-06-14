@@ -84,7 +84,7 @@ const AdminLayout = () => {
                         >
                             <div className="flex items-center justify-between px-4 py-5 border-b border-white/5">
                                 <div className="flex items-center gap-3">
-                                    <div className="w-8 h-8 bg-[#db6513] rounded-md flex items-center justify-center shadow-md">
+                                    <div className="w-8 h-8 bg-[#2563EB] rounded-md flex items-center justify-center shadow-md">
                                         <span className="text-white font-black text-[14px]">H</span>
                                     </div>
                                     <p className="text-white font-black text-[13px] uppercase tracking-wide leading-none">Fadel trading</p>
@@ -104,7 +104,7 @@ const AdminLayout = () => {
                                                     key={to}
                                                     to={to}
                                                     onClick={() => setIsMobileOpen(false)}
-                                                    className={`flex items-center gap-3 px-3 py-2.5 rounded-md mb-1 transition-all ${active ? 'bg-[#db6513] text-white' : 'text-gray-400 hover:bg-white/5'}`}
+                                                    className={`flex items-center gap-3 px-3 py-2.5 rounded-md mb-1 transition-all ${active ? 'bg-[#2563EB] text-white' : 'text-gray-400 hover:bg-white/5'}`}
                                                 >
                                                     <Icon className="w-4 h-4" />
                                                     <span className="text-[12px] font-bold">{label}</span>
@@ -139,7 +139,7 @@ const AdminLayout = () => {
             >
                 {/* Logo */}
                 <div className={`flex items-center gap-3 px-4 py-5 border-b border-white/5 flex-shrink-0 ${collapsed ? 'justify-center' : ''}`}>
-                    <div className="w-8 h-8 bg-[#db6513] rounded-md flex items-center justify-center flex-shrink-0 shadow-md shadow-orange-900/40">
+                    <div className="w-8 h-8 bg-[#2563EB] rounded-md flex items-center justify-center flex-shrink-0 shadow-md shadow-blue-900/40">
                         <span className="text-white font-black text-[14px]">H</span>
                     </div>
                     {!collapsed && (
@@ -170,7 +170,7 @@ const AdminLayout = () => {
                                             flex items-center gap-2.5 mx-2 mb-0.5 rounded-md transition-all duration-150
                                             ${collapsed ? 'justify-center px-0 py-2.5' : 'px-3 py-2'}
                                             ${active
-                                                ? 'bg-[#db6513] text-white shadow-sm shadow-orange-900/30'
+                                                ? 'bg-[#2563EB] text-white shadow-sm shadow-blue-900/30'
                                                 : 'text-gray-400 hover:bg-white/5 hover:text-gray-200'
                                             }
                                         `}
@@ -219,11 +219,11 @@ const AdminLayout = () => {
                     <div className="flex items-center gap-3">
                         <button
                             onClick={() => setIsMobileOpen(true)}
-                            className="lg:hidden p-2 -ml-2 text-gray-500 hover:text-[#db6513] transition-colors"
+                            className="lg:hidden p-2 -ml-2 text-gray-500 hover:text-[#2563EB] transition-colors"
                         >
                             <Menu className="w-5 h-5" />
                         </button>
-                        <div className="lg:hidden w-8 h-8 bg-[#db6513] rounded-md flex items-center justify-center shadow-md">
+                        <div className="lg:hidden w-8 h-8 bg-[#2563EB] rounded-md flex items-center justify-center shadow-md">
                             <span className="text-white font-black text-[12px]">H</span>
                         </div>
                     </div>
@@ -231,10 +231,10 @@ const AdminLayout = () => {
                     <div className="flex items-center gap-3">
                         <div className="text-right hidden sm:block">
                             <p className="text-[11px] font-black uppercase tracking-wide text-gray-800 leading-none">Administrateur</p>
-                            <p className="text-[9px] font-bold uppercase tracking-widest text-[#db6513] leading-none mt-0.5">● Session active</p>
+                            <p className="text-[9px] font-bold uppercase tracking-widest text-[#2563EB] leading-none mt-0.5">● Session active</p>
                         </div>
                         <Link to={`/${ADMIN}/settings`}>
-                            <div className="w-8 h-8 rounded-full border border-gray-200 flex items-center justify-center text-gray-400 hover:border-[#e8721f] hover:text-[#db6513] transition-all">
+                            <div className="w-8 h-8 rounded-full border border-gray-200 flex items-center justify-center text-gray-400 hover:border-[#3B82F6] hover:text-[#2563EB] transition-all">
                                 <Settings className="w-3.5 h-3.5" />
                             </div>
                         </Link>

@@ -278,7 +278,7 @@ const HomeV2 = () => {
 
                     <div className="flex items-center gap-1 mb-3">
                       {[...Array(5)].map((_, i) => (
-                        <Star key={i} className="w-4 h-4 fill-yellow-400 text-[#db6513]" />
+                        <Star key={i} className="w-4 h-4 fill-yellow-400 text-[#2563EB]" />
                       ))}
                     </div>
 
@@ -323,7 +323,7 @@ const HomeV2 = () => {
               <div key={testimonial.id} className="bg-white rounded-xl p-6 border border-gray-200 hover:shadow-md transition-shadow">
                 <div className="flex gap-1 mb-4">
                   {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 fill-yellow-400 text-[#db6513]" />
+                    <Star key={i} className="w-4 h-4 fill-yellow-400 text-[#2563EB]" />
                   ))}
                 </div>
                 <p className="text-gray-700 text-sm mb-4 leading-relaxed">
@@ -343,7 +343,7 @@ const HomeV2 = () => {
           </div>
 
           <div className="text-center">
-            <div className="inline-flex items-center gap-2 bg-[#db6513] text-[#1a1a1a] px-6 py-3 rounded-full text-base font-semibold">
+            <div className="inline-flex items-center gap-2 bg-[#2563EB] text-[#1a1a1a] px-6 py-3 rounded-full text-base font-semibold">
               <span>⭐ 4,9/5</span>
               <span className="text-sm">sur 1000+ avis</span>
             </div>
@@ -474,7 +474,7 @@ const HomeV2 = () => {
               placeholder="Votre adresse e-mail"
               className="flex-1 px-4 py-3 rounded-md text-gray-900 placeholder-gray-500 border-0 focus:ring-2 focus:ring-white/50 outline-none"
             />
-            <button className="bg-[#FFD700] text-[#1a1a1a] hover:bg-[#db6513] px-6 py-3 rounded-md font-semibold transition-colors">
+            <button className="bg-[#FFD700] text-[#1a1a1a] hover:bg-[#2563EB] px-6 py-3 rounded-md font-semibold transition-colors">
               S'inscrire
             </button>
           </div>

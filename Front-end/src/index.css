@@ -200,20 +200,20 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 10%;
 
-    /* MFF Black & Gold Theme - Default */
-    /* Fadel trading Brun #5C2E00 approx HSL(30, 100%, 18%) */
-    --primary: 30 100% 18%;
-    /* Brun */
+    /* Fadel Trading Tech-Blue Theme - Default */
+    /* Royal navy #1E3A8A ≈ HSL(224, 64%, 33%) */
+    --primary: 224 64% 33%;
+    /* Navy */
     --primary-foreground: 0 0% 100%;
-    --primary-dark: 30 100% 12%;
+    --primary-dark: 224 64% 24%;
     /* Deep charcoal for subtle gradients */
 
     --secondary: 0 0% 22%;
     --secondary-foreground: 0 0% 100%;
 
-    --accent: 46 89% 57%;
-    /* Gold (#f4c431 approx) */
-    --accent-foreground: 0 0% 15%;
+    --accent: 221 83% 53%;
+    /* Tech Blue (#2563EB approx) */
+    --accent-foreground: 0 0% 100%;
 
     --muted: 0 0% 96%;
     /* Light gray backgrounds */
@@ -224,7 +224,7 @@ All colors MUST be HSL.
 
     --border: 0 0% 88%;
     --input: 0 0% 88%;
-    --ring: 46 89% 57%;
+    --ring: 221 83% 53%;
     /* Accent ring */
 
     --radius: 0.75rem;
@@ -239,7 +239,7 @@ All colors MUST be HSL.
     /* Shadows */
     --shadow-soft: 0 2px 8px hsl(0 0% 0% / 0.08);
     --shadow-elevated: 0 8px 24px hsl(0 0% 0% / 0.12);
-    --shadow-glow: 0 0 20px hsl(46 89% 57% / 0.3);
+    --shadow-glow: 0 0 20px hsl(221 83% 53% / 0.3);
 
     /* Transitions */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);

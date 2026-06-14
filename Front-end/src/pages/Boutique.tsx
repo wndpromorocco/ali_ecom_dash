@@ -144,18 +144,18 @@ export default function Boutique() {
     <div className="space-y-8">
       {/* Categories */}
       <div>
-        <h3 className="text-[14px] font-black uppercase tracking-widest text-[#5C2E00] mb-5 flex items-center gap-2">
+        <h3 className="text-[14px] font-black uppercase tracking-widest text-[#1E3A8A] mb-5 flex items-center gap-2">
           Catégories
           <div className="h-px flex-1 bg-gray-100" />
         </h3>
         <div className="space-y-1">
           <button
             onClick={() => setCategory("")}
-            className={`flex items-center justify-between w-full py-2 group transition-all ${!activeCible ? "text-[#db6513] font-bold" : "text-gray-500 hover:text-[#5C2E00]"
+            className={`flex items-center justify-between w-full py-2 group transition-all ${!activeCible ? "text-[#2563EB] font-bold" : "text-gray-500 hover:text-[#1E3A8A]"
               }`}
           >
             <span className="text-[12px] uppercase tracking-wider">Tous les produits</span>
-            <ChevronRight className={`w-3 h-3 transition-transform ${!activeCible ? "rotate-90 text-[#db6513]" : "group-hover:translate-x-1"}`} />
+            <ChevronRight className={`w-3 h-3 transition-transform ${!activeCible ? "rotate-90 text-[#2563EB]" : "group-hover:translate-x-1"}`} />
           </button>
 
           {topCategories.map((cat) => {
@@ -166,11 +166,11 @@ export default function Boutique() {
               <div key={cat.id} className="space-y-1">
                 <button
                   onClick={() => setCategory(cat.name)}
-                  className={`flex items-center justify-between w-full py-2 group transition-all ${isParentActive ? "text-[#db6513] font-bold" : "text-gray-500 hover:text-[#5C2E00]"
+                  className={`flex items-center justify-between w-full py-2 group transition-all ${isParentActive ? "text-[#2563EB] font-bold" : "text-gray-500 hover:text-[#1E3A8A]"
                     }`}
                 >
                   <span className="text-[12px] uppercase tracking-wider">{cat.name}</span>
-                  <ChevronRight className={`w-3 h-3 transition-transform ${isParentActive ? "rotate-90 text-[#db6513]" : "group-hover:translate-x-1"}`} />
+                  <ChevronRight className={`w-3 h-3 transition-transform ${isParentActive ? "rotate-90 text-[#2563EB]" : "group-hover:translate-x-1"}`} />
                 </button>
 
                 {/* Nested Models */}
@@ -183,12 +183,12 @@ export default function Boutique() {
                           key={sub.id}
                           onClick={() => setModele(cat.name, sub.id)}
                           className={`flex items-center justify-between w-full py-1.5 px-2 rounded-sm transition-all ${isSubActive
-                            ? "bg-[#db6513]/10 text-[#db6513] font-bold"
-                            : "text-gray-400 hover:text-[#5C2E00] hover:bg-gray-50"
+                            ? "bg-[#2563EB]/10 text-[#2563EB] font-bold"
+                            : "text-gray-400 hover:text-[#1E3A8A] hover:bg-gray-50"
                             }`}
                         >
                           <span className="text-[11px] uppercase tracking-tight">{sub.name}</span>
-                          {isSubActive && <div className="w-1 h-1 rounded-full bg-[#db6513]" />}
+                          {isSubActive && <div className="w-1 h-1 rounded-full bg-[#2563EB]" />}
                         </button>
                       );
                     })}
@@ -202,7 +202,7 @@ export default function Boutique() {
 
       {/* Price Filter */}
       <div>
-        <h3 className="text-[14px] font-black uppercase tracking-widest text-[#5C2E00] mb-5 flex items-center gap-2">
+        <h3 className="text-[14px] font-black uppercase tracking-widest text-[#1E3A8A] mb-5 flex items-center gap-2">
           Prix
           <div className="h-px flex-1 bg-gray-100" />
         </h3>
@@ -227,7 +227,7 @@ export default function Boutique() {
         <Button
           variant="outline"
           onClick={resetFilters}
-          className="w-full rounded-none border-[#5C2E00]/20 text-[#5C2E00] text-[10px] font-black uppercase tracking-widest hover:bg-[#5C2E00] hover:text-white transition-all py-6"
+          className="w-full rounded-none border-[#1E3A8A]/20 text-[#1E3A8A] text-[10px] font-black uppercase tracking-widest hover:bg-[#1E3A8A] hover:text-white transition-all py-6"
         >
           Effacer les filtres
           <X className="w-3 h-3 ml-2" />
@@ -241,13 +241,13 @@ export default function Boutique() {
       {/* ── PAGE HEADER ── */}
       <div className="bg-[#faf8f6] border-b border-gray-100 pt-16 md:pt-20 pb-10 md:pb-12 px-4 sm:px-5">
         <div className="max-w-6xl mx-auto text-center md:text-left">
-          <div className="inline-block px-3 py-1 bg-[#db6513]/10 rounded-full mb-3 md:mb-4">
-            <p className="text-[9px] md:text-[10px] font-black uppercase tracking-[0.2em] md:tracking-[0.3em] text-[#5C2E00]">
+          <div className="inline-block px-3 py-1 bg-[#2563EB]/10 rounded-full mb-3 md:mb-4">
+            <p className="text-[9px] md:text-[10px] font-black uppercase tracking-[0.2em] md:tracking-[0.3em] text-[#1E3A8A]">
               Maroquinerie d'Excellence
             </p>
           </div>
           <h1 className="text-[32px] sm:text-[40px] md:text-[56px] font-black uppercase tracking-tighter text-gray-900 leading-[1] md:leading-[0.9] mb-4">
-            Boutique <span className="text-[#db6513]">Fadel trading</span>
+            Boutique <span className="text-[#2563EB]">Fadel trading</span>
           </h1>
           <p className="text-[12px] md:text-[13px] text-gray-500 max-w-lg mx-auto md:mx-0 font-medium leading-relaxed">
             Découvrez notre sélection exclusive de chaussures et accessoires en cuir premium, conçus pour allier élégance et confort.
@@ -272,7 +272,7 @@ export default function Boutique() {
               <div className="flex items-center gap-3 flex-1">
                 {/* Search */}
                 <div className="relative flex-1 max-w-md group">
-                  <div className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 group-focus-within:text-[#5C2E00] transition-colors">
+                  <div className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 group-focus-within:text-[#1E3A8A] transition-colors">
                     <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
                       <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-4.35-4.35M17 11A6 6 0 115 11a6 6 0 0112 0z" />
                     </svg>
@@ -282,7 +282,7 @@ export default function Boutique() {
                     placeholder="Rechercher par nom, style, cuir..."
                     value={search}
                     onChange={(e) => setSearch(e.target.value)}
-                    className="w-full pl-12 pr-4 py-3 bg-gray-50 border-none rounded-none text-[12px] font-medium text-gray-800 placeholder-gray-400 focus:ring-1 focus:ring-[#5C2E00] transition-all italic"
+                    className="w-full pl-12 pr-4 py-3 bg-gray-50 border-none rounded-none text-[12px] font-medium text-gray-800 placeholder-gray-400 focus:ring-1 focus:ring-[#1E3A8A] transition-all italic"
                   />
                 </div>
 
@@ -296,7 +296,7 @@ export default function Boutique() {
                   </SheetTrigger>
                   <SheetContent side="left" className="w-[300px] sm:w-[400px]">
                     <SheetHeader className="mb-8">
-                      <SheetTitle className="text-left font-black uppercase tracking-widest text-[#5C2E00]">Filtres</SheetTitle>
+                      <SheetTitle className="text-left font-black uppercase tracking-widest text-[#1E3A8A]">Filtres</SheetTitle>
                       <SheetDescription className="text-left py-2 border-b border-gray-100 italic">Personnalisez votre sélection</SheetDescription>
                     </SheetHeader>
                     <FilterSidebar />
@@ -310,7 +310,7 @@ export default function Boutique() {
                 <select
                   value={sort}
                   onChange={(e) => setSort(e.target.value)}
-                  className="bg-transparent border-b border-gray-200 py-2 text-[12px] font-black text-[#5C2E00] uppercase tracking-widest focus:outline-none focus:border-[#db6513] cursor-pointer appearance-none px-2"
+                  className="bg-transparent border-b border-gray-200 py-2 text-[12px] font-black text-[#1E3A8A] uppercase tracking-widest focus:outline-none focus:border-[#2563EB] cursor-pointer appearance-none px-2"
                 >
                   <option value="default">Défaut</option>
                   <option value="price-asc">Prix Croissant</option>
@@ -329,7 +329,7 @@ export default function Boutique() {
               </p>
               {activeCible && (
                 <div className="flex items-center gap-2">
-                  <span className="text-[10px] font-black uppercase text-[#db6513] bg-[#db6513]/10 px-3 py-1 rounded-full">
+                  <span className="text-[10px] font-black uppercase text-[#2563EB] bg-[#2563EB]/10 px-3 py-1 rounded-full">
                     {activeModele && categories.find(c => c.id === activeModele)?.name ? categories.find(c => c.id === activeModele).name : activeCible}
                   </span>
                   <button onClick={() => setCategory("")} className="text-gray-300 hover:text-red-400 transition-colors">
@@ -363,7 +363,7 @@ export default function Boutique() {
                 </p>
                 <Button
                   onClick={resetFilters}
-                  className="rounded-none bg-[#5C2E00] hover:bg-[#db6513] text-white hover:text-[#5C2E00] px-10 py-6 text-[10px] font-black uppercase tracking-widest transition-all"
+                  className="rounded-none bg-[#1E3A8A] hover:bg-[#2563EB] text-white hover:text-[#1E3A8A] px-10 py-6 text-[10px] font-black uppercase tracking-widest transition-all"
                 >
                   Réinitialiser tous les filtres
                 </Button>

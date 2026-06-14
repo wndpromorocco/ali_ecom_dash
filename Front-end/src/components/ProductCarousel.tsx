@@ -68,18 +68,18 @@ const ProductCarousel: React.FC<ProductCarouselProps> = ({ items, onAdd, itemsPe
                 />
               </div>
               <div className="px-5 pt-2 flex-grow flex flex-col items-center text-center">
-                <h3 className="text-[13px] font-black uppercase tracking-tight text-[#5C2E00] leading-tight px-2 min-h-[32px] flex items-center justify-center underline decoration-transparent group-hover:decoration-[#db6513] transition-all underline-offset-4">{item.name}</h3>
+                <h3 className="text-[13px] font-black uppercase tracking-tight text-[#1E3A8A] leading-tight px-2 min-h-[32px] flex items-center justify-center underline decoration-transparent group-hover:decoration-[#2563EB] transition-all underline-offset-4">{item.name}</h3>
                 {item.description && (
                   <p className="mt-2 text-[10px] text-gray-400 italic px-4 line-clamp-2 leading-relaxed">{item.description}</p>
                 )}
                 <div className="flex-grow" />
-                <div className="text-[16px] font-black text-[#db6513] mt-4 tracking-tighter tabular-nums">{formatPrice(item.price)}</div>
+                <div className="text-[16px] font-black text-[#2563EB] mt-4 tracking-tighter tabular-nums">{formatPrice(item.price)}</div>
               </div>
               <div className="px-5 pb-6 mt-4">
                 <div className="flex items-center justify-center">
                   <button
                     onClick={() => onAdd(item)}
-                    className="w-full py-4 bg-[#111827] text-white rounded-lg text-[10px] font-black uppercase tracking-[0.2em] hover:bg-[#db6513] hover:text-white transition-all flex items-center justify-center shadow-md active:scale-95 group/btn"
+                    className="w-full py-4 bg-[#111827] text-white rounded-lg text-[10px] font-black uppercase tracking-[0.2em] hover:bg-[#2563EB] hover:text-white transition-all flex items-center justify-center shadow-md active:scale-95 group/btn"
                     data-button-action="add-to-cart"
                     aria-label={`Ajouter ${item.name} au panier`}
                     type="button"

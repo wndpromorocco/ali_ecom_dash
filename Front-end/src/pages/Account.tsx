@@ -173,13 +173,13 @@ const Account = () => {
               onClick={() => setShowSettings(!showSettings)}
               className={`group text-left bg-card border rounded-3xl p-8 transition-all relative overflow-hidden ${showSettings ? 'border-primary ring-2 ring-primary/20 shadow-xl' : 'hover:border-primary hover:shadow-xl hover:shadow-primary/5'}`}
             >
-              <div className="absolute top-0 right-0 w-24 h-24 bg-[#db6513]/5 rounded-bl-full group-hover:scale-125 transition-transform origin-top-right"></div>
-              <div className="bg-[#db6513]/10 text-[#c45610] w-14 h-14 rounded-2xl flex items-center justify-center mb-10 group-hover:scale-110 transition-transform">
+              <div className="absolute top-0 right-0 w-24 h-24 bg-[#2563EB]/5 rounded-bl-full group-hover:scale-125 transition-transform origin-top-right"></div>
+              <div className="bg-[#2563EB]/10 text-[#1D4ED8] w-14 h-14 rounded-2xl flex items-center justify-center mb-10 group-hover:scale-110 transition-transform">
                 <Settings className="w-7 h-7" />
               </div>
               <h2 className="text-xl font-bold mb-2">Paramètres</h2>
               <p className="text-muted-foreground text-sm mb-4">Gérez vos préférences de compte et votre sécurité.</p>
-              <div className="flex items-center text-[#c45610] font-bold text-sm">
+              <div className="flex items-center text-[#1D4ED8] font-bold text-sm">
                 Modifier <ChevronRight className={`w-4 h-4 ml-1 transition-transform ${showSettings ? 'rotate-90' : 'group-hover:translate-x-1'}`} />
               </div>
             </button>

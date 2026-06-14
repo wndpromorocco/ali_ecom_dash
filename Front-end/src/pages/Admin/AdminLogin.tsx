@@ -33,7 +33,7 @@ const AdminLogin = () => {
     };
 
     return (
-        <div className="min-h-screen flex bg-[#0f1117] font-sans selection:bg-[#db6513]/30">
+        <div className="min-h-screen flex bg-[#0f1117] font-sans selection:bg-[#2563EB]/30">
             {/* Placeholder Color Override */}
             <style>
                 {`
@@ -53,12 +53,12 @@ const AdminLogin = () => {
 
                 {/* Top: Logo & Name */}
                 <div className="relative z-10 flex items-center gap-4">
-                    <div className="w-12 h-12 bg-[#db6513] rounded-xl flex items-center justify-center shadow-lg shadow-orange-900/20">
+                    <div className="w-12 h-12 bg-[#2563EB] rounded-xl flex items-center justify-center shadow-lg shadow-blue-900/20">
                         <span className="text-white font-black text-xl">H</span>
                     </div>
                     <div>
                         <h1 className="text-white font-black text-2xl uppercase tracking-tighter leading-none">Fadel trading</h1>
-                        <p className="text-[#db6513] text-[10px] font-bold uppercase tracking-[0.3em] mt-1">Plateforme Administration</p>
+                        <p className="text-[#2563EB] text-[10px] font-bold uppercase tracking-[0.3em] mt-1">Plateforme Administration</p>
                     </div>
                 </div>
 
@@ -66,7 +66,7 @@ const AdminLogin = () => {
                 <div className="relative z-10 max-w-lg">
                     <h2 className="text-white font-black text-6xl uppercase tracking-tighter leading-[0.9] mb-12">
                         GÉREZ VOTRE <br />
-                        <span className="text-[#db6513]">BOUTIQUE</span> EN <br />
+                        <span className="text-[#2563EB]">BOUTIQUE</span> EN <br />
                         TEMPS RÉEL.
                     </h2>
 
@@ -77,8 +77,8 @@ const AdminLogin = () => {
                             { icon: Smartphone, text: "Canal WhatsApp intégré" }
                         ].map((feature, idx) => (
                             <div key={idx} className="flex items-center gap-4 group cursor-default">
-                                <div className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center group-hover:border-[#db6513]/50 transition-all duration-300">
-                                    <feature.icon className="w-5 h-5 text-[#db6513]" />
+                                <div className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center group-hover:border-[#2563EB]/50 transition-all duration-300">
+                                    <feature.icon className="w-5 h-5 text-[#2563EB]" />
                                 </div>
                                 <span className="text-gray-400 font-bold uppercase text-[11px] tracking-widest group-hover:text-white transition-colors">
                                     {feature.text}
@@ -91,7 +91,7 @@ const AdminLogin = () => {
                 {/* Bottom: Version */}
                 <div className="relative z-10">
                     <div className="inline-flex items-center gap-2 px-3 py-1 bg-white/5 border border-white/10 rounded-full">
-                        <div className="w-1.5 h-1.5 rounded-full bg-[#db6513] animate-pulse" />
+                        <div className="w-1.5 h-1.5 rounded-full bg-[#2563EB] animate-pulse" />
                         <span className="text-[10px] font-black text-gray-500 uppercase tracking-widest">V2.4 · INVENTORY MANAGEMENT SYSTEM</span>
                     </div>
                 </div>
@@ -104,8 +104,8 @@ const AdminLogin = () => {
                     background: `
                         radial-gradient(
                             ellipse 80% 60% at 60% 50%,
-                            rgba(249, 115, 22, 0.07) 0%,
-                            rgba(249, 115, 22, 0.02) 40%,
+                            rgba(37, 99, 235, 0.07) 0%,
+                            rgba(37, 99, 235, 0.02) 40%,
                             transparent 70%
                         ),
                         #0c1020
@@ -114,25 +114,25 @@ const AdminLogin = () => {
             >
                 {/* Mobile Logo */}
                 <div className="lg:hidden flex flex-col items-center mb-12 animate-in fade-in slide-in-from-top-4 duration-700">
-                    <div className="w-16 h-16 bg-[#db6513] rounded-2xl flex items-center justify-center shadow-2xl shadow-orange-900/40 mb-4">
+                    <div className="w-16 h-16 bg-[#2563EB] rounded-2xl flex items-center justify-center shadow-2xl shadow-blue-900/40 mb-4">
                         <span className="text-white font-black text-2xl uppercase">H</span>
                     </div>
-                    <h1 className="text-white font-black text-2xl uppercase tracking-tighter">Fadel trading <span className="text-[#db6513]">ADMIN</span></h1>
+                    <h1 className="text-white font-black text-2xl uppercase tracking-tighter">Fadel trading <span className="text-[#2563EB]">ADMIN</span></h1>
                 </div>
 
                 <div
-                    className="w-full max-w-lg animate-in fade-in zoom-in-95 duration-500 bg-[#1a2035] border border-[#db6513]/40 rounded-lg overflow-hidden"
+                    className="w-full max-w-lg animate-in fade-in zoom-in-95 duration-500 bg-[#1a2035] border border-[#2563EB]/40 rounded-lg overflow-hidden"
                     style={{
-                        boxShadow: '0 0 0 1px rgba(249,115,22,0.15), 0 32px 64px rgba(0,0,0,0.6), 0 0 80px rgba(249,115,22,0.04)'
+                        boxShadow: '0 0 0 1px rgba(37, 99, 235,0.15), 0 32px 64px rgba(0,0,0,0.6), 0 0 80px rgba(37, 99, 235,0.04)'
                     }}
                 >
                     <div className="bg-[#1a2035]">
-                        <div className="h-1.5 bg-[#db6513] w-full" />
+                        <div className="h-1.5 bg-[#2563EB] w-full" />
 
                         <div className="p-12 space-y-6">
                             <div className="mb-10">
                                 <h1 className="text-4xl font-black text-white uppercase tracking-tight leading-none mb-3">
-                                    Fadel trading <span className="text-[#db6513]">ADMIN</span>
+                                    Fadel trading <span className="text-[#2563EB]">ADMIN</span>
                                 </h1>
                                 <p className="text-[12px] font-bold text-gray-500 uppercase tracking-[0.2em]">
                                     ACCÈS SÉCURISÉ AU TABLEAU DE BORD
@@ -152,7 +152,7 @@ const AdminLogin = () => {
                                             placeholder="admin@fadeltrading.com"
                                             value={email}
                                             onChange={(e) => setEmail(e.target.value)}
-                                            className="h-14 pl-11 bg-[#1e2535] border border-white/10 hover:border-white/20 focus:border-[#db6513] focus:ring-2 focus:ring-[#db6513]/20 !text-gray-300 text-[14px] font-medium !placeholder:text-gray-400 !placeholder:font-medium rounded-sm transition-all duration-200 [&:-webkit-autofill]:bg-[#1e2535] [&:-webkit-autofill]:[box-shadow:0_0_0_1000px_#1e2535_inset] [&:-webkit-autofill]:[-webkit-text-fill-color:#d1d5db]"
+                                            className="h-14 pl-11 bg-[#1e2535] border border-white/10 hover:border-white/20 focus:border-[#2563EB] focus:ring-2 focus:ring-[#2563EB]/20 !text-gray-300 text-[14px] font-medium !placeholder:text-gray-400 !placeholder:font-medium rounded-sm transition-all duration-200 [&:-webkit-autofill]:bg-[#1e2535] [&:-webkit-autofill]:[box-shadow:0_0_0_1000px_#1e2535_inset] [&:-webkit-autofill]:[-webkit-text-fill-color:#d1d5db]"
                                             required
                                         />
                                     </div>
@@ -168,7 +168,7 @@ const AdminLogin = () => {
                                             placeholder="••••••••"
                                             value={password}
                                             onChange={(e) => setPassword(e.target.value)}
-                                            className="h-14 pl-11 bg-[#1e2535] border border-white/10 hover:border-white/20 focus:border-[#db6513] focus:ring-2 focus:ring-[#db6513]/20 !text-gray-300 text-[14px] font-medium !placeholder:text-gray-400 !placeholder:font-medium rounded-sm transition-all duration-200 [&:-webkit-autofill]:bg-[#1e2535] [&:-webkit-autofill]:[box-shadow:0_0_0_1000px_#1e2535_inset] [&:-webkit-autofill]:[-webkit-text-fill-color:#d1d5db]"
+                                            className="h-14 pl-11 bg-[#1e2535] border border-white/10 hover:border-white/20 focus:border-[#2563EB] focus:ring-2 focus:ring-[#2563EB]/20 !text-gray-300 text-[14px] font-medium !placeholder:text-gray-400 !placeholder:font-medium rounded-sm transition-all duration-200 [&:-webkit-autofill]:bg-[#1e2535] [&:-webkit-autofill]:[box-shadow:0_0_0_1000px_#1e2535_inset] [&:-webkit-autofill]:[-webkit-text-fill-color:#d1d5db]"
                                             required
                                         />
                                     </div>
@@ -178,7 +178,7 @@ const AdminLogin = () => {
                                     <Button
                                         type="submit"
                                         disabled={isSubmitting}
-                                        className="w-full h-14 rounded-sm bg-[#db6513] hover:bg-[#c45610] text-white font-black uppercase tracking-[0.25em] text-[13px] shadow-lg shadow-[#db6513]/20 transition-all hover:-translate-y-0.5 border-b-2 border-orange-700 active:translate-y-0 active:border-b-0"
+                                        className="w-full h-14 rounded-sm bg-[#2563EB] hover:bg-[#1D4ED8] text-white font-black uppercase tracking-[0.25em] text-[13px] shadow-lg shadow-[#2563EB]/20 transition-all hover:-translate-y-0.5 border-b-2 border-blue-700 active:translate-y-0 active:border-b-0"
                                     >
                                         {isSubmitting ? (
                                             <Loader2 className="h-5 w-5 animate-spin" />

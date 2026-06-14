@@ -149,10 +149,10 @@ export default function OrderModal({ isOpen, onClose, items, totalPrice }: Order
                         initial={{ opacity: 0, scale: 0.95, y: 20 }}
                         animate={{ opacity: 1, scale: 1, y: 0 }}
                         exit={{ opacity: 0, scale: 0.95, y: 20 }}
-                        className="relative w-full max-w-md bg-white shadow-2xl overflow-hidden rounded-xl border border-[#5C2E00]/10"
+                        className="relative w-full max-w-md bg-white shadow-2xl overflow-hidden rounded-xl border border-[#1E3A8A]/10"
                     >
                         {/* Header */}
-                        <div className="bg-[#5C2E00] px-6 py-5 flex items-center justify-between">
+                        <div className="bg-[#1E3A8A] px-6 py-5 flex items-center justify-between">
                             <div className="flex flex-col">
                                 <h3 className="text-white font-black uppercase tracking-[0.1em] flex items-center gap-2">
                                     <MessageSquare className="w-5 h-5" />
@@ -171,7 +171,7 @@ export default function OrderModal({ isOpen, onClose, items, totalPrice }: Order
                         <form onSubmit={handleSubmit} className="p-6 md:p-8 flex flex-col gap-5">
                             {isSingleProduct && (singleProduct.selectedColors || singleProduct.selectedColor || availableColors.length > 1) && (
                                 <div className="flex flex-col gap-2">
-                                    <label className="text-[11px] font-black uppercase tracking-widest text-[#5C2E00] flex justify-between mb-1">
+                                    <label className="text-[11px] font-black uppercase tracking-widest text-[#1E3A8A] flex justify-between mb-1">
                                         <span>Couleur</span>
                                         <span dir="rtl" className="font-bold">اللون</span>
                                     </label>
@@ -180,7 +180,7 @@ export default function OrderModal({ isOpen, onClose, items, totalPrice }: Order
                                             readOnly
                                             type="text"
                                             value={singleProduct.selectedColor}
-                                            className="w-full px-4 py-3 border border-[#5C2E00]/20 bg-gray-100 text-gray-600 outline-none font-bold capitalize"
+                                            className="w-full px-4 py-3 border border-[#1E3A8A]/20 bg-gray-100 text-gray-600 outline-none font-bold capitalize"
                                         />
                                     ) : (
                                         <div className="flex flex-wrap gap-3">
@@ -202,7 +202,7 @@ export default function OrderModal({ isOpen, onClose, items, totalPrice }: Order
 
                             {isSingleProduct && (singleProduct.selectedSize || availableSizes.length > 1) && (
                                 <div className="flex flex-col gap-2">
-                                    <label className="text-[11px] font-black uppercase tracking-widest text-[#5C2E00] flex justify-between mb-1">
+                                    <label className="text-[11px] font-black uppercase tracking-widest text-[#1E3A8A] flex justify-between mb-1">
                                         <span>Pointure</span>
                                         <span dir="rtl" className="font-bold">المقاس</span>
                                     </label>
@@ -211,7 +211,7 @@ export default function OrderModal({ isOpen, onClose, items, totalPrice }: Order
                                             readOnly
                                             type="text"
                                             value={singleProduct.selectedSize}
-                                            className="w-full px-4 py-3 border border-[#5C2E00]/20 bg-gray-100 text-gray-600 outline-none font-bold"
+                                            className="w-full px-4 py-3 border border-[#1E3A8A]/20 bg-gray-100 text-gray-600 outline-none font-bold"
                                         />
                                     ) : (
                                         <div className="flex flex-wrap gap-2">
@@ -220,7 +220,7 @@ export default function OrderModal({ isOpen, onClose, items, totalPrice }: Order
                                                     key={size}
                                                     type="button"
                                                     onClick={() => setSelectedSize(size)}
-                                                    className={`w-10 h-10 text-[12px] rounded-sm flex items-center justify-center font-bold transition-all ${selectedSize === size ? 'bg-[#5C2E00] text-white shadow-md' : 'border border-gray-300 hover:border-[#5C2E00] text-gray-700 bg-white'}`}
+                                                    className={`w-10 h-10 text-[12px] rounded-sm flex items-center justify-center font-bold transition-all ${selectedSize === size ? 'bg-[#1E3A8A] text-white shadow-md' : 'border border-gray-300 hover:border-[#1E3A8A] text-gray-700 bg-white'}`}
                                                 >
                                                     {size}
                                                 </button>
@@ -231,7 +231,7 @@ export default function OrderModal({ isOpen, onClose, items, totalPrice }: Order
                             )}
 
                             <div className="flex flex-col gap-1.5">
-                                <label className="text-[11px] font-black uppercase tracking-widest text-[#5C2E00] flex justify-between">
+                                <label className="text-[11px] font-black uppercase tracking-widest text-[#1E3A8A] flex justify-between">
                                     <span>Nom Complet</span>
                                     <span dir="rtl" className="font-bold">الإسم الكامل</span>
                                 </label>
@@ -241,12 +241,12 @@ export default function OrderModal({ isOpen, onClose, items, totalPrice }: Order
                                     value={formData.name}
                                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                                     placeholder="Ex: Mohammed "
-                                    className="w-full px-4 py-3 border border-[#5C2E00]/20 bg-gray-50 focus:bg-white focus:border-[#db6513] focus:ring-1 focus:ring-[#db6513] outline-none transition-all placeholder:text-gray-400 font-medium"
+                                    className="w-full px-4 py-3 border border-[#1E3A8A]/20 bg-gray-50 focus:bg-white focus:border-[#2563EB] focus:ring-1 focus:ring-[#2563EB] outline-none transition-all placeholder:text-gray-400 font-medium"
                                 />
                             </div>
 
                             <div className="flex flex-col gap-1.5">
-                                <label className="text-[11px] font-black uppercase tracking-widest text-[#5C2E00] flex justify-between">
+                                <label className="text-[11px] font-black uppercase tracking-widest text-[#1E3A8A] flex justify-between">
                                     <span>Ville</span>
                                     <span dir="rtl" className="font-bold">المدينة</span>
                                 </label>
@@ -256,12 +256,12 @@ export default function OrderModal({ isOpen, onClose, items, totalPrice }: Order
                                     value={formData.city}
                                     onChange={(e) => setFormData({ ...formData, city: e.target.value })}
                                     placeholder="Ex: Casablanca"
-                                    className="w-full px-4 py-3 border border-[#5C2E00]/20 bg-gray-50 focus:bg-white focus:border-[#db6513] focus:ring-1 focus:ring-[#db6513] outline-none transition-all placeholder:text-gray-400 font-medium"
+                                    className="w-full px-4 py-3 border border-[#1E3A8A]/20 bg-gray-50 focus:bg-white focus:border-[#2563EB] focus:ring-1 focus:ring-[#2563EB] outline-none transition-all placeholder:text-gray-400 font-medium"
                                 />
                             </div>
 
                             <div className="flex flex-col gap-1.5">
-                                <label className="text-[11px] font-black uppercase tracking-widest text-[#5C2E00] flex justify-between">
+                                <label className="text-[11px] font-black uppercase tracking-widest text-[#1E3A8A] flex justify-between">
                                     <span>Adresse Complète</span>
                                     <span dir="rtl" className="font-bold">العنوان</span>
                                 </label>
@@ -271,12 +271,12 @@ export default function OrderModal({ isOpen, onClose, items, totalPrice }: Order
                                     value={formData.address}
                                     onChange={(e) => setFormData({ ...formData, address: e.target.value })}
                                     placeholder="Ex: Quartier, Rue, N°"
-                                    className="w-full px-4 py-3 border border-[#5C2E00]/20 bg-gray-50 focus:bg-white focus:border-[#db6513] focus:ring-1 focus:ring-[#db6513] outline-none transition-all placeholder:text-gray-400 font-medium"
+                                    className="w-full px-4 py-3 border border-[#1E3A8A]/20 bg-gray-50 focus:bg-white focus:border-[#2563EB] focus:ring-1 focus:ring-[#2563EB] outline-none transition-all placeholder:text-gray-400 font-medium"
                                 />
                             </div>
 
                             <div className="flex flex-col gap-1.5">
-                                <label className="text-[11px] font-black uppercase tracking-widest text-[#5C2E00] flex justify-between">
+                                <label className="text-[11px] font-black uppercase tracking-widest text-[#1E3A8A] flex justify-between">
                                     <span>Téléphone</span>
                                     <span dir="rtl" className="font-bold">رقم الهاتف</span>
                                 </label>
@@ -287,19 +287,19 @@ export default function OrderModal({ isOpen, onClose, items, totalPrice }: Order
                                     value={formData.phone}
                                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                                     placeholder="06 XX XX XX XX"
-                                    className="w-full px-4 py-3 text-right sm:text-left border border-[#5C2E00]/20 bg-gray-50 focus:bg-white focus:border-[#db6513] focus:ring-1 focus:ring-[#db6513] outline-none transition-all placeholder:text-gray-400 font-bold"
+                                    className="w-full px-4 py-3 text-right sm:text-left border border-[#1E3A8A]/20 bg-gray-50 focus:bg-white focus:border-[#2563EB] focus:ring-1 focus:ring-[#2563EB] outline-none transition-all placeholder:text-gray-400 font-bold"
                                 />
                             </div>
 
                             {/* Total Display */}
-                            <div className="mt-2 bg-[#db6513]/10 border border-[#db6513]/20 px-4 py-3 rounded flex justify-between items-center">
-                                <span className="text-[10px] uppercase font-black tracking-widest text-[#db6513]">À Payer / المجموع</span>
-                                <span className="text-xl font-black text-[#5C2E00]">{totalPrice} MAD</span>
+                            <div className="mt-2 bg-[#2563EB]/10 border border-[#2563EB]/20 px-4 py-3 rounded flex justify-between items-center">
+                                <span className="text-[10px] uppercase font-black tracking-widest text-[#2563EB]">À Payer / المجموع</span>
+                                <span className="text-xl font-black text-[#1E3A8A]">{totalPrice} MAD</span>
                             </div>
 
                             <button
                                 type="submit"
-                                className="w-full bg-[#db6513] hover:bg-[#5C2E00] text-white flex items-center justify-center gap-3 py-4 mt-2 font-black uppercase text-[12px] tracking-[0.2em] transition-all duration-300 shadow-xl shadow-[#db6513]/20 active:scale-95"
+                                className="w-full bg-[#2563EB] hover:bg-[#1E3A8A] text-white flex items-center justify-center gap-3 py-4 mt-2 font-black uppercase text-[12px] tracking-[0.2em] transition-all duration-300 shadow-xl shadow-[#2563EB]/20 active:scale-95"
                             >
                                 Confirmer la Commande
                             </button>

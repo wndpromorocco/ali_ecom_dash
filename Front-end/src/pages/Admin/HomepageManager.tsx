@@ -27,7 +27,7 @@ import { API_BASE, DOMAIN_BASE } from '@/config';
 
 const GallerySlot = ({ slot, data, className, onUpload, isUploading }: any) => {
     return (
-        <div className={`relative group bg-gray-50 border border-gray-100 rounded-sm overflow-hidden transition-all hover:border-[#db6513]/30 shadow-sm ${className}`}>
+        <div className={`relative group bg-gray-50 border border-gray-100 rounded-sm overflow-hidden transition-all hover:border-[#2563EB]/30 shadow-sm ${className}`}>
             {data?.imageUrl ? (
                 <img
                     src={data.imageUrl.startsWith('/uploads') ? `${DOMAIN_BASE}${data.imageUrl}` : data.imageUrl}
@@ -48,7 +48,7 @@ const GallerySlot = ({ slot, data, className, onUpload, isUploading }: any) => {
                 <Button
                     variant="secondary"
                     size="sm"
-                    className="h-9 rounded-sm font-black uppercase text-[9px] tracking-widest bg-white hover:bg-[#db6513] hover:text-white border-none shadow-xl"
+                    className="h-9 rounded-sm font-black uppercase text-[9px] tracking-widest bg-white hover:bg-[#2563EB] hover:text-white border-none shadow-xl"
                     onClick={() => document.getElementById(`gallery-file-${slot}`)?.click()}
                     disabled={isUploading}
                     type="button"
@@ -92,7 +92,7 @@ const HomepageManager = () => {
         line1: 'BLACK',
         line2: 'FRIDAY',
         badge_text: 'Super Soldes',
-        bg_color: '#db6513',
+        bg_color: '#2563EB',
         text_color: '#dc2626',
         border_color: '#dc2626',
     });
@@ -196,7 +196,7 @@ const HomepageManager = () => {
                         line1: json.data.line1 || 'BLACK',
                         line2: json.data.line2 || 'FRIDAY',
                         badge_text: json.data.badgeText || 'Super Soldes',
-                        bg_color: json.data.bgColor || '#db6513',
+                        bg_color: json.data.bgColor || '#2563EB',
                         text_color: json.data.textColor || '#dc2626',
                         border_color: json.data.borderColor || '#dc2626',
                     });
@@ -424,7 +424,7 @@ const HomepageManager = () => {
     if (isLoading) {
         return (
             <div className="flex items-center justify-center min-h-[400px]">
-                <Loader2 className="h-8 w-8 animate-spin text-[#db6513]" />
+                <Loader2 className="h-8 w-8 animate-spin text-[#2563EB]" />
             </div>
         );
     }
@@ -435,9 +435,9 @@ const HomepageManager = () => {
             <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
                 <div>
                     <h1 className="text-3xl font-black uppercase tracking-tight text-gray-900 leading-none">
-                        GESTION DE <span className="text-[#db6513]">VITRINE</span>
+                        GESTION DE <span className="text-[#2563EB]">VITRINE</span>
                     </h1>
-                    <p className="text-[10px] text-gray-400 font-bold uppercase tracking-widest mt-3 leading-none underline decoration-[#db6513]/30 underline-offset-4">CONFIGURATION DE LA PAGE D'ACCUEIL</p>
+                    <p className="text-[10px] text-gray-400 font-bold uppercase tracking-widest mt-3 leading-none underline decoration-[#2563EB]/30 underline-offset-4">CONFIGURATION DE LA PAGE D'ACCUEIL</p>
                 </div>
                 <div className="flex items-center gap-3 bg-white px-4 py-2 rounded-sm border border-gray-100 shadow-sm">
                     <div className="flex flex-col items-end">
@@ -454,25 +454,25 @@ const HomepageManager = () => {
                 <TabsList className="bg-white border border-gray-100 p-1 h-12 rounded-sm w-full lg:w-auto shadow-sm gap-1 overflow-x-auto flex-nowrap justify-start lg:justify-center scrollbar-hide">
                     <TabsTrigger
                         value="hero"
-                        className="flex-shrink-0 lg:flex-1 w-32 md:w-48 rounded-sm h-full data-[state=active]:bg-[#db6513] data-[state=active]:text-white data-[state=active]:shadow-md font-black uppercase text-[10px] tracking-widest gap-2 transition-all"
+                        className="flex-shrink-0 lg:flex-1 w-32 md:w-48 rounded-sm h-full data-[state=active]:bg-[#2563EB] data-[state=active]:text-white data-[state=active]:shadow-md font-black uppercase text-[10px] tracking-widest gap-2 transition-all"
                     >
                         <Layout className="w-3.5 h-3.5" /> HERO
                     </TabsTrigger>
                     <TabsTrigger
                         value="promo"
-                        className="flex-shrink-0 lg:flex-1 w-32 md:w-48 rounded-sm h-full data-[state=active]:bg-[#db6513] data-[state=active]:text-white data-[state=active]:shadow-md font-black uppercase text-[10px] tracking-widest gap-2 transition-all"
+                        className="flex-shrink-0 lg:flex-1 w-32 md:w-48 rounded-sm h-full data-[state=active]:bg-[#2563EB] data-[state=active]:text-white data-[state=active]:shadow-md font-black uppercase text-[10px] tracking-widest gap-2 transition-all"
                     >
                         <Zap className="w-3.5 h-3.5" /> PROMO
                     </TabsTrigger>
                     <TabsTrigger
                         value="gallery"
-                        className="flex-shrink-0 lg:flex-1 w-32 md:w-48 rounded-sm h-full data-[state=active]:bg-[#db6513] data-[state=active]:text-white data-[state=active]:shadow-md font-black uppercase text-[10px] tracking-widest gap-2 transition-all"
+                        className="flex-shrink-0 lg:flex-1 w-32 md:w-48 rounded-sm h-full data-[state=active]:bg-[#2563EB] data-[state=active]:text-white data-[state=active]:shadow-md font-black uppercase text-[10px] tracking-widest gap-2 transition-all"
                     >
                         <ImageIcon className="w-3.5 h-3.5" /> GALERIE
                     </TabsTrigger>
                     <TabsTrigger
                         value="blackfriday"
-                        className="flex-shrink-0 lg:flex-1 w-32 md:w-48 rounded-sm h-full data-[state=active]:bg-[#db6513] data-[state=active]:text-white data-[state=active]:shadow-md font-black uppercase text-[10px] tracking-widest gap-2 transition-all"
+                        className="flex-shrink-0 lg:flex-1 w-32 md:w-48 rounded-sm h-full data-[state=active]:bg-[#2563EB] data-[state=active]:text-white data-[state=active]:shadow-md font-black uppercase text-[10px] tracking-widest gap-2 transition-all"
                     >
                         <Palette className="w-3.5 h-3.5" /> BLACK FRIDAY
                     </TabsTrigger>
@@ -484,7 +484,7 @@ const HomepageManager = () => {
                         {/* List Area - show first on desktop, first on mobile too since it's the current state view */}
                         <div className="lg:col-span-7 order-2 lg:order-1 space-y-6">
                             <h2 className="text-[12px] font-black uppercase tracking-[0.2em] text-gray-500 flex items-center gap-2">
-                                <ImageIcon className="w-4 h-4 text-[#db6513]" />
+                                <ImageIcon className="w-4 h-4 text-[#2563EB]" />
                                 Slides Actuels ({heroSlides.length})
                             </h2>
 
@@ -541,9 +541,9 @@ const HomepageManager = () => {
                         {/* Upload Form */}
                         <div className="lg:col-span-5 order-1 lg:order-2">
                             <Card className="rounded-sm border-gray-100 shadow-xl bg-white overflow-hidden sticky top-24">
-                                <CardHeader className="bg-gray-900 border-b border-gray-800 p-6 border-l-4 border-l-[#db6513]">
+                                <CardHeader className="bg-gray-900 border-b border-gray-800 p-6 border-l-4 border-l-[#2563EB]">
                                     <CardTitle className="text-[12px] font-black uppercase tracking-[0.2em] flex items-center gap-3 text-white">
-                                        <Plus className="w-4 h-4 text-[#db6513]" />
+                                        <Plus className="w-4 h-4 text-[#2563EB]" />
                                         Nouvelle Slide
                                     </CardTitle>
                                     <CardDescription className="text-[10px] font-bold text-gray-500 uppercase tracking-widest mt-1 italic">Ajoutez un visuel d'impact à votre vitrine principale.</CardDescription>
@@ -553,7 +553,7 @@ const HomepageManager = () => {
                                         {/* Image Upload Area */}
                                         <div className="space-y-2">
                                             <Label className="text-[10px] font-black uppercase tracking-widest text-gray-400 mb-2 block">Visuel (L:1920 x H:800 recommandé)</Label>
-                                            <div className="group relative h-48 bg-gray-50 border-2 border-dashed border-gray-100 flex items-center justify-center overflow-hidden transition-all hover:border-[#db6513]/40 rounded-sm">
+                                            <div className="group relative h-48 bg-gray-50 border-2 border-dashed border-gray-100 flex items-center justify-center overflow-hidden transition-all hover:border-[#2563EB]/40 rounded-sm">
                                                 {heroPreview ? (
                                                     <>
                                                         <img src={heroPreview} alt="Preview" className="w-full h-full object-cover" />
@@ -568,9 +568,9 @@ const HomepageManager = () => {
                                                         </Button>
                                                     </>
                                                 ) : (
-                                                    <label className="text-center cursor-pointer w-full h-full flex flex-col items-center justify-center gap-3 group-hover:bg-[#fdf0e8]/20 transition-colors">
-                                                        <div className="w-12 h-12 rounded-full bg-[#fdf0e8] flex items-center justify-center group-hover:scale-110 transition-transform shadow-sm">
-                                                            <Upload className="h-6 w-6 text-[#db6513]" />
+                                                    <label className="text-center cursor-pointer w-full h-full flex flex-col items-center justify-center gap-3 group-hover:bg-[#dbeafe]/20 transition-colors">
+                                                        <div className="w-12 h-12 rounded-full bg-[#dbeafe] flex items-center justify-center group-hover:scale-110 transition-transform shadow-sm">
+                                                            <Upload className="h-6 w-6 text-[#2563EB]" />
                                                         </div>
                                                         <div>
                                                             <p className="text-[10px] font-black text-gray-900 uppercase tracking-widest">DÉPOSER L'IMAGE</p>
@@ -588,7 +588,7 @@ const HomepageManager = () => {
                                                 <Input
                                                     value={heroForm.title}
                                                     onChange={(e) => setHeroForm({ ...heroForm, title: e.target.value })}
-                                                    className="w-full border border-gray-100 rounded-sm px-3 py-2.5 text-[12px] text-gray-900 bg-white focus:border-[#e8721f] focus:ring-2 focus:ring-orange-100 transition-all h-11 font-bold"
+                                                    className="w-full border border-gray-100 rounded-sm px-3 py-2.5 text-[12px] text-gray-900 bg-white focus:border-[#3B82F6] focus:ring-2 focus:ring-blue-100 transition-all h-11 font-bold"
                                                     placeholder="EX: NOUVELLE COLLECTION"
                                                 />
                                             </div>
@@ -598,7 +598,7 @@ const HomepageManager = () => {
                                                     type="number"
                                                     value={heroForm.order}
                                                     onChange={(e) => setHeroForm({ ...heroForm, order: e.target.value })}
-                                                    className="w-full border border-gray-100 rounded-sm px-3 py-2.5 text-[12px] text-gray-900 text-center bg-white focus:border-[#e8721f] focus:ring-2 focus:ring-orange-100 transition-all h-11 font-black"
+                                                    className="w-full border border-gray-100 rounded-sm px-3 py-2.5 text-[12px] text-gray-900 text-center bg-white focus:border-[#3B82F6] focus:ring-2 focus:ring-blue-100 transition-all h-11 font-black"
                                                 />
                                             </div>
                                         </div>
@@ -608,7 +608,7 @@ const HomepageManager = () => {
                                             <Input
                                                 value={heroForm.subtitle}
                                                 onChange={(e) => setHeroForm({ ...heroForm, subtitle: e.target.value })}
-                                                className="w-full border border-gray-100 rounded-sm px-3 py-2.5 text-[12px] text-gray-900 bg-white focus:border-[#e8721f] focus:ring-2 focus:ring-orange-100 transition-all h-11 font-bold"
+                                                className="w-full border border-gray-100 rounded-sm px-3 py-2.5 text-[12px] text-gray-900 bg-white focus:border-[#3B82F6] focus:ring-2 focus:ring-blue-100 transition-all h-11 font-bold"
                                                 placeholder="DESCRIPTION COURTE EN CARROUSEL"
                                             />
                                         </div>
@@ -631,9 +631,9 @@ const HomepageManager = () => {
                 {/* GALERIE VITRINE TAB */}
                 <TabsContent value="gallery" className="mt-8 space-y-8 focus-visible:outline-none">
                     <Card className="rounded-sm border-gray-100 shadow-sm bg-white overflow-hidden">
-                        <CardHeader className="bg-gray-50 border-b border-gray-100 p-8 border-l-4 border-l-[#db6513]">
+                        <CardHeader className="bg-gray-50 border-b border-gray-100 p-8 border-l-4 border-l-[#2563EB]">
                             <CardTitle className="text-[14px] font-black uppercase tracking-[0.2em] flex items-center gap-3 text-gray-900">
-                                <ImageIcon className="w-5 h-5 text-[#db6513]" />
+                                <ImageIcon className="w-5 h-5 text-[#2563EB]" />
                                 CONFIGURATION DE LA GALERIE
                             </CardTitle>
                             <CardDescription className="text-[10px] font-bold text-gray-400 uppercase tracking-widest mt-1 italic">Gérez les 5 emplacements d'images du bloc galerie.</CardDescription>
@@ -668,7 +668,7 @@ const HomepageManager = () => {
                                 />
 
                                 {/* Slot 4 - Tall Right (Occupied by BF Preview) */}
-                                <div className="col-span-1 row-span-2 bg-[#db6513]/10 border-2 border-dashed border-yellow-500/30 rounded-sm flex flex-col items-center justify-center p-6 text-center">
+                                <div className="col-span-1 row-span-2 bg-[#2563EB]/10 border-2 border-dashed border-yellow-500/30 rounded-sm flex flex-col items-center justify-center p-6 text-center">
                                     <Palette className="w-8 h-8 text-yellow-600 mb-3 opacity-50" />
                                     <p className="text-[10px] font-black text-yellow-700 uppercase tracking-widest leading-tight">CARTE BLACK FRIDAY</p>
                                     <p className="text-[8px] font-bold text-yellow-600/60 uppercase tracking-widest mt-2 leading-relaxed">Cet emplacement est géré dans l'onglet 4</p>
@@ -702,11 +702,11 @@ const HomepageManager = () => {
                         {/* Form */}
                         <div className="lg:col-span-5">
                             <Card className="rounded-sm border-gray-100 shadow-xl bg-white overflow-hidden">
-                                <CardHeader className="bg-gray-50 border-b border-gray-100 p-8 border-l-4 border-l-[#db6513]">
+                                <CardHeader className="bg-gray-50 border-b border-gray-100 p-8 border-l-4 border-l-[#2563EB]">
                                     <div className="flex items-center justify-between">
                                         <div>
                                             <CardTitle className="text-[14px] font-black uppercase tracking-[0.2em] flex items-center gap-3 text-gray-900">
-                                                <Palette className="w-5 h-5 text-[#db6513]" />
+                                                <Palette className="w-5 h-5 text-[#2563EB]" />
                                                 CARTE BLACK FRIDAY
                                             </CardTitle>
                                             <CardDescription className="text-[10px] font-bold text-gray-400 uppercase tracking-widest mt-1 italic">Personnalisez le visuel de la promotion.</CardDescription>
@@ -714,7 +714,7 @@ const HomepageManager = () => {
                                         <Switch
                                             checked={bfConfig.is_active}
                                             onCheckedChange={(val) => setBfConfig({ ...bfConfig, is_active: val })}
-                                            className="data-[state=checked]:bg-[#db6513] scale-110"
+                                            className="data-[state=checked]:bg-[#2563EB] scale-110"
                                         />
                                     </div>
                                 </CardHeader>
@@ -824,7 +824,7 @@ const HomepageManager = () => {
                         {/* Preview */}
                         <div className="lg:col-span-7 space-y-6">
                             <h2 className="text-[12px] font-black uppercase tracking-[0.2em] text-gray-500 flex items-center gap-2">
-                                <AlertCircle className="w-4 h-4 text-[#db6513]" />
+                                <AlertCircle className="w-4 h-4 text-[#2563EB]" />
                                 APERÇU EN TEMPS RÉEL
                             </h2>
 
@@ -870,11 +870,11 @@ const HomepageManager = () => {
                         {/* Configuration Form */}
                         <div className="space-y-8">
                             <Card className="rounded-sm border-gray-100 shadow-xl bg-white overflow-hidden">
-                                <CardHeader className="bg-gray-50 border-b border-gray-100 p-4 sm:p-8 border-l-4 border-l-[#db6513]">
+                                <CardHeader className="bg-gray-50 border-b border-gray-100 p-4 sm:p-8 border-l-4 border-l-[#2563EB]">
                                     <div className="flex items-center justify-between">
                                         <div>
                                             <CardTitle className="text-[14px] font-black uppercase tracking-[0.2em] flex items-center gap-3 text-gray-900">
-                                                <Zap className="w-5 h-5 text-[#db6513] fill-[#db6513]" />
+                                                <Zap className="w-5 h-5 text-[#2563EB] fill-[#2563EB]" />
                                                 L'OFFRE EXCLUSIVE
                                             </CardTitle>
                                             <CardDescription className="text-[10px] font-bold text-gray-400 uppercase tracking-widest mt-1 italic">Configurez le compte à rebours de la page d'accueil.</CardDescription>
@@ -882,7 +882,7 @@ const HomepageManager = () => {
                                         <Switch
                                             checked={promoForm.is_active}
                                             onCheckedChange={(val) => setPromoForm({ ...promoForm, is_active: val })}
-                                            className="data-[state=checked]:bg-[#db6513] scale-110"
+                                            className="data-[state=checked]:bg-[#2563EB] scale-110"
                                         />
                                     </div>
                                 </CardHeader>
@@ -891,14 +891,14 @@ const HomepageManager = () => {
                                         <div className="space-y-6">
                                             <div className="space-y-2">
                                                 <Label className="text-[10px] font-black uppercase tracking-widest text-gray-400 flex items-center gap-2">
-                                                    <Clock className="w-3.5 h-3.5 text-[#db6513]" /> Date d'Échéance
+                                                    <Clock className="w-3.5 h-3.5 text-[#2563EB]" /> Date d'Échéance
                                                 </Label>
                                                 <Input
                                                     type="datetime-local"
                                                     value={promoForm.promo_end_date}
                                                     onChange={(e) => setPromoForm({ ...promoForm, promo_end_date: e.target.value })}
                                                     step="1"
-                                                    className="w-full border border-gray-100 rounded-sm px-4 py-3 text-[14px] text-gray-900 bg-white focus:border-[#e8721f] focus:ring-2 focus:ring-orange-100 h-12 font-black tracking-wider [&::-webkit-datetime-edit-ampm-field]:hidden [&::-webkit-datetime-edit-hour-field]:text-[14px] uppercase"
+                                                    className="w-full border border-gray-100 rounded-sm px-4 py-3 text-[14px] text-gray-900 bg-white focus:border-[#3B82F6] focus:ring-2 focus:ring-blue-100 h-12 font-black tracking-wider [&::-webkit-datetime-edit-ampm-field]:hidden [&::-webkit-datetime-edit-hour-field]:text-[14px] uppercase"
                                                     required
                                                 />
                                             </div>
@@ -906,7 +906,7 @@ const HomepageManager = () => {
                                             <div className="flex flex-col gap-2">
                                                 <Label className="text-[10px] uppercase font-black text-gray-400">Image de l'Offre Exclusive</Label>
                                                 <div
-                                                    className="bg-white border border-dashed border-gray-200 rounded-sm p-6 text-center text-sm text-gray-500 cursor-pointer hover:border-[#db6513]/40 transition-all group relative overflow-hidden h-28 sm:h-32 max-h-36 flex flex-col items-center justify-center gap-2"
+                                                    className="bg-white border border-dashed border-gray-200 rounded-sm p-6 text-center text-sm text-gray-500 cursor-pointer hover:border-[#2563EB]/40 transition-all group relative overflow-hidden h-28 sm:h-32 max-h-36 flex flex-col items-center justify-center gap-2"
                                                     onClick={() => document.getElementById('promo-image-upload')?.click()}
                                                 >
                                                     {promoPreview ? (
@@ -923,8 +923,8 @@ const HomepageManager = () => {
                                                         </>
                                                     ) : (
                                                         <>
-                                                            <UploadCloud size={24} className="text-gray-300 group-hover:text-[#db6513]/50 transition-colors" />
-                                                            <span className="text-[9px] font-black uppercase tracking-widest leading-none">Déposez ou <span className="text-[#db6513]">cliquez</span></span>
+                                                            <UploadCloud size={24} className="text-gray-300 group-hover:text-[#2563EB]/50 transition-colors" />
+                                                            <span className="text-[9px] font-black uppercase tracking-widest leading-none">Déposez ou <span className="text-[#2563EB]">cliquez</span></span>
                                                             <span className="text-[8px] font-bold text-gray-300 uppercase">PNG/JPG (Max 5MB)</span>
                                                         </>
                                                     )}
@@ -960,7 +960,7 @@ const HomepageManager = () => {
                                                 <Input
                                                     value={promoForm.section_title}
                                                     onChange={(e) => setPromoForm({ ...promoForm, section_title: e.target.value })}
-                                                    className="w-full border border-gray-100 rounded-sm px-4 py-3 text-[13px] text-gray-900 bg-white focus:border-[#e8721f] focus:ring-2 focus:ring-orange-100 h-12 font-black"
+                                                    className="w-full border border-gray-100 rounded-sm px-4 py-3 text-[13px] text-gray-900 bg-white focus:border-[#3B82F6] focus:ring-2 focus:ring-blue-100 h-12 font-black"
                                                     placeholder="EX: OFFRE EXCLUSIVE FINIT BIENTÔT !"
                                                 />
                                             </div>
@@ -970,7 +970,7 @@ const HomepageManager = () => {
                                                 <textarea
                                                     value={promoForm.section_subtitle}
                                                     onChange={(e) => setPromoForm({ ...promoForm, section_subtitle: e.target.value })}
-                                                    className="w-full border border-gray-100 rounded-sm px-4 py-3 text-[12px] text-gray-700 bg-white focus:border-[#e8721f] focus:ring-2 focus:ring-orange-100 min-h-[80px] font-bold resize-none"
+                                                    className="w-full border border-gray-100 rounded-sm px-4 py-3 text-[12px] text-gray-700 bg-white focus:border-[#3B82F6] focus:ring-2 focus:ring-blue-100 min-h-[80px] font-bold resize-none"
                                                     placeholder="Notre plus grande démarque saisonnière à ce jour."
                                                 />
                                             </div>
@@ -995,7 +995,7 @@ const HomepageManager = () => {
                                         <Button
                                             type="submit"
                                             disabled={isSaving}
-                                            className="w-full lg:w-full bg-[#db6513] hover:bg-[#c45610] text-white rounded-sm font-black uppercase tracking-[0.2em] text-[11px] h-12 shadow-xl shadow-orange-100 transition-all hover:-translate-y-0.5"
+                                            className="w-full lg:w-full bg-[#2563EB] hover:bg-[#1D4ED8] text-white rounded-sm font-black uppercase tracking-[0.2em] text-[11px] h-12 shadow-xl shadow-blue-100 transition-all hover:-translate-y-0.5"
                                         >
                                             {isSaving ? <Loader2 className="h-4 w-4 animate-spin mr-2" /> : <Save className="h-4 w-4 mr-2" />}
                                             METTRE À JOUR LA CAMPAGNE
@@ -1008,7 +1008,7 @@ const HomepageManager = () => {
                         {/* LIVE PREVIEW AREA */}
                         <div className="h-full flex flex-col gap-6 lg:sticky lg:top-6 self-start">
                             <h2 className="text-[12px] font-black uppercase tracking-[0.2em] text-gray-500 flex items-center gap-2">
-                                <AlertCircle className="w-4 h-4 text-[#db6513]" />
+                                <AlertCircle className="w-4 h-4 text-[#2563EB]" />
                                 Aperçu en Temps Réel
                             </h2>
 
@@ -1021,11 +1021,11 @@ const HomepageManager = () => {
                                 } : {}}
                             >
                                 {/* Decorative elements */}
-                                <div className="absolute top-0 right-0 w-64 h-64 bg-[#db6513]/10 rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl" />
-                                <div className="absolute bottom-0 left-0 w-48 h-48 bg-[#db6513]/5 rounded-full translate-y-1/2 -translate-x-1/2 blur-3xl" />
+                                <div className="absolute top-0 right-0 w-64 h-64 bg-[#2563EB]/10 rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl" />
+                                <div className="absolute bottom-0 left-0 w-48 h-48 bg-[#2563EB]/5 rounded-full translate-y-1/2 -translate-x-1/2 blur-3xl" />
 
                                 <div className="relative z-10 flex flex-col items-center max-w-lg">
-                                    <div className="inline-flex items-center gap-2 px-3 py-1 bg-[#db6513] rounded-sm mb-6 animate-bounce">
+                                    <div className="inline-flex items-center gap-2 px-3 py-1 bg-[#2563EB] rounded-sm mb-6 animate-bounce">
                                         <Zap className="w-3.5 h-3.5 text-white fill-white" />
                                         <span className="text-[9px] font-black uppercase text-white tracking-[0.3em]">Exclusivité Web</span>
                                     </div>
@@ -1048,7 +1048,7 @@ const HomepageManager = () => {
                                         ].map((unit, i) => (
                                             <div key={i} className="flex flex-col items-center">
                                                 <div className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 bg-white/5 border border-white/10 rounded-sm flex items-center justify-center mb-2 group shadow-lg">
-                                                    <span className="text-lg sm:text-2xl md:text-3xl font-black text-white group-hover:text-[#db6513] transition-colors">{String(unit.val).padStart(2, '0')}</span>
+                                                    <span className="text-lg sm:text-2xl md:text-3xl font-black text-white group-hover:text-[#2563EB] transition-colors">{String(unit.val).padStart(2, '0')}</span>
                                                 </div>
                                                 <span className="text-[9px] font-black uppercase text-gray-500 tracking-[0.2em]">{unit.label}</span>
                                             </div>
@@ -1067,12 +1067,12 @@ const HomepageManager = () => {
                                                 </div>
                                             )}
                                             <div className="text-left">
-                                                <p className="text-[8px] font-black text-[#db6513] uppercase tracking-widest">Produit Associé</p>
+                                                <p className="text-[8px] font-black text-[#2563EB] uppercase tracking-widest">Produit Associé</p>
                                                 <p className="text-[10px] font-bold text-white uppercase tracking-wider truncate w-40">
                                                     {products.find(p => p.id === promoForm.product_id)?.name}
                                                 </p>
                                             </div>
-                                            <div className="ml-4 w-9 h-9 rounded-full bg-[#db6513] flex items-center justify-center shadow-lg shadow-orange-900/50">
+                                            <div className="ml-4 w-9 h-9 rounded-full bg-[#2563EB] flex items-center justify-center shadow-lg shadow-blue-900/50">
                                                 <CheckCircle2 className="w-5 h-5 text-white" />
                                             </div>
                                         </div>
@@ -1080,9 +1080,9 @@ const HomepageManager = () => {
                                 </div>
                             </div>
 
-                            <Card className="border-none bg-[#fdf0e8]/50 p-4 border-l-4 border-[#db6513]">
+                            <Card className="border-none bg-[#dbeafe]/50 p-4 border-l-4 border-[#2563EB]">
                                 <div className="flex gap-3">
-                                    <AlertCircle className="w-4 h-4 text-[#db6513] flex-shrink-0 mt-0.5" />
+                                    <AlertCircle className="w-4 h-4 text-[#2563EB] flex-shrink-0 mt-0.5" />
                                     <div>
                                         <p className="text-[10px] font-black uppercase text-gray-800 tracking-wide">Note de Configuration</p>
                                         <p className="text-[9px] text-gray-500 mt-1 leading-relaxed font-bold uppercase tracking-widest">
