@@ -13,7 +13,7 @@ export const MOCK_PRODUCTS = [
         size: '40-45',
         categoryId: 'cat-1',
         category: 'Hommes',
-        images: ['/uploads/products/nike-1.jpg'],
+        images: ['https://images.pexels.com/photos/5591460/pexels-photo-5591460.jpeg?auto=compress&cs=tinysrgb&w=800'],
         isActive: true,
         quantity: 15,
         description: 'Chaussure de sport premium',
@@ -32,7 +32,7 @@ export const MOCK_PRODUCTS = [
         size: '38-44',
         categoryId: 'cat-2',
         category: 'Femmes',
-        images: ['/uploads/products/adidas-1.jpg'],
+        images: ['https://images.pexels.com/photos/1571459/pexels-photo-1571459.jpeg?auto=compress&cs=tinysrgb&w=800'],
         isActive: true,
         quantity: 0,
         description: 'Chaussure de running légère',
@@ -106,7 +106,7 @@ export const MOCK_SETTINGS = {
 export const MOCK_HERO_SLIDES = [
     {
         id: 1,
-        imageUrl: '/uploads/hero/hero-1.jpg',
+        imageUrl: 'https://images.pexels.com/photos/15668079/pexels-photo-15668079.jpeg?auto=compress&cs=tinysrgb&w=1400',
         title: 'Collection Automne',
         subtitle: 'Nouveautés 2026',
         order: 0,
@@ -114,7 +114,7 @@ export const MOCK_HERO_SLIDES = [
     },
     {
         id: 2,
-        imageUrl: '/uploads/hero/hero-2.jpg',
+        imageUrl: 'https://images.pexels.com/photos/18186205/pexels-photo-18186205.jpeg?auto=compress&cs=tinysrgb&w=1400',
         title: 'Soldes Hiver',
         subtitle: 'Jusqu\'à -50%',
         order: 1,
@@ -133,17 +133,17 @@ export const MOCK_PROMO = {
 };
 
 export const MOCK_GALLERY = [
-    { id: 1, slot: 1, imageUrl: '/images/gallery/gallery-1.jpg', altText: '' },
-    { id: 2, slot: 2, imageUrl: '/images/gallery/gallery-2.jpg', altText: '' },
-    { id: 3, slot: 3, imageUrl: '/images/gallery/gallery-3.jpg', altText: '' },
-    { id: 4, slot: 4, imageUrl: '/images/gallery/gallery-4.jpg', altText: '' },
-    { id: 5, slot: 5, imageUrl: '/images/gallery/gallery-5.jpg', altText: '' },
+    { id: 1, slot: 1, imageUrl: 'https://images.pexels.com/photos/6835104/pexels-photo-6835104.jpeg?auto=compress&cs=tinysrgb&w=800', altText: '' },
+    { id: 2, slot: 2, imageUrl: 'https://images.pexels.com/photos/5591460/pexels-photo-5591460.jpeg?auto=compress&cs=tinysrgb&w=800', altText: '' },
+    { id: 3, slot: 3, imageUrl: 'https://images.pexels.com/photos/11097671/pexels-photo-11097671.jpeg?auto=compress&cs=tinysrgb&w=800', altText: '' },
+    { id: 4, slot: 4, imageUrl: 'https://images.pexels.com/photos/15668079/pexels-photo-15668079.jpeg?auto=compress&cs=tinysrgb&w=800', altText: '' },
+    { id: 5, slot: 5, imageUrl: 'https://images.pexels.com/photos/18186205/pexels-photo-18186205.jpeg?auto=compress&cs=tinysrgb&w=800', altText: '' },
 ];
 
 export const MOCK_BLACKFRIDAY = {
     id: 1,
     isActive: true,
-    emoji: '👟',
+    emoji: '📺',
     line1: 'BLACK',
     line2: 'FRIDAY',
     badgeText: 'SOLDES FOLES',

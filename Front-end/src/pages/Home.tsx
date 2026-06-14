@@ -36,11 +36,11 @@ import { API_BASE, DOMAIN_BASE } from "@/config";
 
 
 const GALLERY_IMGS = [
-  "/images/gallery/gallery-1.jpg",
-  "/images/gallery/gallery-2.jpg",
-  "/images/gallery/gallery-3.jpg",
-  "/images/gallery/gallery-4.jpg",
-  "/images/gallery/gallery-5.jpg",
+  "https://images.pexels.com/photos/6835104/pexels-photo-6835104.jpeg?auto=compress&cs=tinysrgb&w=800",
+  "https://images.pexels.com/photos/5591460/pexels-photo-5591460.jpeg?auto=compress&cs=tinysrgb&w=800",
+  "https://images.pexels.com/photos/11097671/pexels-photo-11097671.jpeg?auto=compress&cs=tinysrgb&w=800",
+  "https://images.pexels.com/photos/15668079/pexels-photo-15668079.jpeg?auto=compress&cs=tinysrgb&w=800",
+  "https://images.pexels.com/photos/18186205/pexels-photo-18186205.jpeg?auto=compress&cs=tinysrgb&w=800",
 ];
 
 /* ─────────────────────────────────────────────
@@ -89,7 +89,7 @@ function Hero({ slides = [] }) {
 
           <div className="hidden md:flex w-7/12 justify-center pt-8">
             <img
-              src="/images/hero-shoe.png"
+              src="https://images.pexels.com/photos/2343467/pexels-photo-2343467.jpeg?auto=compress&cs=tinysrgb&w=800"
               alt="Hero Shoe"
               className="w-[400px] select-none rotate-[-8deg] translate-x-8 translate-y-2 drop-shadow-[0_40px_60px_rgba(0,0,0,0.4)] mix-blend-multiply transition-all duration-700 hover:scale-105"
             />
@@ -194,7 +194,7 @@ function PreFooter() {
 function GalleryGrid({ images = [], bf = null }) {
   // Pad images to 5 if needed
   const displayImages = [...images];
-  while (displayImages.length < 5) displayImages.push({ imageUrl: "/images/gallery/gallery-1.jpg" });
+  while (displayImages.length < 5) displayImages.push({ imageUrl: "https://images.pexels.com/photos/6835104/pexels-photo-6835104.jpeg?auto=compress&cs=tinysrgb&w=800" });
 
   return (
     <div className="w-full bg-[#faf8f6] py-16 md:py-24 mb-0">
@@ -340,7 +340,7 @@ const HotDeal = memo(({ promo }: { promo: any }) => {
   const bgWithCacheBust = useMemo(() => {
     const bgImage = promo?.imageUrl
       ? (promo.imageUrl.startsWith('http') ? promo.imageUrl : `${DOMAIN_BASE}${promo.imageUrl}`)
-      : "https://images.unsplash.com/photo-1549298916-b41d501d3772?w=1200&q=80";
+      : "https://images.pexels.com/photos/15668079/pexels-photo-15668079.jpeg?auto=compress&cs=tinysrgb&w=1200";
 
     // Use a stable property like updatedAt to bust cache only when record actually changes
     const ts = promo.updatedAt ? new Date(promo.updatedAt).getTime() : 'initial';
@@ -408,7 +408,7 @@ const HotDeal = memo(({ promo }: { promo: any }) => {
 
         <div className="flex flex-col items-center text-center relative z-10">
           <img
-            src={product?.images?.[0] ? (product.images[0].startsWith('http') ? product.images[0] : `${DOMAIN_BASE}${product.images[0]}`) : "/images/gallery/gallery-1.jpg"}
+            src={product?.images?.[0] ? (product.images[0].startsWith('http') ? product.images[0] : `${DOMAIN_BASE}${product.images[0]}`) : "https://images.pexels.com/photos/6835104/pexels-photo-6835104.jpeg?auto=compress&cs=tinysrgb&w=800"}
             alt="Deal product"
             loading="eager"
             className="w-80 h-auto drop-shadow-[0_25px_60px_rgba(0,0,0,0.15)] mb-10 transform -rotate-12 select-none hover:rotate-0 transition-transform duration-700"
@@ -504,12 +504,12 @@ function BrandsStrip() {
 ───────────────────────────────────────────── */
 function InstagramSection() {
   const photos = [
-    "/images/footer/img1.jpeg",
-    "/images/footer/img2.jpeg",
-    "/images/footer/img3.jpeg",
-    "/images/footer/img4.jpeg",
-    "/images/footer/img5.jpeg",
-    "/images/footer/img6.jpeg",
+    "https://images.pexels.com/photos/2343467/pexels-photo-2343467.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "https://images.pexels.com/photos/7614539/pexels-photo-7614539.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "https://images.pexels.com/photos/1571459/pexels-photo-1571459.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "https://images.pexels.com/photos/2079698/pexels-photo-2079698.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "https://images.pexels.com/photos/7282376/pexels-photo-7282376.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "https://images.pexels.com/photos/5202925/pexels-photo-5202925.jpeg?auto=compress&cs=tinysrgb&w=600",
   ];
   return (
     <section className="w-full pt-0 border-b border-gray-100">

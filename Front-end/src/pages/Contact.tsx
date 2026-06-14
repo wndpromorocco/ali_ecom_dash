@@ -28,7 +28,7 @@ const globalStyles = `
 
   /* BANNER */
   .hc-banner { position: relative; height: 200px; background: var(--brown); overflow: hidden; }
-  .hc-banner-bg { position: absolute; inset: 0; background: url('https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=1400&q=70') center/cover; opacity: .14; }
+  .hc-banner-bg { position: absolute; inset: 0; background: url('https://images.pexels.com/photos/6835104/pexels-photo-6835104.jpeg?auto=compress&cs=tinysrgb&w=1400') center/cover; opacity: .14; }
   .hc-banner-gold  { position: absolute; top: 0; right: 0; height: 100%; width: 46%; background: var(--gold-bright); opacity: .9;  clip-path: polygon(16% 0%,100% 0%,100% 100%,0% 100%); }
   .hc-banner-gold2 { position: absolute; top: 0; right: 0; height: 100%; width: 48%; background: var(--gold);        opacity: .35; clip-path: polygon(20% 0%,100% 0%,100% 100%,0% 100%); }
   .hc-banner-inner { position: relative; z-index: 10; max-width: 1160px; margin: 0 auto; padding: 0 32px; height: 100%; display: flex; flex-direction: column; justify-content: center; }
