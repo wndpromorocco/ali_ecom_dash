@@ -3,7 +3,6 @@ import { useCatalog } from '@/hooks/useCatalog';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
-import { HexColorPicker } from 'react-colorful';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import {
     Plus,
@@ -28,39 +27,11 @@ import {
     DialogTitle,
 } from "@/components/ui/dialog";
 import { Badge } from '@/components/ui/badge';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-
-const COLOR_GROUPS = {
-    Classique: [
-        { name: 'Noir', hex: '#000000' },
-        { name: 'Brun', hex: '#5C2E00' },
-        { name: 'Camel', hex: '#C19A6B' },
-        { name: 'Beige', hex: '#F5F5DC' },
-        { name: 'Marine', hex: '#000080' },
-        { name: 'Gris Anthracite', hex: '#36454F' }
-    ],
-    Sport: [
-        { name: 'Blanc', hex: '#FFFFFF' },
-        { name: 'Gris Clair', hex: '#D3D3D3' },
-        { name: 'Rouge Hermado', hex: '#E63946' },
-        { name: 'Bleu Sport', hex: '#1D3557' },
-        { name: 'Vert Forêt', hex: '#2D6A4F' },
-        { name: 'Orange', hex: '#F4A261' }
-    ],
-    Autres: [
-        { name: 'Or', hex: '#db6513' },
-        { name: 'Argent', hex: '#C0C0C0' },
-        { name: 'Bordeaux', hex: '#800020' },
-        { name: 'Taupe', hex: '#483C32' },
-        { name: 'Vert Pastel', hex: '#B7E4C7' },
-        { name: 'Rose Poudré', hex: '#FFD1DC' }
-    ]
-};
 
 const CategoryManagement = () => {
     const { categories, isLoading, refetch } = useCatalog({ showInactive: true });
-    const [selectedCible, setSelectedCible] = useState<any>(null);
-    const [selectedType, setSelectedType] = useState<any>(null);
+    const [selectedCategory, setSelectedCategory] = useState<any>(null);
+    const [selectedSubCategory, setSelectedSubCategory] = useState<any>(null);
 
     const [isSaving, setIsSaving] = useState(false);
 
@@ -79,8 +50,8 @@ const CategoryManagement = () => {
 
     // Filtered data
     const cibles = categories.filter(c => !c.parentId);
-    const types = selectedCible ? categories.filter(c => c.parentId === selectedCible.id) : [];
-    const colors = selectedType ? (selectedType.colors || []) : [];
+    const types = selectedCategory ? categories.filter(c => c.parentId === selectedCategory.id) : [];
+    const colors = selectedSubCategory ? (selectedSubCategory.colors || []) : [];
 
     const handleAdd = async () => {
         setIsSaving(true);
@@ -88,15 +59,15 @@ const CategoryManagement = () => {
             if (modalConfig.type === 'color') {
                 // Updating an existing category (the Type) to add a color
                 const updatedColors = [...colors, newInputValue];
-                const res = await fetch(`${API_BASE}/categories/${selectedType.id}`, {
+                const res = await fetch(`${API_BASE}/categories/${selectedSubCategory.id}`, {
                     method: 'PUT',
                     headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${token}` },
                     body: JSON.stringify({ colors: updatedColors })
                 });
                 if (res.ok) {
-                    toast.success('Couleur ajoutée');
+                    toast.success('Attribut ajouté');
                     const updated = await res.json();
-                    setSelectedType(updated.data);
+                    setSelectedSubCategory(updated.data);
                     refetch();
                 }
             } else {
@@ -104,7 +75,7 @@ const CategoryManagement = () => {
                 const payload = {
                     name: newInputValue,
                     nameAr: newArValue || newInputValue, // Fallback if no AR name
-                    parentId: modalConfig.type === 'type' ? selectedCible.id : undefined,
+                    parentId: modalConfig.type === 'type' ? selectedCategory.id : undefined,
                     types: [],
                     colors: []
                 };
@@ -114,7 +85,7 @@ const CategoryManagement = () => {
                     body: JSON.stringify(payload)
                 });
                 if (res.ok) {
-                    toast.success(modalConfig.type === 'cible' ? 'Cible créée' : 'Modèle créé');
+                    toast.success(modalConfig.type === 'cible' ? 'Catégorie créée' : 'Sous-catégorie créée');
                     refetch();
                 } else {
                     const err = await res.json();
@@ -136,15 +107,15 @@ const CategoryManagement = () => {
         try {
             if (modalConfig.type === 'color') {
                 const updatedColors = colors.filter((c: string) => c !== modalConfig.data);
-                const res = await fetch(`${API_BASE}/categories/${selectedType.id}`, {
+                const res = await fetch(`${API_BASE}/categories/${selectedSubCategory.id}`, {
                     method: 'PUT',
                     headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${token}` },
                     body: JSON.stringify({ colors: updatedColors })
                 });
                 if (res.ok) {
-                    toast.success('Couleur supprimée');
+                    toast.success('Attribut supprimé');
                     const updated = await res.json();
-                    setSelectedType(updated.data);
+                    setSelectedSubCategory(updated.data);
                     refetch();
                 }
             } else {
@@ -154,8 +125,8 @@ const CategoryManagement = () => {
                 });
                 if (res.ok) {
                     toast.success('Supprimé avec succès');
-                    if (modalConfig.type === 'cible' && selectedCible?.id === modalConfig.data.id) setSelectedCible(null);
-                    if (modalConfig.type === 'type' && selectedType?.id === modalConfig.data.id) setSelectedType(null);
+                    if (modalConfig.type === 'cible' && selectedCategory?.id === modalConfig.data.id) setSelectedCategory(null);
+                    if (modalConfig.type === 'type' && selectedSubCategory?.id === modalConfig.data.id) setSelectedSubCategory(null);
                     refetch();
                 } else {
                     const err = await res.json();
@@ -194,33 +165,33 @@ const CategoryManagement = () => {
                         onClick={() => setModalConfig({ open: true, type: 'cible', mode: 'add' })}
                         className="w-full sm:w-auto bg-[#db6513] hover:bg-[#c45610] text-white rounded-sm px-6 h-10 font-black uppercase text-[10px] tracking-widest transition-all"
                     >
-                        <Plus className="w-3.5 h-3.5 mr-2" /> Nouvelle Cible
+                        <Plus className="w-3.5 h-3.5 mr-2" /> Nouvelle Catégorie
                     </Button>
                 </div>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 items-start">
-                {/* 1. CIBLES (Hommes, Femmes, etc.) */}
+                {/* 1. CATÉGORIES PRINCIPALES */}
                 <Card className="rounded-sm border-gray-100 shadow-xl overflow-hidden min-h-[280px] sm:min-h-[400px] lg:min-h-[500px] bg-white md:col-span-1">
                     <CardHeader className="bg-gray-900 p-6 text-white border-b border-gray-800">
                         <CardTitle className="text-[12px] font-black uppercase tracking-[0.2em] flex items-center gap-2">
-                            <Tags className="w-4 h-4 text-[#db6513]" /> 1. Cibles (Cible)
+                            <Tags className="w-4 h-4 text-[#db6513]" /> 1. Catégories Principales
                         </CardTitle>
-                        <CardDescription className="text-gray-500 text-[9px] font-bold uppercase tracking-widest mt-1">Secteurs principaux de vente</CardDescription>
+                        <CardDescription className="text-gray-500 text-[9px] font-bold uppercase tracking-widest mt-1">Familles principales du catalogue</CardDescription>
                     </CardHeader>
                     <CardContent className="p-0">
                         <div className="divide-y divide-gray-50">
                             {cibles.map(cible => (
                                 <div
                                     key={cible.id}
-                                    className={`group flex items-center justify-between p-4 cursor-pointer transition-all hover:bg-[#fdf0e8] duration-150 ${selectedCible?.id === cible.id ? 'bg-[#fdf0e8]/50 border-l-[3px] border-l-[#db6513] shadow-inner' : 'border-l-[3px] border-l-transparent'}`}
+                                    className={`group flex items-center justify-between p-4 cursor-pointer transition-all hover:bg-[#fdf0e8] duration-150 ${selectedCategory?.id === cible.id ? 'bg-[#fdf0e8]/50 border-l-[3px] border-l-[#db6513] shadow-inner' : 'border-l-[3px] border-l-transparent'}`}
                                     onClick={() => {
-                                        setSelectedCible(cible);
-                                        setSelectedType(null);
+                                        setSelectedCategory(cible);
+                                        setSelectedSubCategory(null);
                                     }}
                                 >
                                     <div className="flex flex-col">
-                                        <span className={`text-[11px] font-black uppercase tracking-wide transition-colors group-hover:text-[#db6513] ${selectedCible?.id === cible.id ? 'text-[#db6513]' : 'text-gray-600'}`}>{cible.name}</span>
+                                        <span className={`text-[11px] font-black uppercase tracking-wide transition-colors group-hover:text-[#db6513] ${selectedCategory?.id === cible.id ? 'text-[#db6513]' : 'text-gray-600'}`}>{cible.name}</span>
                                         <span className="text-[9px] font-bold text-gray-400 uppercase tracking-widest mt-0.5">{cible.nameAr || '---'}</span>
                                     </div>
                                     <div className="flex items-center gap-2">
@@ -233,38 +204,38 @@ const CategoryManagement = () => {
                                         >
                                             <X className="w-3.5 h-3.5" />
                                         </button>
-                                        <ChevronRight className={`w-4 h-4 transition-transform ${selectedCible?.id === cible.id ? 'translate-x-1 text-[#db6513]' : 'text-gray-200'}`} />
+                                        <ChevronRight className={`w-4 h-4 transition-transform ${selectedCategory?.id === cible.id ? 'translate-x-1 text-[#db6513]' : 'text-gray-200'}`} />
                                     </div>
                                 </div>
                             ))}
                             {cibles.length === 0 && (
                                 <div className="p-16 text-center">
-                                    <p className="text-[10px] font-black text-gray-300 uppercase tracking-[0.2em]">Aucune cible</p>
+                                    <p className="text-[10px] font-black text-gray-300 uppercase tracking-[0.2em]">Aucune catégorie</p>
                                 </div>
                             )}
                         </div>
                     </CardContent>
                 </Card>
 
-                {/* 2. TYPES (Sneakers, Bottes, etc.) */}
+                {/* 2. SOUS-CATÉGORIES */}
                 <Card className="rounded-sm border-gray-100 shadow-xl overflow-hidden min-h-[280px] sm:min-h-[400px] lg:min-h-[500px] relative bg-white">
-                    {!selectedCible && (
+                    {!selectedCategory && (
                         <div className="absolute inset-0 bg-white border border-gray-100 rounded-sm min-h-[400px] flex flex-col items-center justify-center p-8 text-center opacity-60">
                             <Tags className="w-12 h-12 text-gray-200 mb-4" />
-                            <p className="text-[10px] font-black uppercase tracking-[0.2em] text-gray-300 mt-3">SÉLECTIONNEZ UNE CIBLE</p>
+                            <p className="text-[10px] font-black uppercase tracking-[0.2em] text-gray-300 mt-3">SÉLECTIONNEZ UNE CATÉGORIE</p>
                         </div>
                     )}
-                    <CardHeader className={`${selectedCible ? 'bg-gray-800' : 'bg-gray-100'} p-6 text-white transition-colors border-b border-gray-700`}>
+                    <CardHeader className={`${selectedCategory ? 'bg-gray-800' : 'bg-gray-100'} p-6 text-white transition-colors border-b border-gray-700`}>
                         <div className="flex justify-between items-center">
                             <div>
                                 <CardTitle className="text-[12px] font-black uppercase tracking-[0.2em] flex items-center gap-2">
-                                    <Cylinder className="w-4 h-4 text-[#db6513]" /> 2. Modèles (Type)
+                                    <Cylinder className="w-4 h-4 text-[#db6513]" /> 2. Sous-catégories
                                 </CardTitle>
                                 <CardDescription className="text-gray-400 text-[9px] font-bold uppercase tracking-widest mt-1">
-                                    Sous-catégories pour {selectedCible?.name || '...'}
+                                    Sous-catégories pour {selectedCategory?.name || '...'}
                                 </CardDescription>
                             </div>
-                            {selectedCible && (
+                            {selectedCategory && (
                                 <button
                                     onClick={() => setModalConfig({ open: true, type: 'type', mode: 'add' })}
                                     className="w-8 h-8 bg-[#db6513] text-white flex items-center justify-center hover:bg-[#c45610] transition-all rounded-sm shadow-md"
@@ -279,12 +250,12 @@ const CategoryManagement = () => {
                             {types.map(type => (
                                 <div
                                     key={type.id}
-                                    className={`group flex items-center justify-between p-4 cursor-pointer transition-all hover:bg-[#fdf0e8] duration-150 ${selectedType?.id === type.id ? 'bg-[#fdf0e8]/50 border-l-[3px] border-l-[#db6513] shadow-inner' : 'border-l-[3px] border-l-transparent'}`}
-                                    onClick={() => setSelectedType(type)}
+                                    className={`group flex items-center justify-between p-4 cursor-pointer transition-all hover:bg-[#fdf0e8] duration-150 ${selectedSubCategory?.id === type.id ? 'bg-[#fdf0e8]/50 border-l-[3px] border-l-[#db6513] shadow-inner' : 'border-l-[3px] border-l-transparent'}`}
+                                    onClick={() => setSelectedSubCategory(type)}
                                 >
                                     <div className="flex flex-col">
-                                        <span className={`text-[11px] font-black uppercase tracking-wide transition-colors group-hover:text-[#db6513] ${selectedType?.id === type.id ? 'text-[#db6513]' : 'text-gray-600'}`}>{type.name}</span>
-                                        <span className="text-[9px] font-bold text-gray-400 uppercase tracking-widest mt-1">{type.colors?.length || 0} COULEURS</span>
+                                        <span className={`text-[11px] font-black uppercase tracking-wide transition-colors group-hover:text-[#db6513] ${selectedSubCategory?.id === type.id ? 'text-[#db6513]' : 'text-gray-600'}`}>{type.name}</span>
+                                        <span className="text-[9px] font-bold text-gray-400 uppercase tracking-widest mt-1">{type.colors?.length || 0} ATTRIBUTS</span>
                                     </div>
                                     <div className="flex items-center gap-2">
                                         <button
@@ -296,38 +267,38 @@ const CategoryManagement = () => {
                                         >
                                             <X className="w-3.5 h-3.5" />
                                         </button>
-                                        <ChevronRight className={`w-4 h-4 transition-transform ${selectedType?.id === type.id ? 'translate-x-1 text-[#db6513]' : 'text-gray-200'}`} />
+                                        <ChevronRight className={`w-4 h-4 transition-transform ${selectedSubCategory?.id === type.id ? 'translate-x-1 text-[#db6513]' : 'text-gray-200'}`} />
                                     </div>
                                 </div>
                             ))}
-                            {selectedCible && types.length === 0 && (
+                            {selectedCategory && types.length === 0 && (
                                 <div className="p-16 text-center">
-                                    <p className="text-[10px] font-black text-gray-300 uppercase tracking-[0.2em]">Aucun modèle</p>
+                                    <p className="text-[10px] font-black text-gray-300 uppercase tracking-[0.2em]">Aucune sous-catégorie</p>
                                 </div>
                             )}
                         </div>
                     </CardContent>
                 </Card>
 
-                {/* 3. COLORS (Palette de Couleurs) */}
+                {/* 3. ATTRIBUTS TECHNIQUES */}
                 <Card className="rounded-sm border-gray-100 shadow-xl overflow-hidden min-h-[280px] sm:min-h-[400px] lg:min-h-[500px] relative bg-white md:col-span-2 lg:col-span-1">
-                    {!selectedType && (
+                    {!selectedSubCategory && (
                         <div className="absolute inset-0 bg-white border border-gray-100 rounded-sm min-h-[400px] flex flex-col items-center justify-center p-8 text-center opacity-60">
                             <Palette className="w-12 h-12 text-gray-200 mb-4" />
-                            <p className="text-[10px] font-black uppercase tracking-[0.2em] text-gray-300 mt-3">SÉLECTIONNEZ UN MODÈLE</p>
+                            <p className="text-[10px] font-black uppercase tracking-[0.2em] text-gray-300 mt-3">SÉLECTIONNEZ UNE SOUS-CATÉGORIE</p>
                         </div>
                     )}
-                    <CardHeader className={`${selectedType ? 'bg-gray-900' : 'bg-gray-100'} p-6 text-white transition-colors border-b border-gray-800`}>
+                    <CardHeader className={`${selectedSubCategory ? 'bg-gray-900' : 'bg-gray-100'} p-6 text-white transition-colors border-b border-gray-800`}>
                         <div className="flex justify-between items-center">
                             <div>
                                 <CardTitle className="text-[12px] font-black uppercase tracking-[0.2em] flex items-center gap-2">
-                                    <Palette className="w-4 h-4 text-[#db6513]" /> 3. Palette de Couleurs
+                                    <Palette className="w-4 h-4 text-[#db6513]" /> 3. Attributs Techniques
                                 </CardTitle>
                                 <CardDescription className="text-gray-400 text-[9px] font-bold uppercase tracking-widest mt-1">
-                                    Variantes pour {selectedType?.name || '...'}
+                                    Attributs pour {selectedSubCategory?.name || '...'}
                                 </CardDescription>
                             </div>
-                            {selectedType && (
+                            {selectedSubCategory && (
                                 <button
                                     onClick={() => setModalConfig({ open: true, type: 'color', mode: 'add' })}
                                     className="w-8 h-8 bg-[#db6513] text-white flex items-center justify-center hover:bg-[#c45610] transition-all rounded-sm shadow-md"
@@ -343,7 +314,7 @@ const CategoryManagement = () => {
                                 <div key={color} className="group relative flex items-center gap-3 p-3 bg-gray-50 border border-gray-100 rounded-sm shadow-sm transition-all hover:border-[#db651330]">
                                     <div
                                         className="w-5 h-5 shadow-inner border border-black/5 transition-transform group-hover:scale-110 rounded-sm"
-                                        style={{ backgroundColor: color.toLowerCase() }}
+                                        style={{ backgroundColor: '#db651315' }}
                                     />
                                     <span className="text-[9px] font-black uppercase tracking-[0.1em] text-gray-700 truncate">{color}</span>
                                     <button
@@ -354,9 +325,9 @@ const CategoryManagement = () => {
                                     </button>
                                 </div>
                             ))}
-                            {selectedType && colors.length === 0 && (
+                            {selectedSubCategory && colors.length === 0 && (
                                 <div className="col-span-2 p-16 text-center border-2 border-dashed border-gray-100 bg-gray-50 rounded-sm">
-                                    <p className="text-[10px] font-black text-gray-300 uppercase tracking-[0.2em]">Palette vide</p>
+                                    <p className="text-[10px] font-black text-gray-300 uppercase tracking-[0.2em]">Aucun attribut</p>
                                 </div>
                             )}
                         </div>
@@ -371,7 +342,7 @@ const CategoryManagement = () => {
                         <DialogHeader>
                             <DialogTitle className="text-xl font-black uppercase tracking-wider text-white">
                                 {modalConfig.mode === 'add' ? (
-                                    <>AJOUTER <span className="text-[#db6513]">{modalConfig.type === 'cible' ? 'UNE CIBLE' : modalConfig.type === 'type' ? 'UN MODÈLE' : 'UNE COULEUR'}</span></>
+                                    <>AJOUTER <span className="text-[#db6513]">{modalConfig.type === 'cible' ? 'UNE CATÉGORIE' : modalConfig.type === 'type' ? 'UNE SOUS-CATÉGORIE' : 'UN ATTRIBUT'}</span></>
                                 ) : (
                                     <>SUPPRIMER <span className="text-red-500">CONFIRMATION</span></>
                                 )}
@@ -389,89 +360,21 @@ const CategoryManagement = () => {
                             <div className="space-y-6">
                                 <div className="space-y-2">
                                     <Label className="text-[10px] font-black uppercase tracking-widest text-gray-400">
-                                        {modalConfig.type === 'color' ? 'SÉLECTIONNEZ UNE COULEUR' : 'NOM DU MODÈLE (FR)'}
+                                        {modalConfig.type === 'color' ? "VALEUR DE L'ATTRIBUT (EX: 1000W, 300L)" : modalConfig.type === 'cible' ? 'NOM DE LA CATÉGORIE (FR)' : 'NOM DE LA SOUS-CATÉGORIE (FR)'}
                                     </Label>
 
                                     {modalConfig.type === 'color' ? (
-                                        <Tabs defaultValue="Classique" className="w-full mt-2">
-                                            <TabsList className="grid grid-cols-3 bg-gray-50 border border-gray-100 p-1 h-10 rounded-sm mb-6">
-                                                {Object.keys(COLOR_GROUPS).map(group => (
-                                                    <TabsTrigger
-                                                        key={group}
-                                                        value={group}
-                                                        className="rounded-sm h-full data-[state=active]:bg-[#db6513] data-[state=active]:text-white font-black uppercase text-[9px] tracking-widest transition-all text-gray-400 bg-[#2D3748]/30"
-                                                    >
-                                                        {group}
-                                                    </TabsTrigger>
-                                                ))}
-                                            </TabsList>
-
-                                            {Object.entries(COLOR_GROUPS).map(([group, list]) => (
-                                                <TabsContent key={group} value={group} className="focus-visible:outline-none">
-                                                    <div className="grid grid-cols-3 gap-3">
-                                                        {list.map(c => (
-                                                            <button
-                                                                key={c.hex}
-                                                                type="button"
-                                                                onClick={() => setNewInputValue(c.name)}
-                                                                className={`flex items-center gap-2 p-2.5 border transition-all rounded-sm shadow-sm ${newInputValue === c.name ? 'border-[#db6513] bg-[#db6513]/10 ring-1 ring-[#db6513]' : 'border-[#2D3748] bg-[#111827] hover:border-[#db6513]/50'}`}
-                                                            >
-                                                                <div className="w-4 h-4 border border-black/20 rounded-sm" style={{ backgroundColor: c.hex }} />
-                                                                <span className="text-[9px] font-black text-gray-200 uppercase truncate tracking-tight">{c.name}</span>
-                                                            </button>
-                                                        ))}
-                                                    </div>
-                                                </TabsContent>
-                                            ))}
-
-                                            <div className="mt-8 pt-6 border-t border-gray-800/50 flex flex-col items-center">
-                                                <Label className="text-[10px] font-black uppercase tracking-[0.2em] text-[#E6A37C] mb-6 block w-full text-left">Palette Visuelle & Signature</Label>
-
-                                                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center w-full">
-                                                    <div className="custom-color-picker shadow-2xl rounded-2xl overflow-hidden border border-[#1F2937] bg-[#111827] p-2">
-                                                        <HexColorPicker
-                                                            color={newInputValue.startsWith('#') ? newInputValue : '#ffffff'}
-                                                            onChange={setNewInputValue}
-                                                        />
-                                                    </div>
-
-                                                    <div className="flex flex-col gap-4 w-full">
-                                                        <div className="flex items-center gap-4 p-5 bg-[#111827] rounded-2xl border border-[#1F2937] shadow-inner">
-                                                            <div
-                                                                className="w-14 h-14 rounded-xl shadow-xl border-2 border-white/10 transition-transform duration-500 transform hover:scale-105"
-                                                                style={{ backgroundColor: newInputValue.startsWith('#') ? newInputValue : (Object.values(COLOR_GROUPS).flat().find(c => c.name === newInputValue)?.hex || '#FFFFFF') }}
-                                                            />
-                                                            <div className="flex flex-col gap-1">
-                                                                <span className="text-[9px] font-black text-gray-500 uppercase tracking-[0.2em]">Aperçu Couleur</span>
-                                                                <span className="text-sm font-mono font-black text-[#E6A37C] uppercase tracking-widest">{newInputValue}</span>
-                                                            </div>
-                                                        </div>
-
-                                                        <div className="relative group">
-                                                            <div className="absolute inset-y-0 left-4 flex items-center pointer-events-none">
-                                                                <span className="text-[#E6A37C] font-black text-xs">HEX</span>
-                                                            </div>
-                                                            <Input
-                                                                value={newInputValue.startsWith('#') ? newInputValue.substring(1) : newInputValue}
-                                                                onChange={(e) => {
-                                                                    const val = e.target.value;
-                                                                    if (val === '' || /^[0-9A-Fa-f]{0,6}$/.test(val)) {
-                                                                        setNewInputValue(val.startsWith('#') ? val : `#${val}`);
-                                                                    }
-                                                                }}
-                                                                placeholder="FFFFFF"
-                                                                className="pl-12 w-full border-[#1F2937] rounded-xl text-[13px] text-white bg-[#111827] focus:border-[#E6A37C] focus:ring-1 focus:ring-[#E6A37C]/20 transition-all h-12 font-mono uppercase tracking-widest"
-                                                            />
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </Tabs>
+                                        <Input
+                                            value={newInputValue}
+                                            onChange={(e) => setNewInputValue(e.target.value)}
+                                            placeholder="Ex: 1000W, 300L, Samsung"
+                                            className="w-full border-[#2D3748] rounded-sm px-3 py-2.5 text-[12px] text-white placeholder-gray-500 bg-[#111827] focus:outline-none focus:border-[#db6513] focus:ring-2 focus:ring-[#db6513]/10 transition-colors duration-200 h-12 uppercase font-bold"
+                                        />
                                     ) : (
                                         <Input
                                             value={newInputValue}
                                             onChange={(e) => setNewInputValue(e.target.value)}
-                                            placeholder="Ex: Sneakers de Luxe"
+                                            placeholder="Ex: Réfrigérateurs"
                                             className="w-full border-[#2D3748] rounded-sm px-3 py-2.5 text-[12px] text-white placeholder-gray-500 bg-[#111827] focus:outline-none focus:border-[#db6513] focus:ring-2 focus:ring-[#db6513]/10 transition-colors duration-200 h-12 uppercase font-bold"
                                         />
                                     )}
@@ -495,7 +398,7 @@ const CategoryManagement = () => {
                                 <p className="text-[16px] font-black text-gray-900 uppercase tracking-tight">{modalConfig.data?.name || modalConfig.data}</p>
                                 <p className="text-[10px] text-red-500 mt-3 font-bold px-10 uppercase tracking-widest leading-relaxed">
                                     {modalConfig.type === 'color'
-                                        ? 'SUPPRESSION DÉFINITIVE DE LA PALETTE.'
+                                        ? "SUPPRESSION DÉFINITIVE DE L'ATTRIBUT."
                                         : 'VÉRIFIEZ L\'ABSENCE DE PRODUITS LIÉS.'}
                                 </p>
                             </div>

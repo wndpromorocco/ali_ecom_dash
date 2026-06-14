@@ -99,7 +99,7 @@ const ProductManagement = ({ isAddingNewDefault = false }: { isAddingNewDefault?
         promoEnd: '',
         colors: [] as string[],
         type: '',
-        size: '',
+        warranty: '',
         categoryId: '',
         sku: '',
         images: ['', '', '', ''],
@@ -193,7 +193,8 @@ const ProductManagement = ({ isAddingNewDefault = false }: { isAddingNewDefault?
                     ? product.color.split(',').map((c: string) => c.trim())
                     : []),
             type: product.type || '',
-            size: product.size || '',
+            // loaded from the existing `size` DB column, now repurposed for warranty
+            warranty: product.size || '',
             categoryId: product.categoryId,
             sku: product.sku,
             images: formImages as string[],
@@ -250,6 +251,8 @@ const ProductManagement = ({ isAddingNewDefault = false }: { isAddingNewDefault?
                 if (key === 'price') { fd.append(key, formData.price); return; }
                 if (key === 'discountPrice' && isPromotion) { fd.append(key, formData.discountPrice || ''); return; }
                 if (key === 'isActive') { fd.append(key, value.toString()); return; }
+                // 'warranty' is persisted via the existing 'size' DB column (avoids a schema migration)
+                if (key === 'warranty') { fd.append('size', value as string); return; }
                 fd.append(key, value as string);
             });
             imageFiles.forEach((file) => { if (file) fd.append('images', file); });
@@ -531,7 +534,7 @@ const ProductManagement = ({ isAddingNewDefault = false }: { isAddingNewDefault?
                                                     />
                                                 </div>
                                                 <div className="space-y-1.5">
-                                                    <Label className="text-[10px] font-black uppercase tracking-widest text-gray-700 text-right block">اسم الحذاء (AR)</Label>
+                                                    <Label className="text-[10px] font-black uppercase tracking-widest text-gray-700 text-right block">اسم المنتج (AR)</Label>
                                                     <Input
                                                         name="nameAr"
                                                         value={formData.nameAr}
@@ -543,13 +546,13 @@ const ProductManagement = ({ isAddingNewDefault = false }: { isAddingNewDefault?
                                             </div>
 
                                             <div className="space-y-1.5">
-                                                <Label className="text-[10px] font-black uppercase tracking-widest text-gray-700">Description & Matériaux</Label>
+                                                <Label className="text-[10px] font-black uppercase tracking-widest text-gray-700">Description & Spécifications</Label>
                                                 <textarea
                                                     name="description"
                                                     value={formData.description}
                                                     onChange={handleInputChange}
                                                     className="w-full min-h-[100px] px-3 py-2.5 border border-gray-200 rounded-sm text-[12px] text-gray-700 placeholder-gray-300 bg-white resize-none focus:outline-none focus:border-[#e8721f] focus:ring-2 focus:ring-orange-100 transition-colors duration-200"
-                                                    placeholder="Détails du cuir, semelle, confort..."
+                                                    placeholder="Spécifications techniques, garantie, puissance (Watt)..."
                                                 />
                                             </div>
                                         </div>
@@ -608,12 +611,12 @@ const ProductManagement = ({ isAddingNewDefault = false }: { isAddingNewDefault?
                                                     />
                                                 </div>
                                                 <div className="space-y-1.5">
-                                                    <Label className="text-[10px] font-black uppercase tracking-widest text-gray-700">Pointure</Label>
+                                                    <Label className="text-[10px] font-black uppercase tracking-widest text-gray-700">Garantie (Mois / Ans)</Label>
                                                     <Input
-                                                        name="size"
-                                                        value={formData.size}
+                                                        name="warranty"
+                                                        value={formData.warranty}
                                                         onChange={handleInputChange}
-                                                        placeholder="38-44"
+                                                        placeholder="12 mois / 2 ans"
                                                         className="h-10 rounded-sm border-gray-200 text-[12px] font-bold focus:border-[#e8721f] focus:ring-2 focus:ring-orange-100"
                                                     />
                                                 </div>
