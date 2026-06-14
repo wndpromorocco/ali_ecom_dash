@@ -72,7 +72,7 @@ function Hero({ slides = [] }) {
         <div className="relative z-10 max-w-6xl mx-auto h-full flex items-center px-5">
           <div className="w-full md:w-5/12 text-center md:text-left">
             <h1 className="text-[42px] md:text-[52px] font-black text-gray-900 leading-[1] mb-8 uppercase tracking-tighter italic">
-              Chaussures<br />Premium Cuir !
+              Électroménager<br />de Qualité Supérieure !
             </h1>
             <div className="flex flex-wrap items-center justify-center md:justify-start gap-4">
               <Link
@@ -115,7 +115,7 @@ function Hero({ slides = [] }) {
                 {line}<br className="hidden md:block" />
                 {i < slide.title.split('\n').length - 1 && <span className="md:hidden"> </span>}
               </React.Fragment>
-            )) || "Chaussures Premium"}
+            )) || "Électroménager Premium"}
           </h1>
           <p className="text-[10px] sm:text-[12px] font-bold text-gray-500 uppercase tracking-widest mb-4 md:mb-8 max-w-sm mx-auto md:mx-0">
             {slide.subtitle}
@@ -415,7 +415,7 @@ const HotDeal = memo(({ promo }: { promo: any }) => {
           />
           <div className="flex flex-col gap-3">
             <h3 className="text-gray-900 font-black text-[20px] uppercase tracking-tighter leading-tight max-w-xs text-center italic">
-              {product?.name || "CHAUSSURES CONFORT PREMIUM"}
+              {product?.name || "ÉLECTROMÉNAGER CONFORT PREMIUM"}
             </h3>
             <div className="flex items-center gap-3 justify-center mb-4">
               <span className="text-[22px] font-black text-[#5C2E00]">
@@ -455,11 +455,12 @@ const HotDeal = memo(({ promo }: { promo: any }) => {
 ───────────────────────────────────────────── */
 function BrandsStrip() {
   const brands = [
-    { name: 'Gucci', logo: '/brand-logos/gucci.jpeg' },
-    { name: 'Louboutin', logo: '/brand-logos/louboutin.jpeg' },
-    { name: 'Prada', logo: '/brand-logos/prada.jpeg' },
-    { name: 'Salvatore Ferragamo', logo: '/brand-logos/ferragamo.jpeg' },
-    { name: 'Versace', logo: '/brand-logos/versace.jpeg' },
+    { name: 'Bosch', logo: 'https://cdn.worldvectorlogo.com/logos/bosch-2.svg' },
+    { name: 'Samsung', logo: 'https://cdn.worldvectorlogo.com/logos/samsung-8.svg' },
+    { name: 'LG Electronics', logo: 'https://cdn.worldvectorlogo.com/logos/lg-electronics.svg' },
+    { name: 'Whirlpool', logo: 'https://cdn.worldvectorlogo.com/logos/whirlpool-2.svg' },
+    { name: 'Philips', logo: 'https://cdn.worldvectorlogo.com/logos/philips-6.svg' },
+    { name: 'Sony', logo: 'https://cdn.worldvectorlogo.com/logos/sony-2.svg' },
   ];
 
   // Repeat the logos 4 times to fill the screen and ensure a seamless loop
@@ -469,7 +470,7 @@ function BrandsStrip() {
     <section className="bg-white border-y border-gray-200 py-4 md:py-5 overflow-hidden relative z-10 flex items-center">
       <div className="animate-marquee-wrapper marquee-fade w-full overflow-hidden">
         <div className="flex animate-marquee whitespace-nowrap items-center w-max">
-          {/* We render the repeated set twice: the total width is 2 * (4 * 5 logos) = 40 logos. 
+          {/* We render the repeated set twice: the total width is 2 * (4 * 6 logos) = 48 logos. 
               The animation moves -50% (halfway), so it loops back to the start of the second main group. */}
           <div className="flex items-center shrink-0">
             {repeatedBrands.map((brand, i) => (

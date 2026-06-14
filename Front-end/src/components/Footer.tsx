@@ -41,7 +41,7 @@ const Footer = () => {
               </span>
             </Link>
             <p className="text-gray-400 text-[13px] leading-relaxed max-w-[280px]">
-              Chaussures premium pour un style de vie moderne. Confort, style et qualité supérieure pour chaque pas que vous faites.
+              Votre partenaire de confiance pour l'électroménager et les équipements électroniques de haute qualité. Confort, performance et innovation pour votre maison au meilleur prix.
             </p>
             <div className="flex gap-4">
               {socials.map(({ Icon, href, label }) => (
@@ -99,7 +99,7 @@ const Footer = () => {
                     <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
                 </div>
-                <span className="text-gray-400 text-[13px] font-medium">contact@hermado.com</span>
+                <span className="text-gray-400 text-[13px] font-medium">contact@fadeltrading.com</span>
               </li>
               <li className="flex gap-4 items-start">
                 <div className="w-8 h-8 bg-[#db6513]/10 text-[#db6513] rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
@@ -127,7 +127,7 @@ const Footer = () => {
         {/* ── Bottom bar ── */}
         <div className="pt-8 border-t border-white/5 flex flex-col items-center">
           <p className="text-gray-600 text-[11px] font-medium tracking-wide text-center uppercase">
-            © {new Date().getFullYear()} Fadel trading — Développé par <span className="text-[#db6513] font-black">Liadtech</span>
+            © {new Date().getFullYear()} Fadel trading — Développé par <span className="text-[#db6513] font-black">WND</span>
           </p>
         </div>
 

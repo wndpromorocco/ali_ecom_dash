@@ -186,7 +186,7 @@ function InfoCards() {
             icon: <MailIcon />,
             title: "Contact E-mail",
             lines: [
-                <a key="email" href="mailto:contact@hermado.com">contact@hermado.com</a>,
+                <a key="email" href="mailto:contact@fadeltrading.com">contact@fadeltrading.com</a>,
             ],
         },
         {
@@ -242,13 +242,13 @@ function MapSection() {
         <div className="hc-map-section">
             <div className="hc-map-frame">
                 <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3324.1383562397327!2d-7.5539429!3d33.5757568!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda7cd0007ada383%3A0x97ed9141fe00c69c!2sHermado%20shoes!5e0!3m2!1sen!2sma!4v1773750890888!5m2!1sen!2sma"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3324.1383562397327!2d-7.5539429!3d33.5757568!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda7cd0007ada383%3A0x97ed9141fe00c69c!2sFadel%20Trading%20Casablanca!5e0!3m2!1sen!2sma!4v1773750890888!5m2!1sen!2sma"
                     allowFullScreen loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
                     title="Emplacement Fadel trading Store"
                 />
                 <div className="hc-map-badge">
-                    <strong>Fadel trading Shoes — Casablanca</strong>
+                    <strong>Fadel Trading — Électroménager</strong>
                     <span>Av. Saïd Abou Jemaa<br />Casablanca 20250, Maroc</span>
                 </div>
             </div>
@@ -262,9 +262,9 @@ function FAQ() {
     const faqs = [
         { q: "Quels sont les délais et les frais de livraison ?", a: "La livraison est 100% gratuite partout au Maroc ! Votre commande est expédiée rapidement et arrivera à votre porte dans un délai maximum de 24 à 48 heures." },
         { q: "Quels sont les modes de paiement acceptés ?", a: "Pour votre confort et votre sécurité, nous privilégions le paiement à la livraison (Cash on Delivery). Vous ne payez votre commande qu'une fois que vous l'avez reçue et vérifiée entre vos mains." },
-        { q: "En quelle matière sont fabriquées vos chaussures ?", a: "Toutes les chaussures Fadel trading sont confectionnées à partir de cuir véritable de première qualité. Nous allions le savoir-faire artisanal à un design moderne pour vous garantir élégance, robustesse et confort absolu." },
+        { q: "Quelles sont les marques et la qualité de vos appareils ?", a: "Nous collaborons directement avec les plus grandes marques mondiales (Bosch, Samsung, LG, Philips...) pour garantir des appareils certifiés d'origine, performants et conformes aux normes de sécurité internationales." },
         { q: "Comment puis-je passer une commande ?", a: "C'est très simple ! Vous pouvez ajouter le modèle de votre choix au panier et remplir le formulaire, ou bien cliquer directement sur le bouton 'Commander sur WhatsApp' pour finaliser votre achat avec l'un de nos conseillers en un instant." },
-        { q: "Comment être sûr de choisir la bonne pointure ?", a: "Nos modèles taillent de manière standard. Nous vous conseillons de choisir votre pointure habituelle. Si vous hésitez entre deux tailles, n'hésitez pas à nous contacter sur WhatsApp, notre équipe se fera un plaisir de vous conseiller !" },
+        { q: "Comment fonctionne la garantie de vos produits ?", a: "Tous nos produits électroniques et gros électroménagers bénéficient d'une garantie constructeur officielle allant de 1 à 2 ans. Votre facture d'achat fait foi de bon de garantie." },
     ];
     return (
         <div className="hc-faq-section">
