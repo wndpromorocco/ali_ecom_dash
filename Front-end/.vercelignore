@@ -1,0 +1,14 @@
+node_modules
+dist
+build
+test-results
+tests
+playwright-report
+playwright.config.ts
+.env.local
+.env.test
+*.png
+"image footer"
+"image logo"
+*.text
+bun.lockb
