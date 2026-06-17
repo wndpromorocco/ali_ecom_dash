@@ -1,1 +1,26 @@
-{"success":true,"message":"Hero slides retrieved successfully","data":[{"id":"ee31552c-8af1-4920-bec6-f8c2f7327f54","imageUrl":"/uploads/hero/hero-1773943941401.png","title":"CONFORT SANS COMPROMIS","subtitle":"Technologie de semelle active et cuir souple pour une marche légère toute la journée.","order":2,"isActive":true,"createdAt":"2026-03-19T18:12:21.403Z","updatedAt":"2026-03-19T18:12:21.403Z"},{"id":"a5bc895d-2c4d-4b3f-a0dc-469c8babf26c","imageUrl":"/uploads/hero/hero-1773944071040.png","title":"AFFIRMEZ VOTRE STYLE","subtitle":"La bottine Chelsea réinventée avec une semelle crantée pour un look urbain et audacieux.","order":3,"isActive":true,"createdAt":"2026-03-19T18:14:31.043Z","updatedAt":"2026-03-19T18:14:31.043Z"}]}
+{
+ "success": true,
+ "message": "Hero slides retrieved successfully",
+ "data": [
+  {
+   "id": "hero-1",
+   "imageUrl": "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?w=1920&q=80",
+   "title": "RÉVOLUTIONNEZ VOTRE CUISINE",
+   "subtitle": "Jusqu’à -30% sur le gros électroménager intelligent de grande marque.",
+   "order": 1,
+   "isActive": true,
+   "createdAt": "2026-06-01T00:00:00.000Z",
+   "updatedAt": "2026-06-01T00:00:00.000Z"
+  },
+  {
+   "id": "hero-2",
+   "imageUrl": "https://images.unsplash.com/photo-1593784991095-a205069470b6?w=1920&q=80",
+   "title": "L’EXPÉRIENCE CINÉMA À LA MAISON",
+   "subtitle": "Découvrez notre nouvelle sélection de Smart TVs OLED 4K Premium.",
+   "order": 2,
+   "isActive": true,
+   "createdAt": "2026-06-01T00:00:00.000Z",
+   "updatedAt": "2026-06-01T00:00:00.000Z"
+  }
+ ]
+}

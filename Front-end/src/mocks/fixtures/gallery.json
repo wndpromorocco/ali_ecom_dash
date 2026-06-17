@@ -1,1 +1,41 @@
-{"success":true,"message":"Gallery images retrieved successfully","data":[{"id":1,"slot":1,"imageUrl":"/uploads/homepage/gallery-slot-1-1774047282923.png","altText":"","updatedAt":"2026-03-20T22:54:42.927Z"},{"id":2,"slot":2,"imageUrl":"/uploads/homepage/gallery-slot-2-1774536996592.jpeg","altText":"","updatedAt":"2026-03-26T14:56:36.598Z"},{"id":4,"slot":3,"imageUrl":"/uploads/homepage/gallery-slot-3-1773948895049.png","altText":"","updatedAt":"2026-03-19T19:34:55.053Z"},{"id":3,"slot":4,"imageUrl":"/uploads/homepage/gallery-slot-4-1773948882981.png","altText":"","updatedAt":"2026-03-19T19:34:42.984Z"},{"id":5,"slot":5,"imageUrl":"/uploads/homepage/gallery-slot-5-1773949079722.png","altText":"","updatedAt":"2026-03-19T19:37:59.729Z"}]}
+{
+ "success": true,
+ "message": "Gallery images retrieved successfully",
+ "data": [
+  {
+   "id": 1,
+   "slot": 1,
+   "imageUrl": "https://images.pexels.com/photos/6835104/pexels-photo-6835104.jpeg?auto=compress&cs=tinysrgb&w=600",
+   "altText": "Cuisine — Gros Électroménager",
+   "updatedAt": "2026-06-01T00:00:00.000Z"
+  },
+  {
+   "id": 2,
+   "slot": 2,
+   "imageUrl": "https://images.pexels.com/photos/5591460/pexels-photo-5591460.jpeg?auto=compress&cs=tinysrgb&w=600",
+   "altText": "Lave-linge & Essentiels",
+   "updatedAt": "2026-06-01T00:00:00.000Z"
+  },
+  {
+   "id": 3,
+   "slot": 3,
+   "imageUrl": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=600",
+   "altText": "Audio & Gadgets",
+   "updatedAt": "2026-06-01T00:00:00.000Z"
+  },
+  {
+   "id": 4,
+   "slot": 4,
+   "imageUrl": "https://images.pexels.com/photos/1571459/pexels-photo-1571459.jpeg?auto=compress&cs=tinysrgb&w=600",
+   "altText": "Smart TV & Image",
+   "updatedAt": "2026-06-01T00:00:00.000Z"
+  },
+  {
+   "id": 5,
+   "slot": 5,
+   "imageUrl": "https://images.pexels.com/photos/2343467/pexels-photo-2343467.jpeg?auto=compress&cs=tinysrgb&w=600",
+   "altText": "Réfrigération",
+   "updatedAt": "2026-06-01T00:00:00.000Z"
+  }
+ ]
+}

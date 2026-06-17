@@ -1,1 +1,815 @@
-{"success":true,"message":"Categories retrieved successfully","data":[{"id":"23587ddd-be1e-4b5f-9120-dd3010c029aa","name":"Accessoires","nameAr":"إكسسوارات","slug":"accessoires","description":null,"descriptionAr":null,"image":null,"isActive":true,"parentId":"e612024b-28f8-480b-a0d6-0b1cd34f0644","types":[],"colors":["Noir","Camel","#36439e"],"createdAt":"2026-03-19T18:01:03.268Z","updatedAt":"2026-03-24T21:22:20.199Z","parent":{"id":"e612024b-28f8-480b-a0d6-0b1cd34f0644","name":"Homme","slug":"homme"},"children":[],"_count":{"products":0}},{"id":"26662d36-6ab9-4f75-8943-68aa3934141e","name":"Baskets & Espadrilles","nameAr":"أحذية رياضية وإسبادريل","slug":"baskets-&-espadrilles","description":null,"descriptionAr":null,"image":null,"isActive":true,"parentId":"e612024b-28f8-480b-a0d6-0b1cd34f0644","types":[],"colors":["Brun","Noir"],"createdAt":"2026-03-19T17:33:00.294Z","updatedAt":"2026-05-04T17:43:59.028Z","parent":{"id":"e612024b-28f8-480b-a0d6-0b1cd34f0644","name":"Homme","slug":"homme"},"children":[],"_count":{"products":0}},{"id":"f2cc523f-e78f-405a-b8c6-68a3744fea99","name":"Bottines hommes","nameAr":"أحذية قصيرة رجالية","slug":"bottines-hommes","description":null,"descriptionAr":null,"image":null,"isActive":true,"parentId":"e612024b-28f8-480b-a0d6-0b1cd34f0644","types":[],"colors":["Noir"],"createdAt":"2026-03-19T18:04:14.313Z","updatedAt":"2026-03-19T18:04:23.239Z","parent":{"id":"e612024b-28f8-480b-a0d6-0b1cd34f0644","name":"Homme","slug":"homme"},"children":[],"_count":{"products":0}},{"id":"d922d194-0dd1-457e-ae60-6432f494b427","name":"Chaussures","nameAr":"Chaussures","slug":"chaussures","description":null,"descriptionAr":null,"image":null,"isActive":true,"parentId":"f3994191-9551-438d-9b50-8038ad9eb2ec","types":[],"colors":[],"createdAt":"2026-05-04T00:36:51.632Z","updatedAt":"2026-05-04T00:36:51.632Z","parent":{"id":"f3994191-9551-438d-9b50-8038ad9eb2ec","name":"Femme","slug":"femme"},"children":[],"_count":{"products":0}},{"id":"a98b5e75-2b72-4de8-9b0b-8e0682c1a698","name":"Chaussures confort +","nameAr":"أحذية مريحة +","slug":"chaussures-confort-+","description":null,"descriptionAr":null,"image":null,"isActive":true,"parentId":"e612024b-28f8-480b-a0d6-0b1cd34f0644","types":[],"colors":["Noir","#a01717"],"createdAt":"2026-03-19T17:48:00.521Z","updatedAt":"2026-03-24T21:25:10.327Z","parent":{"id":"e612024b-28f8-480b-a0d6-0b1cd34f0644","name":"Homme","slug":"homme"},"children":[],"_count":{"products":0}},{"id":"3ef31f61-25dc-4c48-8bdd-773ea8ac3431","name":"Chaussures de ville","nameAr":"أحذية رسمية","slug":"chaussures-de-ville","description":null,"descriptionAr":null,"image":null,"isActive":true,"parentId":"e612024b-28f8-480b-a0d6-0b1cd34f0644","types":[],"colors":["Beige","Camel","Noir"],"createdAt":"2026-03-19T17:27:16.244Z","updatedAt":"2026-05-10T00:04:31.333Z","parent":{"id":"e612024b-28f8-480b-a0d6-0b1cd34f0644","name":"Homme","slug":"homme"},"children":[],"_count":{"products":0}},{"id":"7966a914-ce81-42b8-9269-11ac561bf386","name":"Classique","nameAr":"كلاسيك","slug":"classique","description":null,"descriptionAr":null,"image":null,"isActive":true,"parentId":"e612024b-28f8-480b-a0d6-0b1cd34f0644","types":[],"colors":["Brun","Noir"],"createdAt":"2026-03-19T17:38:49.214Z","updatedAt":"2026-03-19T17:39:28.664Z","parent":{"id":"e612024b-28f8-480b-a0d6-0b1cd34f0644","name":"Homme","slug":"homme"},"children":[],"_count":{"products":0}},{"id":"f3994191-9551-438d-9b50-8038ad9eb2ec","name":"Femme","nameAr":"النساء","slug":"femme","description":null,"descriptionAr":null,"image":null,"isActive":true,"parentId":null,"types":[],"colors":[],"createdAt":"2026-03-23T02:50:23.923Z","updatedAt":"2026-03-23T02:50:23.923Z","parent":null,"children":[{"id":"d922d194-0dd1-457e-ae60-6432f494b427","name":"Chaussures","slug":"chaussures","description":null,"image":null},{"id":"d6013f68-e1d5-466f-b514-83d203575129","name":"Sacs","slug":"sacs","description":null,"image":null},{"id":"3828560e-4bcd-4072-9311-20bace65be95","name":"Sandales","slug":"sandales","description":null,"image":null}],"_count":{"products":0}},{"id":"e612024b-28f8-480b-a0d6-0b1cd34f0644","name":"Homme","nameAr":"رجال","slug":"homme","description":null,"descriptionAr":null,"image":null,"isActive":true,"parentId":null,"types":[],"colors":[],"createdAt":"2026-03-19T17:26:20.715Z","updatedAt":"2026-03-19T17:26:20.715Z","parent":null,"children":[{"id":"23587ddd-be1e-4b5f-9120-dd3010c029aa","name":"Accessoires","slug":"accessoires","description":null,"image":null},{"id":"26662d36-6ab9-4f75-8943-68aa3934141e","name":"Baskets & Espadrilles","slug":"baskets-&-espadrilles","description":null,"image":null},{"id":"f2cc523f-e78f-405a-b8c6-68a3744fea99","name":"Bottines hommes","slug":"bottines-hommes","description":null,"image":null},{"id":"a98b5e75-2b72-4de8-9b0b-8e0682c1a698","name":"Chaussures confort +","slug":"chaussures-confort-+","description":null,"image":null},{"id":"3ef31f61-25dc-4c48-8bdd-773ea8ac3431","name":"Chaussures de ville","slug":"chaussures-de-ville","description":null,"image":null},{"id":"7966a914-ce81-42b8-9269-11ac561bf386","name":"Classique","slug":"classique","description":null,"image":null},{"id":"14ea2565-989d-4b0e-a1f6-e2fd114e70cb","name":"Mocassins","slug":"mocassins","description":null,"image":null},{"id":"9e9dcff8-7fd5-41b2-8c0a-9196ecf77e61","name":"Sandales homme","slug":"sandales-homme","description":null,"image":null}],"_count":{"products":9}},{"id":"14ea2565-989d-4b0e-a1f6-e2fd114e70cb","name":"Mocassins","nameAr":"موكاسين","slug":"mocassins","description":null,"descriptionAr":null,"image":null,"isActive":true,"parentId":"e612024b-28f8-480b-a0d6-0b1cd34f0644","types":[],"colors":["Noir","#a48989","Bleu Sport","#3e0707"],"createdAt":"2026-03-19T17:52:23.589Z","updatedAt":"2026-03-24T21:28:07.392Z","parent":{"id":"e612024b-28f8-480b-a0d6-0b1cd34f0644","name":"Homme","slug":"homme"},"children":[],"_count":{"products":0}},{"id":"d6013f68-e1d5-466f-b514-83d203575129","name":"Sacs","nameAr":"Sacs","slug":"sacs","description":null,"descriptionAr":null,"image":null,"isActive":true,"parentId":"f3994191-9551-438d-9b50-8038ad9eb2ec","types":[],"colors":[],"createdAt":"2026-05-04T00:37:10.230Z","updatedAt":"2026-05-04T00:37:10.230Z","parent":{"id":"f3994191-9551-438d-9b50-8038ad9eb2ec","name":"Femme","slug":"femme"},"children":[],"_count":{"products":0}},{"id":"3828560e-4bcd-4072-9311-20bace65be95","name":"Sandales","nameAr":"Sandales","slug":"sandales","description":null,"descriptionAr":null,"image":null,"isActive":true,"parentId":"f3994191-9551-438d-9b50-8038ad9eb2ec","types":[],"colors":["Brun"],"createdAt":"2026-05-04T00:35:36.210Z","updatedAt":"2026-05-04T00:37:57.444Z","parent":{"id":"f3994191-9551-438d-9b50-8038ad9eb2ec","name":"Femme","slug":"femme"},"children":[],"_count":{"products":0}},{"id":"9e9dcff8-7fd5-41b2-8c0a-9196ecf77e61","name":"Sandales homme","nameAr":"صنادل رجالية","slug":"sandales-homme","description":null,"descriptionAr":null,"image":null,"isActive":true,"parentId":"e612024b-28f8-480b-a0d6-0b1cd34f0644","types":[],"colors":["Noir"],"createdAt":"2026-03-19T17:58:05.673Z","updatedAt":"2026-03-19T17:58:11.979Z","parent":{"id":"e612024b-28f8-480b-a0d6-0b1cd34f0644","name":"Homme","slug":"homme"},"children":[],"_count":{"products":0}}]}
+{
+ "success": true,
+ "message": "Categories retrieved successfully",
+ "data": [
+  {
+   "id": "cat-gros-electromenager",
+   "name": "Gros Électroménager",
+   "nameAr": "الأجهزة الكبيرة",
+   "slug": "gros-electromenager",
+   "description": null,
+   "descriptionAr": null,
+   "image": null,
+   "isActive": true,
+   "parentId": null,
+   "types": [],
+   "colors": [],
+   "createdAt": "2026-06-01T00:00:00.000Z",
+   "updatedAt": "2026-06-01T00:00:00.000Z",
+   "parent": null,
+   "children": [],
+   "_count": {
+    "products": 10
+   }
+  },
+  {
+   "id": "cat-petit-electromenager",
+   "name": "Petit Électroménager",
+   "nameAr": "الأجهزة الصغيرة",
+   "slug": "petit-electromenager",
+   "description": null,
+   "descriptionAr": null,
+   "image": null,
+   "isActive": true,
+   "parentId": null,
+   "types": [],
+   "colors": [],
+   "createdAt": "2026-06-01T00:00:00.000Z",
+   "updatedAt": "2026-06-01T00:00:00.000Z",
+   "parent": null,
+   "children": [],
+   "_count": {
+    "products": 10
+   }
+  },
+  {
+   "id": "cat-electronique-tv",
+   "name": "Électronique & TV",
+   "nameAr": "الإلكترونيات والتلفزيونات",
+   "slug": "electronique-tv",
+   "description": null,
+   "descriptionAr": null,
+   "image": null,
+   "isActive": true,
+   "parentId": null,
+   "types": [],
+   "colors": [],
+   "createdAt": "2026-06-01T00:00:00.000Z",
+   "updatedAt": "2026-06-01T00:00:00.000Z",
+   "parent": null,
+   "children": [],
+   "_count": {
+    "products": 10
+   }
+  },
+  {
+   "id": "subcat-refrigerateurs",
+   "name": "Réfrigérateurs",
+   "nameAr": "",
+   "slug": "refrigerateurs",
+   "description": null,
+   "descriptionAr": null,
+   "image": null,
+   "isActive": true,
+   "parentId": "cat-gros-electromenager",
+   "types": [],
+   "colors": [
+    "Marque",
+    "Capacité (Litres)",
+    "Classe Énergétique"
+   ],
+   "createdAt": "2026-06-01T00:00:00.000Z",
+   "updatedAt": "2026-06-01T00:00:00.000Z",
+   "parent": {
+    "id": "cat-gros-electromenager",
+    "name": "Gros Électroménager",
+    "slug": "gros-electromenager"
+   },
+   "children": [],
+   "_count": {
+    "products": 0
+   }
+  },
+  {
+   "id": "subcat-machines-a-laver",
+   "name": "Machines à laver",
+   "nameAr": "",
+   "slug": "machines-a-laver",
+   "description": null,
+   "descriptionAr": null,
+   "image": null,
+   "isActive": true,
+   "parentId": "cat-gros-electromenager",
+   "types": [],
+   "colors": [
+    "Marque",
+    "Capacité (Litres)",
+    "Classe Énergétique"
+   ],
+   "createdAt": "2026-06-01T00:00:00.000Z",
+   "updatedAt": "2026-06-01T00:00:00.000Z",
+   "parent": {
+    "id": "cat-gros-electromenager",
+    "name": "Gros Électroménager",
+    "slug": "gros-electromenager"
+   },
+   "children": [],
+   "_count": {
+    "products": 0
+   }
+  },
+  {
+   "id": "subcat-lave-vaisselle",
+   "name": "Lave-vaisselle",
+   "nameAr": "",
+   "slug": "lave-vaisselle",
+   "description": null,
+   "descriptionAr": null,
+   "image": null,
+   "isActive": true,
+   "parentId": "cat-gros-electromenager",
+   "types": [],
+   "colors": [
+    "Marque",
+    "Capacité (Litres)",
+    "Classe Énergétique"
+   ],
+   "createdAt": "2026-06-01T00:00:00.000Z",
+   "updatedAt": "2026-06-01T00:00:00.000Z",
+   "parent": {
+    "id": "cat-gros-electromenager",
+    "name": "Gros Électroménager",
+    "slug": "gros-electromenager"
+   },
+   "children": [],
+   "_count": {
+    "products": 0
+   }
+  },
+  {
+   "id": "subcat-cuisinieres",
+   "name": "Cuisinières",
+   "nameAr": "",
+   "slug": "cuisinieres",
+   "description": null,
+   "descriptionAr": null,
+   "image": null,
+   "isActive": true,
+   "parentId": "cat-gros-electromenager",
+   "types": [],
+   "colors": [
+    "Marque",
+    "Capacité (Litres)",
+    "Classe Énergétique"
+   ],
+   "createdAt": "2026-06-01T00:00:00.000Z",
+   "updatedAt": "2026-06-01T00:00:00.000Z",
+   "parent": {
+    "id": "cat-gros-electromenager",
+    "name": "Gros Électroménager",
+    "slug": "gros-electromenager"
+   },
+   "children": [],
+   "_count": {
+    "products": 0
+   }
+  },
+  {
+   "id": "subcat-congelateurs",
+   "name": "Congélateurs",
+   "nameAr": "",
+   "slug": "congelateurs",
+   "description": null,
+   "descriptionAr": null,
+   "image": null,
+   "isActive": true,
+   "parentId": "cat-gros-electromenager",
+   "types": [],
+   "colors": [
+    "Marque",
+    "Capacité (Litres)",
+    "Classe Énergétique"
+   ],
+   "createdAt": "2026-06-01T00:00:00.000Z",
+   "updatedAt": "2026-06-01T00:00:00.000Z",
+   "parent": {
+    "id": "cat-gros-electromenager",
+    "name": "Gros Électroménager",
+    "slug": "gros-electromenager"
+   },
+   "children": [],
+   "_count": {
+    "products": 0
+   }
+  },
+  {
+   "id": "subcat-fours",
+   "name": "Fours",
+   "nameAr": "",
+   "slug": "fours",
+   "description": null,
+   "descriptionAr": null,
+   "image": null,
+   "isActive": true,
+   "parentId": "cat-gros-electromenager",
+   "types": [],
+   "colors": [
+    "Marque",
+    "Capacité (Litres)",
+    "Classe Énergétique"
+   ],
+   "createdAt": "2026-06-01T00:00:00.000Z",
+   "updatedAt": "2026-06-01T00:00:00.000Z",
+   "parent": {
+    "id": "cat-gros-electromenager",
+    "name": "Gros Électroménager",
+    "slug": "gros-electromenager"
+   },
+   "children": [],
+   "_count": {
+    "products": 0
+   }
+  },
+  {
+   "id": "subcat-plaques-de-cuisson",
+   "name": "Plaques de cuisson",
+   "nameAr": "",
+   "slug": "plaques-de-cuisson",
+   "description": null,
+   "descriptionAr": null,
+   "image": null,
+   "isActive": true,
+   "parentId": "cat-gros-electromenager",
+   "types": [],
+   "colors": [
+    "Marque",
+    "Capacité (Litres)",
+    "Classe Énergétique"
+   ],
+   "createdAt": "2026-06-01T00:00:00.000Z",
+   "updatedAt": "2026-06-01T00:00:00.000Z",
+   "parent": {
+    "id": "cat-gros-electromenager",
+    "name": "Gros Électroménager",
+    "slug": "gros-electromenager"
+   },
+   "children": [],
+   "_count": {
+    "products": 0
+   }
+  },
+  {
+   "id": "subcat-hottes",
+   "name": "Hottes",
+   "nameAr": "",
+   "slug": "hottes",
+   "description": null,
+   "descriptionAr": null,
+   "image": null,
+   "isActive": true,
+   "parentId": "cat-gros-electromenager",
+   "types": [],
+   "colors": [
+    "Marque",
+    "Capacité (Litres)",
+    "Classe Énergétique"
+   ],
+   "createdAt": "2026-06-01T00:00:00.000Z",
+   "updatedAt": "2026-06-01T00:00:00.000Z",
+   "parent": {
+    "id": "cat-gros-electromenager",
+    "name": "Gros Électroménager",
+    "slug": "gros-electromenager"
+   },
+   "children": [],
+   "_count": {
+    "products": 0
+   }
+  },
+  {
+   "id": "subcat-chauffe-eau",
+   "name": "Chauffe-eau",
+   "nameAr": "",
+   "slug": "chauffe-eau",
+   "description": null,
+   "descriptionAr": null,
+   "image": null,
+   "isActive": true,
+   "parentId": "cat-gros-electromenager",
+   "types": [],
+   "colors": [
+    "Marque",
+    "Capacité (Litres)",
+    "Classe Énergétique"
+   ],
+   "createdAt": "2026-06-01T00:00:00.000Z",
+   "updatedAt": "2026-06-01T00:00:00.000Z",
+   "parent": {
+    "id": "cat-gros-electromenager",
+    "name": "Gros Électroménager",
+    "slug": "gros-electromenager"
+   },
+   "children": [],
+   "_count": {
+    "products": 0
+   }
+  },
+  {
+   "id": "subcat-climatiseurs",
+   "name": "Climatiseurs",
+   "nameAr": "",
+   "slug": "climatiseurs",
+   "description": null,
+   "descriptionAr": null,
+   "image": null,
+   "isActive": true,
+   "parentId": "cat-gros-electromenager",
+   "types": [],
+   "colors": [
+    "Marque",
+    "Capacité (Litres)",
+    "Classe Énergétique"
+   ],
+   "createdAt": "2026-06-01T00:00:00.000Z",
+   "updatedAt": "2026-06-01T00:00:00.000Z",
+   "parent": {
+    "id": "cat-gros-electromenager",
+    "name": "Gros Électroménager",
+    "slug": "gros-electromenager"
+   },
+   "children": [],
+   "_count": {
+    "products": 0
+   }
+  },
+  {
+   "id": "subcat-blenders-mixeurs",
+   "name": "Blenders & Mixeurs",
+   "nameAr": "",
+   "slug": "blenders-mixeurs",
+   "description": null,
+   "descriptionAr": null,
+   "image": null,
+   "isActive": true,
+   "parentId": "cat-petit-electromenager",
+   "types": [],
+   "colors": [
+    "Puissance (Watt)",
+    "Vitesse",
+    "Couleur"
+   ],
+   "createdAt": "2026-06-01T00:00:00.000Z",
+   "updatedAt": "2026-06-01T00:00:00.000Z",
+   "parent": {
+    "id": "cat-petit-electromenager",
+    "name": "Petit Électroménager",
+    "slug": "petit-electromenager"
+   },
+   "children": [],
+   "_count": {
+    "products": 0
+   }
+  },
+  {
+   "id": "subcat-aspirateurs",
+   "name": "Aspirateurs",
+   "nameAr": "",
+   "slug": "aspirateurs",
+   "description": null,
+   "descriptionAr": null,
+   "image": null,
+   "isActive": true,
+   "parentId": "cat-petit-electromenager",
+   "types": [],
+   "colors": [
+    "Puissance (Watt)",
+    "Vitesse",
+    "Couleur"
+   ],
+   "createdAt": "2026-06-01T00:00:00.000Z",
+   "updatedAt": "2026-06-01T00:00:00.000Z",
+   "parent": {
+    "id": "cat-petit-electromenager",
+    "name": "Petit Électroménager",
+    "slug": "petit-electromenager"
+   },
+   "children": [],
+   "_count": {
+    "products": 0
+   }
+  },
+  {
+   "id": "subcat-micro-ondes",
+   "name": "Micro-ondes",
+   "nameAr": "",
+   "slug": "micro-ondes",
+   "description": null,
+   "descriptionAr": null,
+   "image": null,
+   "isActive": true,
+   "parentId": "cat-petit-electromenager",
+   "types": [],
+   "colors": [
+    "Puissance (Watt)",
+    "Vitesse",
+    "Couleur"
+   ],
+   "createdAt": "2026-06-01T00:00:00.000Z",
+   "updatedAt": "2026-06-01T00:00:00.000Z",
+   "parent": {
+    "id": "cat-petit-electromenager",
+    "name": "Petit Électroménager",
+    "slug": "petit-electromenager"
+   },
+   "children": [],
+   "_count": {
+    "products": 0
+   }
+  },
+  {
+   "id": "subcat-machines-a-cafe",
+   "name": "Machines à café",
+   "nameAr": "",
+   "slug": "machines-a-cafe",
+   "description": null,
+   "descriptionAr": null,
+   "image": null,
+   "isActive": true,
+   "parentId": "cat-petit-electromenager",
+   "types": [],
+   "colors": [
+    "Puissance (Watt)",
+    "Vitesse",
+    "Couleur"
+   ],
+   "createdAt": "2026-06-01T00:00:00.000Z",
+   "updatedAt": "2026-06-01T00:00:00.000Z",
+   "parent": {
+    "id": "cat-petit-electromenager",
+    "name": "Petit Électroménager",
+    "slug": "petit-electromenager"
+   },
+   "children": [],
+   "_count": {
+    "products": 0
+   }
+  },
+  {
+   "id": "subcat-friteuses",
+   "name": "Friteuses",
+   "nameAr": "",
+   "slug": "friteuses",
+   "description": null,
+   "descriptionAr": null,
+   "image": null,
+   "isActive": true,
+   "parentId": "cat-petit-electromenager",
+   "types": [],
+   "colors": [
+    "Puissance (Watt)",
+    "Vitesse",
+    "Couleur"
+   ],
+   "createdAt": "2026-06-01T00:00:00.000Z",
+   "updatedAt": "2026-06-01T00:00:00.000Z",
+   "parent": {
+    "id": "cat-petit-electromenager",
+    "name": "Petit Électroménager",
+    "slug": "petit-electromenager"
+   },
+   "children": [],
+   "_count": {
+    "products": 0
+   }
+  },
+  {
+   "id": "subcat-robots-de-cuisine",
+   "name": "Robots de cuisine",
+   "nameAr": "",
+   "slug": "robots-de-cuisine",
+   "description": null,
+   "descriptionAr": null,
+   "image": null,
+   "isActive": true,
+   "parentId": "cat-petit-electromenager",
+   "types": [],
+   "colors": [
+    "Puissance (Watt)",
+    "Vitesse",
+    "Couleur"
+   ],
+   "createdAt": "2026-06-01T00:00:00.000Z",
+   "updatedAt": "2026-06-01T00:00:00.000Z",
+   "parent": {
+    "id": "cat-petit-electromenager",
+    "name": "Petit Électroménager",
+    "slug": "petit-electromenager"
+   },
+   "children": [],
+   "_count": {
+    "products": 0
+   }
+  },
+  {
+   "id": "subcat-presse-agrumes",
+   "name": "Presse-agrumes",
+   "nameAr": "",
+   "slug": "presse-agrumes",
+   "description": null,
+   "descriptionAr": null,
+   "image": null,
+   "isActive": true,
+   "parentId": "cat-petit-electromenager",
+   "types": [],
+   "colors": [
+    "Puissance (Watt)",
+    "Vitesse",
+    "Couleur"
+   ],
+   "createdAt": "2026-06-01T00:00:00.000Z",
+   "updatedAt": "2026-06-01T00:00:00.000Z",
+   "parent": {
+    "id": "cat-petit-electromenager",
+    "name": "Petit Électroménager",
+    "slug": "petit-electromenager"
+   },
+   "children": [],
+   "_count": {
+    "products": 0
+   }
+  },
+  {
+   "id": "subcat-bouilloires",
+   "name": "Bouilloires",
+   "nameAr": "",
+   "slug": "bouilloires",
+   "description": null,
+   "descriptionAr": null,
+   "image": null,
+   "isActive": true,
+   "parentId": "cat-petit-electromenager",
+   "types": [],
+   "colors": [
+    "Puissance (Watt)",
+    "Vitesse",
+    "Couleur"
+   ],
+   "createdAt": "2026-06-01T00:00:00.000Z",
+   "updatedAt": "2026-06-01T00:00:00.000Z",
+   "parent": {
+    "id": "cat-petit-electromenager",
+    "name": "Petit Électroménager",
+    "slug": "petit-electromenager"
+   },
+   "children": [],
+   "_count": {
+    "products": 0
+   }
+  },
+  {
+   "id": "subcat-grille-pain",
+   "name": "Grille-pain",
+   "nameAr": "",
+   "slug": "grille-pain",
+   "description": null,
+   "descriptionAr": null,
+   "image": null,
+   "isActive": true,
+   "parentId": "cat-petit-electromenager",
+   "types": [],
+   "colors": [
+    "Puissance (Watt)",
+    "Vitesse",
+    "Couleur"
+   ],
+   "createdAt": "2026-06-01T00:00:00.000Z",
+   "updatedAt": "2026-06-01T00:00:00.000Z",
+   "parent": {
+    "id": "cat-petit-electromenager",
+    "name": "Petit Électroménager",
+    "slug": "petit-electromenager"
+   },
+   "children": [],
+   "_count": {
+    "products": 0
+   }
+  },
+  {
+   "id": "subcat-extracteurs-de-jus",
+   "name": "Extracteurs de jus",
+   "nameAr": "",
+   "slug": "extracteurs-de-jus",
+   "description": null,
+   "descriptionAr": null,
+   "image": null,
+   "isActive": true,
+   "parentId": "cat-petit-electromenager",
+   "types": [],
+   "colors": [
+    "Puissance (Watt)",
+    "Vitesse",
+    "Couleur"
+   ],
+   "createdAt": "2026-06-01T00:00:00.000Z",
+   "updatedAt": "2026-06-01T00:00:00.000Z",
+   "parent": {
+    "id": "cat-petit-electromenager",
+    "name": "Petit Électroménager",
+    "slug": "petit-electromenager"
+   },
+   "children": [],
+   "_count": {
+    "products": 0
+   }
+  },
+  {
+   "id": "subcat-smart-tvs",
+   "name": "Smart TVs",
+   "nameAr": "",
+   "slug": "smart-tvs",
+   "description": null,
+   "descriptionAr": null,
+   "image": null,
+   "isActive": true,
+   "parentId": "cat-electronique-tv",
+   "types": [],
+   "colors": [
+    "Résolution (4K/8K)",
+    "Taille d'écran (Pouces)"
+   ],
+   "createdAt": "2026-06-01T00:00:00.000Z",
+   "updatedAt": "2026-06-01T00:00:00.000Z",
+   "parent": {
+    "id": "cat-electronique-tv",
+    "name": "Électronique & TV",
+    "slug": "electronique-tv"
+   },
+   "children": [],
+   "_count": {
+    "products": 0
+   }
+  },
+  {
+   "id": "subcat-barres-de-son",
+   "name": "Barres de son",
+   "nameAr": "",
+   "slug": "barres-de-son",
+   "description": null,
+   "descriptionAr": null,
+   "image": null,
+   "isActive": true,
+   "parentId": "cat-electronique-tv",
+   "types": [],
+   "colors": [
+    "Résolution (4K/8K)",
+    "Taille d'écran (Pouces)"
+   ],
+   "createdAt": "2026-06-01T00:00:00.000Z",
+   "updatedAt": "2026-06-01T00:00:00.000Z",
+   "parent": {
+    "id": "cat-electronique-tv",
+    "name": "Électronique & TV",
+    "slug": "electronique-tv"
+   },
+   "children": [],
+   "_count": {
+    "products": 0
+   }
+  },
+  {
+   "id": "subcat-recepteurs",
+   "name": "Récepteurs",
+   "nameAr": "",
+   "slug": "recepteurs",
+   "description": null,
+   "descriptionAr": null,
+   "image": null,
+   "isActive": true,
+   "parentId": "cat-electronique-tv",
+   "types": [],
+   "colors": [
+    "Résolution (4K/8K)",
+    "Taille d'écran (Pouces)"
+   ],
+   "createdAt": "2026-06-01T00:00:00.000Z",
+   "updatedAt": "2026-06-01T00:00:00.000Z",
+   "parent": {
+    "id": "cat-electronique-tv",
+    "name": "Électronique & TV",
+    "slug": "electronique-tv"
+   },
+   "children": [],
+   "_count": {
+    "products": 0
+   }
+  },
+  {
+   "id": "subcat-box-tv",
+   "name": "Box TV",
+   "nameAr": "",
+   "slug": "box-tv",
+   "description": null,
+   "descriptionAr": null,
+   "image": null,
+   "isActive": true,
+   "parentId": "cat-electronique-tv",
+   "types": [],
+   "colors": [
+    "Résolution (4K/8K)",
+    "Taille d'écran (Pouces)"
+   ],
+   "createdAt": "2026-06-01T00:00:00.000Z",
+   "updatedAt": "2026-06-01T00:00:00.000Z",
+   "parent": {
+    "id": "cat-electronique-tv",
+    "name": "Électronique & TV",
+    "slug": "electronique-tv"
+   },
+   "children": [],
+   "_count": {
+    "products": 0
+   }
+  },
+  {
+   "id": "subcat-videoprojecteurs",
+   "name": "Vidéoprojecteurs",
+   "nameAr": "",
+   "slug": "videoprojecteurs",
+   "description": null,
+   "descriptionAr": null,
+   "image": null,
+   "isActive": true,
+   "parentId": "cat-electronique-tv",
+   "types": [],
+   "colors": [
+    "Résolution (4K/8K)",
+    "Taille d'écran (Pouces)"
+   ],
+   "createdAt": "2026-06-01T00:00:00.000Z",
+   "updatedAt": "2026-06-01T00:00:00.000Z",
+   "parent": {
+    "id": "cat-electronique-tv",
+    "name": "Électronique & TV",
+    "slug": "electronique-tv"
+   },
+   "children": [],
+   "_count": {
+    "products": 0
+   }
+  },
+  {
+   "id": "subcat-accessoires-tv",
+   "name": "Accessoires TV",
+   "nameAr": "",
+   "slug": "accessoires-tv",
+   "description": null,
+   "descriptionAr": null,
+   "image": null,
+   "isActive": true,
+   "parentId": "cat-electronique-tv",
+   "types": [],
+   "colors": [
+    "Résolution (4K/8K)",
+    "Taille d'écran (Pouces)"
+   ],
+   "createdAt": "2026-06-01T00:00:00.000Z",
+   "updatedAt": "2026-06-01T00:00:00.000Z",
+   "parent": {
+    "id": "cat-electronique-tv",
+    "name": "Électronique & TV",
+    "slug": "electronique-tv"
+   },
+   "children": [],
+   "_count": {
+    "products": 0
+   }
+  },
+  {
+   "id": "subcat-audio",
+   "name": "Audio",
+   "nameAr": "",
+   "slug": "audio",
+   "description": null,
+   "descriptionAr": null,
+   "image": null,
+   "isActive": true,
+   "parentId": "cat-electronique-tv",
+   "types": [],
+   "colors": [
+    "Résolution (4K/8K)",
+    "Taille d'écran (Pouces)"
+   ],
+   "createdAt": "2026-06-01T00:00:00.000Z",
+   "updatedAt": "2026-06-01T00:00:00.000Z",
+   "parent": {
+    "id": "cat-electronique-tv",
+    "name": "Électronique & TV",
+    "slug": "electronique-tv"
+   },
+   "children": [],
+   "_count": {
+    "products": 0
+   }
+  }
+ ]
+}
