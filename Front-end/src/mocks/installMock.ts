@@ -79,6 +79,18 @@ function resolve(method: string, path: string): Response {
 }
 
 export function installMock(): void {
+  // Auto-authenticate in the demo: pre-seed the token so AuthContext's
+  // /auth/me (mocked below) returns the admin and the dashboard opens with
+  // NO login screen. The client can visit /<slug>/dashboard directly.
+  try {
+    if (!localStorage.getItem('accessToken')) {
+      localStorage.setItem('accessToken', tokens.accessToken);
+      localStorage.setItem('refreshToken', tokens.refreshToken);
+    }
+  } catch {
+    /* ignore (e.g. storage disabled) */
+  }
+
   const originalFetch = window.fetch.bind(window);
   const MARKER = '/api/v1';
 
